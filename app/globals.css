@@ -189,8 +189,67 @@
     -webkit-text-fill-color: transparent;
   }
 
+  /* More readable gradient text with better contrast */
+  .gradient-fire-text-readable {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ffa94d 30%, #ffd93d 60%, #ffa94d 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: brightness(1.2) contrast(1.3);
+  }
+
   .gradient-fire-dark {
     background: linear-gradient(135deg, var(--fire-charcoal) 0%, var(--fire-dark) 100%);
+  }
+
+  .bg-gradient-radial {
+    background: radial-gradient(circle, var(--tw-gradient-stops));
+  }
+
+  /* Animated gradient background */
+  .gradient-fire-animated {
+    background: linear-gradient(135deg, var(--fire-red) 0%, var(--fire-orange) 50%, var(--fire-yellow) 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 12s ease infinite;
+  }
+
+  /* Reverse animated gradient for layered effect */
+  .gradient-fire-animated-reverse {
+    background: linear-gradient(225deg, var(--fire-yellow) 0%, var(--fire-orange) 50%, var(--fire-red) 100%);
+    background-size: 400% 400%;
+    animation: gradientShiftReverse 15s ease infinite;
+  }
+
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes gradientShiftReverse {
+    0% {
+      background-position: 100% 50%;
+    }
+    50% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+  /* Glassmorphism effect */
+  .glass-effect {
+    background: rgba(26, 26, 26, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   /* Animation Utilities */
@@ -250,5 +309,52 @@
 
   .animate-slide-in-right {
     animation: slideInRight 0.6s ease-out;
+  }
+
+  @keyframes pulseSlow {
+    0%, 100% {
+      opacity: 0.4;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+
+  .animate-pulse-slow {
+    animation: pulseSlow 4s ease-in-out infinite;
+  }
+
+  @keyframes bounceSlow {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-bounce-slow {
+    animation: bounceSlow 2s ease-in-out infinite;
+  }
+
+  /* Delay utilities */
+  .delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .delay-500 {
+    animation-delay: 500ms;
+  }
+
+  .delay-700 {
+    animation-delay: 700ms;
+  }
+
+  .delay-1000 {
+    animation-delay: 1000ms;
   }
 }
