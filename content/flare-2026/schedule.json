@@ -1,0 +1,133 @@
+{
+  "days": [
+    {
+      "date": "2026-04-17",
+      "label": "Friday",
+      "slots": [
+        {
+          "time": "6:00 PM",
+          "title": "Registration Opens",
+          "type": "general"
+        },
+        {
+          "time": "7:00 PM",
+          "title": "Opening Welcome & Orientation",
+          "type": "general",
+          "room": "Main Room"
+        },
+        {
+          "time": "8:00 PM",
+          "title": "Introduction to Floor Work",
+          "presenter": "desmond-ellise",
+          "room": "Main Room",
+          "type": "class"
+        },
+        {
+          "time": "10:00 PM",
+          "title": "Open Rope Time",
+          "type": "social",
+          "room": "All Rooms"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-18",
+      "label": "Saturday",
+      "slots": [
+        {
+          "time": "10:00 AM",
+          "title": "Single Column Ties",
+          "presenter": "john-doe",
+          "room": "Room A",
+          "type": "class"
+        },
+        {
+          "time": "10:00 AM",
+          "title": "Body Harnesses 101",
+          "presenter": "jane-smith",
+          "room": "Room B",
+          "type": "class"
+        },
+        {
+          "time": "12:00 PM",
+          "title": "Lunch Break",
+          "type": "general"
+        },
+        {
+          "time": "2:00 PM",
+          "title": "Hip Harnesses & Transitions",
+          "presenter": "desmond-ellise",
+          "room": "Room A",
+          "type": "class"
+        },
+        {
+          "time": "2:00 PM",
+          "title": "Communication in Rope",
+          "presenter": "jane-smith",
+          "room": "Room B",
+          "type": "class"
+        },
+        {
+          "time": "4:00 PM",
+          "title": "Afternoon Break",
+          "type": "general"
+        },
+        {
+          "time": "5:00 PM",
+          "title": "Futomomo Ties",
+          "presenter": "john-doe",
+          "room": "Room A",
+          "type": "class"
+        },
+        {
+          "time": "7:00 PM",
+          "title": "Dinner Break",
+          "type": "general"
+        },
+        {
+          "time": "9:00 PM",
+          "title": "Evening Rope Social",
+          "type": "social",
+          "room": "All Rooms"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-19",
+      "label": "Sunday",
+      "slots": [
+        {
+          "time": "10:00 AM",
+          "title": "Advanced Floor Work",
+          "presenter": "desmond-ellise",
+          "room": "Room A",
+          "type": "class"
+        },
+        {
+          "time": "10:00 AM",
+          "title": "Rope Care & Maintenance",
+          "presenter": "john-doe",
+          "room": "Room B",
+          "type": "class"
+        },
+        {
+          "time": "12:00 PM",
+          "title": "Lunch Break",
+          "type": "general"
+        },
+        {
+          "time": "2:00 PM",
+          "title": "Closing Demonstration",
+          "type": "general",
+          "room": "Main Room"
+        },
+        {
+          "time": "3:00 PM",
+          "title": "Farewell & Thank You",
+          "type": "general",
+          "room": "Main Room"
+        }
+      ]
+    }
+  ]
+}

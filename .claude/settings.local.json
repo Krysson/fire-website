@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(test:*)",
+      "Bash(npm run build:*)",
+      "Bash(npx tsc:*)",
+      "Bash(node -e:*)",
+      "Bash(npm run dev:*)",
+      "Bash(ls:*)",
+      "Bash(pkill:*)",
+      "Bash(taskkill:*)",
+      "Bash(npx shadcn@latest add accordion)",
+      "Bash(tree:*)",
+      "Bash(grep:*)",
+      "Bash(npm install:*)",
+      "Bash(find:*)"
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "blaze-2026",
+  "name": "BLAZE",
+  "year": 2026,
+  "tagline": "Ignite Your Rope Journey",
+  "description": "A dungeon-based rope weekend packed with classes specifically geared toward those at the beginner and intermediate levels. The weekend includes classes all day and playtime in the Woodshed dungeon all night!",
+  "dates": {
+    "display": "April 17-19, 2026",
+    "start": "2026-04-17",
+    "end": "2026-04-19"
+  },
+  "focus": "Beginner to Intermediate",
+  "size": "Intimate weekend event",
+  "venue": {
+    "name": "The Woodshed",
+    "address": "6431 Milner Blvd Suite #4",
+    "city": "Orlando",
+    "state": "FL",
+    "zip": "32809",
+    "mapUrl": "https://maps.google.com/?q=6431+Milner+Blvd+Suite+4+Orlando+FL+32809"
+  },
+  "tickets": {
+    "url": "https://forbiddentickets.com/events/the-woodshed-orlando/blaze-2026",
+    "onSaleDate": "February 14, 2026",
+    "soldAsPairs": true,
+    "pairsNote": "Tickets are sold as a tying pair for maximum learning benefit"
+  },
+  "social": {
+    "fetlife": "https://fetlife.com/events/blaze-2026",
+    "hashtag": "#BLAZE2026"
+  },
+  "logo": "/logos/blaze-2026.png",
+  "theme": {
+    "primary": "#e63946",
+    "secondary": "#f4a261"
+  }
+}

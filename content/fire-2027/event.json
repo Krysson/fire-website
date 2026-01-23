@@ -1,0 +1,51 @@
+{
+  "id": "fire-2027",
+  "name": "FIRE",
+  "year": 2027,
+  "tagline": "The Premier Rope Bondage Experience",
+  "description": "Our largest and most comprehensive event of the year, FIRE brings together the rope bondage community for an unforgettable experience. Featuring world-class presenters, diverse programming for all skill levels, and unparalleled opportunities for learning and connection. This is the flagship event that started it all.",
+  "dates": {
+    "display": "August 2027 (Dates TBD)",
+    "start": null,
+    "end": null,
+    "confirmed": false,
+    "displayNote": "Exact dates coming soon"
+  },
+  "focus": "All Levels - Our Largest Event",
+  "size": "Our flagship and largest event",
+  "venue": {
+    "name": "Venue TBD",
+    "address": null,
+    "city": "Orlando",
+    "state": "FL",
+    "zip": null,
+    "mapUrl": null,
+    "confirmed": false,
+    "displayNote": "Venue details coming soon"
+  },
+  "tickets": {
+    "url": "https://forbiddentickets.com/events/fire-2027",
+    "onSaleDate": "Spring 2027",
+    "soldAsPairs": true,
+    "pairsNote": "Tickets are sold as a tying pair for maximum learning benefit"
+  },
+  "social": {
+    "fetlife": "https://fetlife.com/groups/89922",
+    "hashtag": "#FIRE2027"
+  },
+  "logo": "/logos/fire-logo.png",
+  "theme": {
+    "primary": "#e63946",
+    "secondary": "#f9c74f"
+  },
+  "highlights": [
+    "50+ classes",
+    "International presenters",
+    "Vendor marketplace",
+    "3 nights of dungeon play",
+    "12,000+ square feet of space",
+    "100+ hard points",
+    "Dedicated photography space",
+    "Performances"
+  ]
+}

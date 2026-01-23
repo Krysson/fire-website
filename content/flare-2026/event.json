@@ -1,0 +1,37 @@
+{
+  "id": "flare-2026",
+  "name": "FLARE",
+  "year": 2026,
+  "tagline": "Elevate Your Rope Skills",
+  "description": "A dungeon-based rope weekend designed for intermediate to advanced practitioners. The weekend features advanced classes, demonstrations, and playtime in the Woodshed dungeon all night long!",
+  "dates": {
+    "display": "October 15-18, 2026",
+    "start": "2026-10-15",
+    "end": "2026-10-18"
+  },
+  "focus": "Intermediate to Advanced",
+  "size": "Intimate weekend event",
+  "venue": {
+    "name": "The Woodshed",
+    "address": "6431 Milner Blvd Suite #4",
+    "city": "Orlando",
+    "state": "FL",
+    "zip": "32809",
+    "mapUrl": "https://maps.google.com/?q=6431+Milner+Blvd+Suite+4+Orlando+FL+32809"
+  },
+  "tickets": {
+    "url": "https://forbiddentickets.com/events/flare-2026",
+    "onSaleDate": "August 1, 2026",
+    "soldAsPairs": true,
+    "pairsNote": "Tickets are sold as a tying pair for maximum learning benefit"
+  },
+  "social": {
+    "fetlife": "https://fetlife.com/events/flare-2026",
+    "hashtag": "#FLARE2026"
+  },
+  "logo": "/logos/flare-2026.png",
+  "theme": {
+    "primary": "#f4a261",
+    "secondary": "#e63946"
+  }
+}
