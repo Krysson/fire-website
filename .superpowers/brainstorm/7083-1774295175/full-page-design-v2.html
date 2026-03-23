@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FIRE Orlando — Landing Page Design</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #050505; color: white; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+
+  /* ── APPROVAL BAR ── */
+  .approval-bar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(10,10,10,0.95); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(244,162,97,0.3);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 10px 24px; gap: 16px;
+  }
+  .approval-bar span { font-size: 13px; color: rgba(255,255,255,0.6); }
+  .approval-bar strong { color: #f4a261; }
+  .approval-btns { display: flex; gap: 8px; }
+  .btn-approve {
+    background: linear-gradient(135deg, #e63946, #f4a261);
+    color: white; border: none; padding: 7px 20px; border-radius: 8px;
+    font-size: 13px; font-weight: 700; cursor: pointer;
+  }
+  .btn-change {
+    background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.7);
+    border: 1px solid rgba(255,255,255,0.15); padding: 7px 16px;
+    border-radius: 8px; font-size: 13px; cursor: pointer;
+  }
+
+  /* ── NAV ── */
+  .mock-nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 40px; position: relative; z-index: 10;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 10px; }
+  .nav-logo-icon { width: 36px; height: 36px; background: radial-gradient(circle, #f4a261, #e63946); border-radius: 50%; }
+  .nav-logo-text { font-size: 18px; font-weight: 900; letter-spacing: 2px; }
+  .nav-links { display: flex; gap: 28px; }
+  .nav-link { font-size: 13px; color: rgba(255,255,255,0.65); font-weight: 500; }
+  .nav-link.active { color: #f4a261; }
+  .nav-cta { background: #e63946; color: white; padding: 8px 18px; border-radius: 8px; font-size: 13px; font-weight: 700; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh; display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+    background: #0a0a0a;
+    margin-top: 0;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 50% 70%, rgba(230,57,70,0.40) 0%, transparent 60%),
+      radial-gradient(ellipse at 20% 90%, rgba(244,162,97,0.25) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 10%, rgba(249,199,79,0.12) 0%, transparent 45%),
+      radial-gradient(ellipse at 50% 50%, rgba(26,8,8,1) 0%, rgba(10,10,10,1) 100%);
+    animation: heroPulse 8s ease-in-out infinite alternate;
+  }
+  @keyframes heroPulse {
+    0% { opacity: 0.8; }
+    100% { opacity: 1; }
+  }
+  .ember {
+    position: absolute; border-radius: 50%;
+    animation: float linear infinite;
+    pointer-events: none;
+  }
+  @keyframes float {
+    0% { transform: translateY(100vh) scale(0); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 0.6; }
+    100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+  }
+  .hero-content { position: relative; z-index: 5; text-align: center; padding: 0 24px; max-width: 860px; }
+  .hero-logo-wrap {
+    width: 140px; height: 140px; margin: 0 auto 32px;
+    position: relative;
+  }
+  .hero-logo-glow {
+    position: absolute; inset: -20px;
+    background: radial-gradient(circle, rgba(244,162,97,0.4) 0%, transparent 70%);
+    animation: glowPulse 3s ease-in-out infinite alternate;
+    border-radius: 50%;
+  }
+  @keyframes glowPulse {
+    0% { transform: scale(0.9); opacity: 0.6; }
+    100% { transform: scale(1.15); opacity: 1; }
+  }
+  .hero-logo-img {
+    width: 140px; height: 140px;
+    background: radial-gradient(circle at 40% 35%, #f9c74f, #f4a261 40%, #e63946 75%);
+    border-radius: 50%;
+    position: relative; z-index: 1;
+    box-shadow: 0 0 60px rgba(244,162,97,0.5), 0 0 120px rgba(230,57,70,0.3);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 900; letter-spacing: 1px; color: rgba(255,255,255,0.9);
+    text-align: center; line-height: 1.3;
+  }
+  .hero-eyebrow {
+    font-size: 12px; font-weight: 700; letter-spacing: 5px; text-transform: uppercase;
+    color: rgba(244,162,97,0.8); margin-bottom: 16px;
+  }
+  .hero-title {
+    font-size: clamp(52px, 10vw, 88px); font-weight: 900; line-height: 0.9;
+    letter-spacing: -2px; margin-bottom: 16px;
+    background: linear-gradient(135deg, #fff 0%, #fff 30%, #f9c74f 55%, #f4a261 75%, #e63946 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    filter: drop-shadow(0 0 40px rgba(244,162,97,0.4));
+  }
+  .hero-subtitle {
+    font-size: 18px; color: rgba(255,255,255,0.7); margin-bottom: 40px; line-height: 1.6;
+    font-weight: 400;
+  }
+  .hero-subtitle strong { color: #f4a261; font-weight: 700; }
+
+  /* Countdown */
+  .countdown-wrap { margin-bottom: 40px; }
+  .countdown-label {
+    font-size: 22px; font-weight: 900; margin-bottom: 16px; letter-spacing: 0;
+    background: linear-gradient(135deg, #f9c74f, #f4a261);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    filter: drop-shadow(0 0 16px rgba(244,162,97,0.6));
+  }
+  .countdown {
+    display: inline-flex; gap: 0; border: 1px solid rgba(244,162,97,0.25);
+    border-radius: 16px; overflow: hidden; backdrop-filter: blur(8px);
+    background: rgba(255,255,255,0.04);
+  }
+  .count-unit {
+    padding: 16px 24px; text-align: center;
+    border-right: 1px solid rgba(244,162,97,0.15);
+    position: relative;
+  }
+  .count-unit:last-child { border-right: none; }
+  .count-num {
+    font-size: 36px; font-weight: 900; line-height: 1;
+    background: linear-gradient(to bottom, #f9c74f, #f4a261);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .count-lbl {
+    font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
+    color: rgba(255,255,255,0.4); margin-top: 4px;
+  }
+
+  /* Hero CTAs */
+  .hero-ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .cta-primary {
+    background: linear-gradient(135deg, #e63946, #f4a261);
+    color: white; padding: 16px 36px; border-radius: 12px;
+    font-size: 16px; font-weight: 800; border: none; cursor: pointer;
+    box-shadow: 0 8px 32px rgba(230,57,70,0.45);
+    display: flex; align-items: center; gap: 8px;
+    transition: transform 0.2s;
+  }
+  .cta-secondary {
+    background: transparent; color: rgba(255,255,255,0.85);
+    border: 1.5px solid rgba(255,255,255,0.2); padding: 16px 32px;
+    border-radius: 12px; font-size: 16px; font-weight: 600; cursor: pointer;
+    backdrop-filter: blur(8px);
+  }
+  .cta-arrow { font-size: 18px; }
+
+  /* Scroll indicator */
+  .scroll-hint {
+    position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+    color: rgba(255,255,255,0.35); font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  }
+  .scroll-chevron { font-size: 20px; animation: bounce 2s infinite; }
+  @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(4px)} }
+
+  /* Bottom fade */
+  .hero-fade {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 160px;
+    background: linear-gradient(to top, #0a0a0a, transparent);
+  }
+
+  /* ── SECTION LABEL ── */
+  .section-label {
+    text-align: center; padding: 6px 14px;
+    background: rgba(244,162,97,0.08); border: 1px solid rgba(244,162,97,0.2);
+    border-radius: 20px; display: inline-flex; align-items: center; gap: 6px;
+    font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+    color: #f4a261; margin-bottom: 20px;
+  }
+  .dot { width: 6px; height: 6px; background: #f4a261; border-radius: 50; animation: blink 2s infinite; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+  /* ── EVENTS SECTION ── */
+  .events-section {
+    background: #111; padding: 100px 40px;
+    position: relative; overflow: hidden;
+  }
+  .events-section::before {
+    content: '';
+    position: absolute; top: 0; right: 0;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(244,162,97,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .events-section::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(230,57,70,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .section-header { text-align: center; margin-bottom: 64px; }
+  .section-title {
+    font-size: clamp(36px, 6vw, 56px); font-weight: 900; margin-bottom: 16px;
+    background: linear-gradient(135deg, #fff, #f4a261);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .section-desc { font-size: 18px; color: rgba(255,255,255,0.5); max-width: 560px; margin: 0 auto; line-height: 1.6; }
+
+  .events-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+    max-width: 1100px; margin: 0 auto; position: relative; z-index: 1;
+  }
+  .event-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px; overflow: hidden;
+    transition: all 0.3s;
+    position: relative;
+  }
+  .event-card.featured {
+    border-color: rgba(230,57,70,0.4);
+    box-shadow: 0 0 0 1px rgba(230,57,70,0.15), 0 24px 48px rgba(230,57,70,0.12);
+  }
+  .event-card.featured::before {
+    content: '🔥 NEXT EVENT';
+    position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    background: linear-gradient(135deg, #e63946, #f4a261);
+    color: white; font-size: 9px; font-weight: 800; letter-spacing: 2px;
+    padding: 4px 16px; border-radius: 0 0 10px 10px; z-index: 5;
+  }
+  .card-logo-area {
+    aspect-ratio: 16/9; background: rgba(255,255,255,0.02);
+    display: flex; align-items: center; justify-content: center;
+    border-bottom: 1px solid rgba(255,255,255,0.06); position: relative; overflow: hidden;
+  }
+  .card-logo-area.featured-bg {
+    background: linear-gradient(135deg, rgba(230,57,70,0.08), rgba(244,162,97,0.06));
+  }
+  .logo-placeholder {
+    width: 90px; height: 90px; border-radius: 50%;
+    background: linear-gradient(135deg, #f9c74f, #f4a261, #e63946);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 13px; color: rgba(255,255,255,0.9);
+    box-shadow: 0 0 40px rgba(244,162,97,0.3);
+  }
+  .logo-placeholder.sm { width: 70px; height: 70px; font-size: 11px; opacity: 0.65; }
+  .card-body { padding: 24px; }
+  .card-event-name { font-size: 26px; font-weight: 900; margin-bottom: 8px; color: white; }
+  .card-date { font-size: 13px; color: #f4a261; font-weight: 600; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+  .card-focus { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; margin-bottom: 20px; }
+  .focus-beginner { background: rgba(249,199,79,0.15); color: #f9c74f; border: 1px solid rgba(249,199,79,0.3); }
+  .focus-intermediate { background: rgba(244,162,97,0.15); color: #f4a261; border: 1px solid rgba(244,162,97,0.3); }
+  .focus-all { background: rgba(230,57,70,0.15); color: #e87878; border: 1px solid rgba(230,57,70,0.3); }
+  .card-btn-ticket {
+    width: 100%; padding: 13px; border-radius: 10px;
+    background: linear-gradient(135deg, #e63946, #f4a261);
+    color: white; font-weight: 800; font-size: 14px; border: none; cursor: pointer;
+    box-shadow: 0 4px 20px rgba(230,57,70,0.35);
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+  }
+  .card-btn-learn {
+    width: 100%; padding: 12px; border-radius: 10px;
+    background: transparent; color: rgba(255,255,255,0.6);
+    border: 1px solid rgba(255,255,255,0.12); font-weight: 600; font-size: 14px; cursor: pointer;
+  }
+
+  /* ── ABOUT SECTION ── */
+  .about-section {
+    background: #0a0a0a; padding: 100px 40px;
+    position: relative; overflow: hidden;
+  }
+  .about-section::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.04) 1px, transparent 0);
+    background-size: 48px 48px;
+  }
+  .about-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+    align-items: center; position: relative; z-index: 1;
+  }
+  .about-features { display: flex; flex-direction: column; gap: 24px; }
+  .feature-row {
+    display: flex; gap: 16px; align-items: flex-start;
+    background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 14px; padding: 20px;
+    transition: border-color 0.3s;
+  }
+  .feature-icon {
+    width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center; font-size: 22px;
+  }
+  .fi-red { background: linear-gradient(135deg, rgba(230,57,70,0.2), rgba(244,162,97,0.1)); border: 1px solid rgba(230,57,70,0.2); }
+  .fi-orange { background: linear-gradient(135deg, rgba(244,162,97,0.2), rgba(249,199,79,0.1)); border: 1px solid rgba(244,162,97,0.2); }
+  .fi-yellow { background: linear-gradient(135deg, rgba(249,199,79,0.2), rgba(244,162,97,0.1)); border: 1px solid rgba(249,199,79,0.2); }
+  .feature-text h4 { font-size: 16px; font-weight: 700; margin-bottom: 4px; color: white; }
+  .feature-text p { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.5; }
+  .about-content { }
+  .about-title { font-size: clamp(40px, 5vw, 56px); font-weight: 900; margin-bottom: 24px; line-height: 1.05; }
+  .about-title span {
+    background: linear-gradient(135deg, #fff, #f4a261);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .about-text { font-size: 16px; color: rgba(255,255,255,0.6); line-height: 1.8; margin-bottom: 14px; }
+  .about-cta {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(244,162,97,0.1); border: 1px solid rgba(244,162,97,0.3);
+    color: #f4a261; padding: 13px 24px; border-radius: 10px;
+    font-size: 14px; font-weight: 700; cursor: pointer; margin-top: 12px;
+    transition: all 0.2s;
+  }
+
+  /* ── FOOTER CTA ── */
+  .footer-cta {
+    background: linear-gradient(135deg, #0f0808 0%, #1a0a08 50%, #0f0808 100%);
+    border-top: 1px solid rgba(244,162,97,0.1);
+    padding: 80px 40px; text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .footer-cta::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 100%, rgba(230,57,70,0.15) 0%, transparent 60%);
+  }
+  .footer-cta-inner { position: relative; z-index: 1; max-width: 600px; margin: 0 auto; }
+  .footer-cta h2 { font-size: 40px; font-weight: 900; margin-bottom: 16px; }
+  .footer-cta p { font-size: 16px; color: rgba(255,255,255,0.55); margin-bottom: 32px; line-height: 1.6; }
+  .footer-cta-btns { display: flex; gap: 12px; justify-content: center; }
+
+  /* ── ANNOTATION OVERLAY ── */
+  .anno {
+    position: relative;
+  }
+  .anno-badge {
+    position: absolute; right: -12px; top: 50%; transform: translateY(-50%);
+    background: rgba(244,162,97,0.9); color: #000; font-size: 10px; font-weight: 800;
+    padding: 2px 8px; border-radius: 4px; letter-spacing: 1px; white-space: nowrap;
+    z-index: 20;
+  }
+  .anno-badge.top { top: 8px; transform: none; right: 8px; }
+  .anno-badge.bottom-center {
+    right: auto; left: 50%; transform: translateX(-50%);
+    bottom: 8px; top: auto;
+  }
+
+  /* divider */
+  .divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(244,162,97,0.2), transparent);
+  }
+</style>
+</head>
+<body>
+<!-- Ember particles -->
+<div id="embers"></div>
+<script>
+  const container = document.getElementById('embers');
+  for (let i = 0; i < 18; i++) {
+    const e = document.createElement('div');
+    e.className = 'ember';
+    const size = Math.random() * 4 + 2;
+    e.style.cssText = `
+      width:${size}px; height:${size}px;
+      left:${Math.random()*100}%;
+      bottom:-10px;
+      background: ${['#f9c74f','#f4a261','#e63946'][Math.floor(Math.random()*3)]};
+      opacity: ${Math.random()*0.6+0.2};
+      animation-duration: ${Math.random()*8+6}s;
+      animation-delay: ${Math.random()*8}s;
+      filter: blur(${Math.random()*1}px);
+    `;
+    container.appendChild(e);
+  }
+</script>
+
+<!-- NAV -->
+<nav class="mock-nav" style="position:absolute;top:0;left:0;right:0;z-index:100">
+  <div class="nav-logo">
+    <div class="nav-logo-icon"></div>
+    <span class="nav-logo-text">FIRE</span>
+  </div>
+  <div class="nav-links">
+    <span class="nav-link active">Events ▾</span>
+    <span class="nav-link">About</span>
+    <span class="nav-link">FAQ</span>
+    <span class="nav-link">Contact</span>
+  </div>
+  <span class="nav-cta">Get Tickets</span>
+</nav>
+
+<!-- SECTION 1: HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+
+  <div class="hero-content">
+    <!-- Logo -->
+    <div class="hero-logo-wrap">
+      <div class="hero-logo-glow"></div>
+      <div class="hero-logo-img">FIRE<br/>LOGO</div>
+    </div>
+
+    <!-- Eyebrow -->
+    <div class="hero-eyebrow">Florida Intensive Rope Events</div>
+
+    <!-- Title -->
+    <div class="hero-title">FIRE<br/>Orlando</div>
+
+    <!-- Subtitle -->
+    <p class="hero-subtitle">
+      Three annual rope bondage education events — from <strong>beginner</strong> to <strong>advanced</strong> — held in Orlando, FL.
+    </p>
+
+    <!-- Countdown -->
+    <div class="countdown-wrap">
+      <div class="countdown-label">⚡ BLAZE 2026 begins in</div>
+      <div class="countdown">
+        <div class="count-unit">
+          <div class="count-num">24</div>
+          <div class="count-lbl">Days</div>
+        </div>
+        <div class="count-unit">
+          <div class="count-num">18</div>
+          <div class="count-lbl">Hours</div>
+        </div>
+        <div class="count-unit">
+          <div class="count-num">43</div>
+          <div class="count-lbl">Min</div>
+        </div>
+        <div class="count-unit">
+          <div class="count-num">07</div>
+          <div class="count-lbl">Sec</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTAs -->
+    <div class="hero-ctas">
+      <button class="cta-primary">
+        🎟 Get Tickets — BLAZE 2026 <span class="cta-arrow">→</span>
+      </button>
+      <button class="cta-secondary">Explore All Events</button>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Scroll to explore</span>
+    <span class="scroll-chevron">⌄</span>
+  </div>
+  <div class="hero-fade"></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SECTION 2: EVENTS -->
+<section class="events-section">
+  <div class="section-header">
+    <div style="display:flex;justify-content:center;margin-bottom:16px">
+      <div class="section-label"><span class="dot"></span> Annual Events</div>
+    </div>
+    <div class="section-title">Our Events</div>
+    <div class="section-desc">Three unique events each year — each designed for a different experience level and learning goal.</div>
+  </div>
+
+  <div class="events-grid">
+    <!-- BLAZE (featured) -->
+    <div class="event-card featured" style="padding-top:12px">
+      <div class="card-logo-area featured-bg">
+        <div class="logo-placeholder">BLAZE<br/>2026</div>
+      </div>
+      <div class="card-body">
+        <div class="card-event-name">BLAZE</div>
+        <div class="card-date">📅 April 17–19, 2026</div>
+        <div class="card-focus focus-beginner">Beginner to Intermediate</div>
+        <button class="card-btn-ticket">🎟 Get Tickets →</button>
+      </div>
+    </div>
+
+    <!-- FLARE -->
+    <div class="event-card">
+      <div class="card-logo-area">
+        <div class="logo-placeholder sm">FLARE<br/>2026</div>
+      </div>
+      <div class="card-body">
+        <div class="card-event-name">FLARE</div>
+        <div class="card-date">📅 August 2026</div>
+        <div class="card-focus focus-intermediate">Intermediate to Advanced</div>
+        <button class="card-btn-learn">Learn More →</button>
+      </div>
+    </div>
+
+    <!-- FIRE -->
+    <div class="event-card">
+      <div class="card-logo-area">
+        <div class="logo-placeholder sm">FIRE<br/>2027</div>
+      </div>
+      <div class="card-body">
+        <div class="card-event-name">FIRE</div>
+        <div class="card-date">📅 February 2027</div>
+        <div class="card-focus focus-all">All Levels</div>
+        <button class="card-btn-learn">Learn More →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SECTION 3: ABOUT -->
+<section class="about-section">
+  <div class="about-inner">
+    <!-- Left: Feature blocks -->
+    <div class="about-features">
+      <div class="feature-row">
+        <div class="feature-icon fi-red">📚</div>
+        <div class="feature-text">
+          <h4>Education First</h4>
+          <p>Intensive workshops led by experienced practitioners — covering technique, safety, and artistry at every level.</p>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon fi-orange">🤝</div>
+        <div class="feature-text">
+          <h4>Community Driven</h4>
+          <p>Meaningful connections with practitioners from across the country in a safe, inclusive environment.</p>
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-icon fi-yellow">🎨</div>
+        <div class="feature-text">
+          <h4>Artistic Expression</h4>
+          <p>Space to explore rope as an art form — from foundational floor work to advanced suspension and performance.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Content -->
+    <div class="about-content">
+      <div style="display:flex;margin-bottom:20px">
+        <div class="section-label"><span class="dot"></span> Who We Are</div>
+      </div>
+      <div class="about-title"><span>About FIRE</span></div>
+      <p class="about-text">
+        FIRE (Florida Intensive Rope Events) is a community-driven organization dedicated to advancing rope bondage education in a safe, inclusive, and supportive environment.
+      </p>
+      <p class="about-text">
+        Based in Orlando, Florida, we host three annual events that cater to different skill levels — ensuring everyone from curious beginners to seasoned experts finds their place in our community.
+      </p>
+      <div class="about-cta">Learn More About FIRE →</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SECTION 4: FOOTER CTA -->
+<section class="footer-cta">
+  <div class="footer-cta-inner">
+    <div style="display:flex;justify-content:center;margin-bottom:20px">
+      <div class="section-label"><span class="dot"></span> Join Us</div>
+    </div>
+    <h2>Ready to <span style="background:linear-gradient(135deg,#f9c74f,#e63946);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Ignite</span> Your Journey?</h2>
+    <p>Tickets for BLAZE 2026 are on sale now. Beginner-friendly, community-focused, and unforgettable.</p>
+    <div class="footer-cta-btns">
+      <button class="cta-primary">🎟 Get Tickets</button>
+      <button class="cta-secondary" style="font-size:14px;padding:13px 24px">View Event Details</button>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

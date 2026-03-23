@@ -1,0 +1,246 @@
+<style>
+  .direction-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 24px;
+  }
+  .direction-card {
+    border: 2px solid rgba(255,255,255,0.15);
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.2s;
+    background: #111;
+  }
+  .direction-card:hover { border-color: rgba(244,162,97,0.6); transform: translateY(-3px); }
+  .direction-card.selected { border-color: #f4a261 !important; box-shadow: 0 0 0 3px rgba(244,162,97,0.25); }
+  .mock-hero {
+    width: 100%;
+    aspect-ratio: 16/9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 16px;
+  }
+  /* Direction A: Cinematic Fullscreen */
+  .hero-a {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a0808 40%, #2a0a0a 100%);
+  }
+  .hero-a::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 60%, rgba(230,57,70,0.35) 0%, transparent 70%),
+                radial-gradient(ellipse at 20% 80%, rgba(244,162,97,0.2) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(249,199,79,0.1) 0%, transparent 40%);
+  }
+  .hero-a-logo {
+    width: 60px; height: 60px; background: radial-gradient(circle, #f4a261, #e63946);
+    border-radius: 50%; margin-bottom: 8px; position: relative; z-index: 1;
+    box-shadow: 0 0 30px rgba(244,162,97,0.6);
+  }
+  .hero-a-title {
+    font-size: 22px; font-weight: 900; color: white; text-align: center;
+    position: relative; z-index: 1; line-height: 1.1;
+    text-shadow: 0 0 40px rgba(244,162,97,0.8);
+  }
+  .hero-a-sub {
+    font-size: 9px; color: rgba(244,162,97,0.8); letter-spacing: 3px;
+    text-transform: uppercase; margin-top: 4px; position: relative; z-index: 1;
+  }
+  .hero-a-cta {
+    margin-top: 12px; position: relative; z-index: 1;
+    display: flex; gap: 6px;
+  }
+  .btn-fire { background: #e63946; color: white; border: none; padding: 5px 12px; border-radius: 6px; font-size: 9px; font-weight: 700; }
+  .btn-outline { background: transparent; color: #f4a261; border: 1px solid #f4a261; padding: 5px 12px; border-radius: 6px; font-size: 9px; font-weight: 700; }
+  .countdown-strip {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: rgba(230,57,70,0.2); backdrop-filter: blur(4px);
+    border-top: 1px solid rgba(244,162,97,0.3);
+    display: flex; justify-content: center; gap: 16px; padding: 6px;
+  }
+  .count-box { text-align: center; }
+  .count-num { font-size: 14px; font-weight: 900; color: #f4a261; line-height: 1; }
+  .count-lbl { font-size: 6px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px; }
+
+  /* Direction B: Split Screen */
+  .hero-b {
+    background: #0a0a0a;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 !important;
+    align-items: stretch !important;
+  }
+  .hero-b-left {
+    background: linear-gradient(135deg, #1a0808, #0a0a0a);
+    display: flex; align-items: center; justify-content: center;
+    padding: 16px; border-right: 1px solid rgba(244,162,97,0.2);
+    position: relative;
+  }
+  .hero-b-left::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at center, rgba(230,57,70,0.25) 0%, transparent 70%);
+  }
+  .hero-b-logo-wrap { position: relative; z-index: 1; text-align: center; }
+  .hero-b-logo { width: 70px; height: 70px; background: radial-gradient(circle, #f4a261, #e63946); border-radius: 50%; margin: 0 auto 6px; box-shadow: 0 0 40px rgba(244,162,97,0.5); }
+  .hero-b-org { font-size: 7px; color: rgba(244,162,97,0.7); letter-spacing: 3px; text-transform: uppercase; }
+  .hero-b-right {
+    padding: 16px; display: flex; flex-direction: column; justify-content: center;
+  }
+  .hero-b-badge { background: rgba(230,57,70,0.15); border: 1px solid rgba(230,57,70,0.4); border-radius: 20px; padding: 2px 8px; font-size: 7px; color: #e63946; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; display: inline-block; margin-bottom: 6px; }
+  .hero-b-event { font-size: 24px; font-weight: 900; color: white; line-height: 1; }
+  .hero-b-date { font-size: 9px; color: #f4a261; font-weight: 600; margin: 4px 0 8px; }
+  .hero-b-desc { font-size: 8px; color: rgba(255,255,255,0.6); line-height: 1.4; margin-bottom: 10px; }
+  .hero-b-btns { display: flex; flex-direction: column; gap: 4px; }
+
+  /* Direction C: Bold Typography */
+  .hero-c {
+    background: #0a0a0a;
+    position: relative;
+  }
+  .hero-c::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(45deg, rgba(230,57,70,0.15) 0%, transparent 50%),
+      linear-gradient(135deg, rgba(244,162,97,0.1) 0%, transparent 50%);
+  }
+  .hero-c-stripe {
+    position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+    background: linear-gradient(to bottom, #f9c74f, #f4a261, #e63946);
+  }
+  .hero-c-content { position: relative; z-index: 1; text-align: left; padding: 8px 12px 8px 20px; width: 100%; }
+  .hero-c-eyebrow { font-size: 7px; color: #f4a261; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 4px; font-weight: 600; }
+  .hero-c-title {
+    font-size: 36px; font-weight: 900; line-height: 0.9; margin-bottom: 8px;
+    background: linear-gradient(135deg, #ffffff 0%, #f9c74f 40%, #f4a261 70%, #e63946 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .hero-c-rule { width: 48px; height: 2px; background: linear-gradient(to right, #e63946, #f4a261); margin-bottom: 6px; }
+  .hero-c-sub { font-size: 8px; color: rgba(255,255,255,0.65); line-height: 1.5; max-width: 200px; margin-bottom: 10px; }
+  .hero-c-events { display: flex; gap: 8px; margin-bottom: 10px; }
+  .hero-c-event-pill {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 6px; padding: 4px 8px; font-size: 7px; color: rgba(255,255,255,0.7);
+  }
+  .hero-c-event-pill strong { display: block; color: #f4a261; font-size: 8px; }
+
+  /* Card labels */
+  .dir-info { padding: 16px; }
+  .dir-name { font-size: 15px; font-weight: 800; color: white; margin-bottom: 4px; }
+  .dir-tag { font-size: 11px; color: rgba(244,162,97,0.8); font-weight: 600; margin-bottom: 8px; }
+  .dir-desc { font-size: 12px; color: rgba(255,255,255,0.55); line-height: 1.5; }
+  .dir-keywords { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px; }
+  .kw { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 2px 8px; font-size: 10px; color: rgba(255,255,255,0.5); }
+  .select-hint { text-align: center; font-size: 11px; color: rgba(255,255,255,0.3); margin-top: 20px; }
+</style>
+
+<h2>Which design direction feels right for FIRE?</h2>
+<p class="subtitle">Three distinct approaches — each sets a very different tone for the site. Click a card to select.</p>
+
+<div class="direction-grid">
+
+  <!-- Direction A -->
+  <div class="direction-card option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="mock-hero hero-a">
+      <div class="hero-a-logo"></div>
+      <div class="hero-a-title">FIRE Orlando</div>
+      <div class="hero-a-sub">Florida Intensive Rope Events</div>
+      <div class="hero-a-cta">
+        <button class="btn-fire">Get Tickets</button>
+        <button class="btn-outline">Explore Events</button>
+      </div>
+      <div class="countdown-strip">
+        <div class="count-box"><div class="count-num">25</div><div class="count-lbl">Days</div></div>
+        <div class="count-box"><div class="count-num">14</div><div class="count-lbl">Hours</div></div>
+        <div class="count-box"><div class="count-num">32</div><div class="count-lbl">Min</div></div>
+        <div class="count-box"><div class="count-num">09</div><div class="count-lbl">Sec</div></div>
+      </div>
+    </div>
+    <div class="dir-info">
+      <div class="dir-name">A — Cinematic Countdown</div>
+      <div class="dir-tag">Urgent · Dramatic · Immersive</div>
+      <div class="dir-desc">Full-viewport dark hero with animated fire gradients, prominent FIRE logo, and a live countdown to the next event. Ticket CTA front and center. The page creates urgency immediately.</div>
+      <div class="dir-keywords">
+        <span class="kw">countdown timer</span>
+        <span class="kw">full-bleed hero</span>
+        <span class="kw">ticket CTA first</span>
+        <span class="kw">fire gradients</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Direction B -->
+  <div class="direction-card option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="mock-hero hero-b">
+      <div class="hero-b-left">
+        <div class="hero-b-logo-wrap">
+          <div class="hero-b-logo"></div>
+          <div class="hero-b-org">FIRE Orlando</div>
+        </div>
+      </div>
+      <div class="hero-b-right">
+        <div>
+          <div class="hero-b-badge">Next Event</div>
+          <div class="hero-b-event">BLAZE<br/>2026</div>
+          <div class="hero-b-date">📅 April 17–19, 2026 · The Woodshed</div>
+          <div class="hero-b-desc">Beginner to intermediate rope education, hands-on practice, and community connection.</div>
+          <div class="hero-b-btns">
+            <button class="btn-fire" style="font-size:8px;padding:6px">Get Tickets →</button>
+            <button class="btn-outline" style="font-size:8px;padding:5px">View Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dir-info">
+      <div class="dir-name">B — Split: Brand + Event</div>
+      <div class="dir-tag">Editorial · Informative · Balanced</div>
+      <div class="dir-desc">Split-screen hero: FIRE brand identity on the left, next event details + ticket CTA on the right. Users immediately see what's coming up. Clean, editorial feel with strong hierarchy.</div>
+      <div class="dir-keywords">
+        <span class="kw">split-screen</span>
+        <span class="kw">event-first</span>
+        <span class="kw">clean hierarchy</span>
+        <span class="kw">editorial</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Direction C -->
+  <div class="direction-card option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="mock-hero hero-c">
+      <div class="hero-c-stripe"></div>
+      <div class="hero-c-content">
+        <div class="hero-c-eyebrow">Florida Intensive Rope Events</div>
+        <div class="hero-c-title">FIRE</div>
+        <div class="hero-c-rule"></div>
+        <div class="hero-c-sub">Three annual rope bondage education events in Orlando — for every level of practitioner.</div>
+        <div class="hero-c-events">
+          <div class="hero-c-event-pill"><strong>BLAZE '26</strong>Apr 17–19</div>
+          <div class="hero-c-event-pill"><strong>FLARE '26</strong>Aug 2026</div>
+          <div class="hero-c-event-pill"><strong>FIRE '27</strong>Feb 2027</div>
+        </div>
+        <button class="btn-fire" style="font-size:9px;padding:6px 14px">Get Tickets for BLAZE 2026 →</button>
+      </div>
+    </div>
+    <div class="dir-info">
+      <div class="dir-name">C — Bold Typography</div>
+      <div class="dir-tag">Confident · Modern · All Events Visible</div>
+      <div class="dir-desc">Left-aligned, typographically bold hero with the FIRE name large and commanding. Shows all three events at a glance as pills. Single powerful ticket CTA. Less reliance on imagery, more on type and color.</div>
+      <div class="dir-keywords">
+        <span class="kw">left-aligned</span>
+        <span class="kw">all events visible</span>
+        <span class="kw">type-forward</span>
+        <span class="kw">modern</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="select-hint">Click a card to select • You can change your selection anytime</div>
