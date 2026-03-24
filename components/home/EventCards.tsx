@@ -18,7 +18,7 @@ interface EventConfig {
   featured?: boolean
 }
 
-const EVENTS: EventConfig[] = [
+const EVENTS_BASE: Omit<EventConfig, 'ticketUrl'>[] = [
   {
     id: 'blaze',
     name: 'BLAZE',
@@ -28,7 +28,6 @@ const EVENTS: EventConfig[] = [
     focus: 'Beginner to Intermediate',
     focusVariant: 'beginner',
     internalLink: '/events/blaze-2026',
-    ticketUrl: 'https://forbiddentickets.com/events/blaze-2026',
     featured: true,
   },
   {
@@ -59,7 +58,11 @@ const focusBadgeClasses: Record<EventConfig['focusVariant'], string> = {
   all:          'bg-fire-red/15    text-red-400     border-fire-red/30',
 }
 
-export default function EventCards() {
+export default function EventCards({ blazeTicketUrl }: { blazeTicketUrl: string }) {
+  const EVENTS: EventConfig[] = EVENTS_BASE.map(e =>
+    e.id === 'blaze' ? { ...e, ticketUrl: blazeTicketUrl } : e
+  )
+
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {

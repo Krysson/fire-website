@@ -27,13 +27,28 @@ function pad(n: number): string {
 }
 
 export default function Countdown() {
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>(getTimeLeft())
-  const isPast = timeLeft.days === 0 && timeLeft.hours === 0 && timeLeft.minutes === 0 && timeLeft.seconds === 0
+  const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null)
 
   useEffect(() => {
+    setTimeLeft(getTimeLeft())
     const id = setInterval(() => setTimeLeft(getTimeLeft()), 1000)
     return () => clearInterval(id)
   }, [])
+
+  const isPast = timeLeft !== null && timeLeft.days === 0 && timeLeft.hours === 0 && timeLeft.minutes === 0 && timeLeft.seconds === 0
+
+  if (timeLeft === null) {
+    return (
+      <div className="inline-flex overflow-hidden rounded-2xl border border-fire-orange/25 bg-white/[0.04] backdrop-blur-md">
+        {['Days', 'Hours', 'Minutes', 'Seconds'].map((label, i, arr) => (
+          <div key={label} className={`flex flex-col items-center px-5 py-4 sm:px-7 sm:py-5 ${i < arr.length - 1 ? 'border-r border-fire-orange/15' : ''}`}>
+            <span className="text-3xl font-black leading-none text-fire-orange sm:text-4xl">--</span>
+            <span className="mt-1 text-[9px] uppercase tracking-widest text-white/40">{label}</span>
+          </div>
+        ))}
+      </div>
+    )
+  }
 
   if (isPast) {
     return (
@@ -59,7 +74,7 @@ export default function Countdown() {
             i < units.length - 1 ? 'border-r border-fire-orange/15' : ''
           }`}
         >
-          <span className="bg-gradient-to-b from-fire-yellow to-fire-orange bg-clip-text text-3xl font-black leading-none text-transparent sm:text-4xl">
+          <span className="text-3xl font-black leading-none text-fire-orange sm:text-4xl">
             {pad(value)}
           </span>
           <span className="mt-1 text-[9px] uppercase tracking-widest text-white/40">

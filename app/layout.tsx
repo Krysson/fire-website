@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { getEventData } from "@/lib/content";
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -55,12 +56,15 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
+	const blazeEvent = getEventData('blaze-2026')
+	const blazeTicketUrl = blazeEvent?.tickets?.url ?? ''
+
 	return (
 		<html lang="en" className="dark">
 			<body
 				className={`${inter.variable} font-sans antialiased bg-fire-black text-foreground`}
 			>
-				<Header />
+				<Header ticketUrl={blazeTicketUrl} />
 				<main className="min-h-screen">{children}</main>
 				<Footer />
 			</body>

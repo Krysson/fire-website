@@ -5,28 +5,43 @@
       "label": "Friday",
       "slots": [
         {
-          "time": "6:00 PM",
+          "time": "3:00 PM",
           "title": "Registration Opens",
           "type": "general"
         },
         {
-          "time": "7:00 PM",
-          "title": "Opening Welcome & Orientation",
-          "type": "general",
-          "room": "Main Room"
-        },
-        {
-          "time": "8:00 PM",
-          "title": "Introduction to Floor Work",
-          "presenter": "desmond-ellise",
-          "room": "Main Room",
+          "time": "4:30 PM",
+          "title": "Rope 101",
+          "presenter": "sorin",
+          "room": "Blue Side",
           "type": "class"
         },
         {
-          "time": "10:00 PM",
-          "title": "Open Rope Time",
+          "time": "4:30 PM",
+          "title": "Partial Suspension Exposed!",
+          "presenter": "mako-breeze",
+          "room": "Green Side",
+          "type": "class"
+        },
+        {
+          "time": "6:00 PM",
+          "title": "The Nerve",
+          "presenter": "Nova-Mako",
+          "room": "Blue Side",
+          "type": "class"
+        },
+        {
+          "time": "6:00 PM",
+          "title": "Single Rope Skills, Drill, & Scenes",
+          "presenter": "senbound-giggles",
+          "room": "Green Side",
+          "type": "class"
+        },
+        {
+          "time": "8:00 PM",
+          "title": "BLAZE 2026 Play Party",
           "type": "social",
-          "room": "All Rooms"
+          "room": "Green Side"
         }
       ]
     },

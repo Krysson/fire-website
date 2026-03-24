@@ -25,7 +25,7 @@ const eventLinks = [
   { href: '/events/fire-2027', label: 'FIRE' }
 ]
 
-export function Header() {
+export function Header({ ticketUrl }: { ticketUrl: string }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -81,7 +81,7 @@ export function Header() {
 
         {/* Desktop Ticket CTA */}
         <a
-          href="https://forbiddentickets.com/events/blaze-2026"
+          href={ticketUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="hidden md:inline-flex items-center gap-2 rounded-lg bg-fire-red px-4 py-2 text-sm font-bold text-white transition-all duration-200 hover:bg-fire-orange hover:shadow-md hover:shadow-fire-orange/30 active:scale-95"
@@ -139,7 +139,7 @@ export function Header() {
 
               {/* Mobile Ticket CTA */}
               <a
-                href="https://forbiddentickets.com/events/blaze-2026"
+                href={ticketUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-fire-red to-fire-orange px-6 py-4 text-base font-bold text-white shadow-md shadow-fire-red/30 transition-all duration-200 hover:shadow-fire-orange/40 active:scale-95"

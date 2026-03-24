@@ -6,7 +6,6 @@ import { useEffect, useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 import Countdown from './Countdown'
 
-const TICKET_URL = 'https://forbiddentickets.com/events/blaze-2026'
 
 // Deterministic ember positions — avoids hydration mismatch from Math.random()
 const EMBERS = [
@@ -27,7 +26,7 @@ const EMBERS = [
   { left: '96%', delay: '5s',   dur: '8s',  size: 4, color: '#f9c74f' },
 ]
 
-export default function Hero() {
+export default function Hero({ ticketUrl }: { ticketUrl: string }) {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
@@ -136,7 +135,7 @@ export default function Hero() {
           style={{ transitionDelay: '500ms' }}
         >
           <a
-            href={TICKET_URL}
+            href={ticketUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-fire-red to-fire-orange px-8 py-4 text-base font-bold text-white shadow-lg shadow-fire-red/40 transition-all duration-300 hover:scale-105 hover:shadow-fire-orange/50 active:scale-100 md:px-10 md:py-5 md:text-lg"
