@@ -7,8 +7,8 @@ pronouns:
 photo: /images/presenters/preview16.jpg
 social:
   fetlife:
-    - https://fetlife.com/users/8036439
-    - https://fetlife.com/users/7342370
+    - https://fetlife.com/-_nova_-
+    - https://fetlife.com/Nevertheless
 featured: true
 ---
 
