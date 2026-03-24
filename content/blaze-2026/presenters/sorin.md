@@ -4,7 +4,7 @@ slug: sorin
 pronouns:
   - 'he/him'
   - 'she/her'
-photo: /images/presenters/desmond-ellise.jpg
+photo: /images/presenters/sorin.png
 social:
   fetlife:
     - https://fetlife.com/users/8036439

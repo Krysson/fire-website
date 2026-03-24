@@ -4,7 +4,7 @@ slug: corvid-fern
 pronouns:
   - 'he/him'
   - 'she/her'
-photo: /images/presenters/desmond-ellise.jpg
+photo: /images/presenters/corvid-fern.jpg
 social:
   fetlife:
     - https://fetlife.com/users/8036439

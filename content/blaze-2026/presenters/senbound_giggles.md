@@ -4,7 +4,7 @@ slug: senbound-giggles
 pronouns:
   - 'he/him'
   - 'she/her'
-photo: /images/presenters/desmond-ellise.jpg
+photo: /images/presenters/s-g.jpg
 social:
   fetlife:
     - https://fetlife.com/users/8036439
