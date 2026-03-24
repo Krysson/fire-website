@@ -7,8 +7,8 @@ pronouns:
 photo: /images/presenters/corvid-fern.jpg
 social:
   fetlife:
-    - https://fetlife.com/users/8036439
-    - https://fetlife.com/users/7342370
+    - https://fetlife.com/knotty_corvid
+    - https://fetlife.com/fern_bights
 featured: true
 ---
 
