@@ -60,7 +60,7 @@ export default function RootLayout({
 	const blazeTicketUrl = blazeEvent?.tickets?.url ?? ''
 
 	return (
-		<html lang="en" className="dark">
+		<html lang="en" className="dark" suppressHydrationWarning>
 			<body
 				className={`${inter.variable} font-sans antialiased bg-fire-black text-foreground`}
 			>

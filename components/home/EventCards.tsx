@@ -90,7 +90,8 @@ export default function EventCards({ blazeTicketUrl }: { blazeTicketUrl: string 
           )}
 
           {/* Logo area */}
-          <div
+          <Link
+            href={event.internalLink}
             className={`relative flex aspect-video w-full items-center justify-center overflow-hidden border-b border-white/[0.06] ${
               event.featured
                 ? 'bg-gradient-to-br from-fire-red/10 to-fire-orange/8'
@@ -110,14 +111,16 @@ export default function EventCards({ blazeTicketUrl }: { blazeTicketUrl: string 
                 className="object-contain drop-shadow-xl"
               />
             </div>
-          </div>
+          </Link>
 
           {/* Card body */}
           <div className="flex flex-1 flex-col gap-4 p-6 md:p-8">
             <div>
-              <h3 className="mb-2 text-2xl font-extrabold text-white transition-colors duration-300 group-hover:text-fire-orange md:text-3xl">
-                {event.name} {event.year}
-              </h3>
+              <Link href={event.internalLink}>
+                <h3 className="mb-2 text-2xl font-extrabold text-white transition-colors duration-300 hover:text-fire-orange md:text-3xl">
+                  {event.name} {event.year}
+                </h3>
+              </Link>
               <div className="mb-3 flex items-center gap-2 text-fire-orange">
                 <Calendar className="h-4 w-4 flex-shrink-0" />
                 <span className="text-sm font-semibold">{event.dates}</span>

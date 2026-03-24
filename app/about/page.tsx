@@ -1,6 +1,5 @@
+import { OrganizationMarkdown } from '@/components/markdown/OrganizationMarkdown';
 import { getOrganizationContent } from '@/lib/content';
-import { remark } from 'remark';
-import html from 'remark-html';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 
@@ -8,11 +7,6 @@ export const metadata: Metadata = {
   title: 'About FIRE',
   description: 'Learn about FIRE (Florida Intensive Rope Events) - our mission, values, team, and commitment to rope bondage education in Orlando, FL.',
 };
-
-async function markdownToHtml(markdown: string) {
-  const result = await remark().use(html).process(markdown);
-  return result.toString();
-}
 
 export default async function AboutPage() {
   const content = getOrganizationContent('about.md');
@@ -27,8 +21,6 @@ export default async function AboutPage() {
       </div>
     );
   }
-
-  const htmlContent = await markdownToHtml(content.content);
 
   return (
     <div className="min-h-screen bg-fire-black">
@@ -60,19 +52,7 @@ export default async function AboutPage() {
       <section className="py-16 md:py-24 bg-fire-black">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div
-              className="prose prose-invert prose-lg max-w-none
-                prose-headings:text-white prose-headings:font-bold
-                prose-h2:text-3xl prose-h2:mb-6 prose-h2:mt-12 prose-h2:text-fire-orange
-                prose-h3:text-2xl prose-h3:mb-4 prose-h3:mt-8 prose-h3:text-fire-yellow
-                prose-p:text-gray-300 prose-p:leading-relaxed prose-p:mb-4
-                prose-ul:text-gray-300 prose-ul:my-6
-                prose-li:mb-2
-                prose-strong:text-white prose-strong:font-semibold
-                prose-a:text-fire-orange prose-a:no-underline hover:prose-a:text-fire-yellow
-                prose-hr:border-fire-orange/30 prose-hr:my-12"
-              dangerouslySetInnerHTML={{ __html: htmlContent }}
-            />
+            <OrganizationMarkdown>{content.content}</OrganizationMarkdown>
           </div>
         </div>
       </section>
@@ -90,7 +70,7 @@ export default async function AboutPage() {
                 className="w-24 h-24 md:w-32 md:h-32 opacity-80 hover:opacity-100 transition-opacity"
               />
               <Image
-                src="/logos/flower-flat.png"
+                src="/logos/flower-FLAT.png"
                 alt="FIRE Flower Symbol"
                 width={120}
                 height={120}

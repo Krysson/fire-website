@@ -1,12 +1,11 @@
 import { getOrganizationContent } from '@/lib/content';
-import { remark } from 'remark';
-import html from 'remark-html';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import { OrganizationMarkdown } from '@/components/markdown/OrganizationMarkdown';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -14,13 +13,39 @@ export const metadata: Metadata = {
   description: 'Frequently asked questions about FIRE events, policies, registration, venue, and more.',
 };
 
-async function markdownToHtml(markdown: string) {
-  const result = await remark().use(html).process(markdown);
-  return result.toString();
-}
-
 // Parse markdown into sections with Q&A pairs
 function parseMarkdownSections(markdown: string) {
+  function normalizeAnswerMarkdown(lines: string[]) {
+    // In Markdown, a line containing only `---` can become a setext
+    // heading underline for the previous paragraph, instead of a thematic
+    // break. Since FAQ answers live inside an accordion, we force `---`
+    // to behave like a horizontal rule by adding blank lines around it.
+    const normalized: string[] = [];
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      const isThematicBreak = line.trim() === '---';
+
+      if (!isThematicBreak) {
+        normalized.push(line);
+        continue;
+      }
+
+      if (normalized.length > 0 && normalized.at(-1)?.trim() !== '') {
+        normalized.push('');
+      }
+
+      normalized.push('---');
+
+      const nextLine = lines[i + 1];
+      if (nextLine && nextLine.trim() !== '') {
+        normalized.push('');
+      }
+    }
+
+    return normalized.join('\n').trim();
+  }
+
   const sections: { title: string; items: { question: string; answer: string }[] }[] = [];
   const lines = markdown.split('\n');
 
@@ -32,12 +57,12 @@ function parseMarkdownSections(markdown: string) {
     const line = lines[i];
 
     // H2 headings are section titles
-    if (line.startsWith('## ') && !line.startsWith('## ')) {
+    if (line.startsWith('## ')) {
       // Save previous Q&A if exists
       if (currentQuestion && currentSection) {
         currentSection.items.push({
           question: currentQuestion,
-          answer: currentAnswer.join('\n').trim(),
+          answer: normalizeAnswerMarkdown(currentAnswer),
         });
         currentQuestion = null;
         currentAnswer = [];
@@ -60,7 +85,7 @@ function parseMarkdownSections(markdown: string) {
       if (currentQuestion && currentSection) {
         currentSection.items.push({
           question: currentQuestion,
-          answer: currentAnswer.join('\n').trim(),
+          answer: normalizeAnswerMarkdown(currentAnswer),
         });
       }
 
@@ -78,7 +103,7 @@ function parseMarkdownSections(markdown: string) {
   if (currentQuestion && currentSection) {
     currentSection.items.push({
       question: currentQuestion,
-      answer: currentAnswer.join('\n').trim(),
+      answer: normalizeAnswerMarkdown(currentAnswer),
     });
   }
   if (currentSection) {
@@ -86,6 +111,25 @@ function parseMarkdownSections(markdown: string) {
   }
 
   return sections;
+}
+
+function splitFaqNote(markdown: string) {
+  const marker = '\n---\n';
+  const markerIndex = markdown.lastIndexOf(marker);
+
+  if (markerIndex === -1) {
+    return { mainMarkdown: markdown, noteMarkdown: null as string | null };
+  }
+
+  const noteMarkdown = markdown.slice(markerIndex + marker.length).trim();
+  if (!noteMarkdown) {
+    return { mainMarkdown: markdown, noteMarkdown: null as string | null };
+  }
+
+  return {
+    mainMarkdown: markdown.slice(0, markerIndex).trim(),
+    noteMarkdown,
+  };
 }
 
 export default async function FAQPage() {
@@ -102,12 +146,13 @@ export default async function FAQPage() {
     );
   }
 
-  const sections = parseMarkdownSections(content.content);
+  const { mainMarkdown, noteMarkdown } = splitFaqNote(content.content);
+  const sections = parseMarkdownSections(mainMarkdown);
 
   return (
     <div className="min-h-screen bg-fire-black">
       {/* Hero Section */}
-      <section className="py-20 md:py-32 bg-gradient-to-b from-fire-charcoal to-fire-black border-b border-fire-orange/20">
+      <section className="py-20 md:py-32 bg-linear-to-b from-fire-charcoal to-fire-black border-b border-fire-orange/20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
@@ -139,16 +184,24 @@ export default async function FAQPage() {
                       <AccordionTrigger className="text-left text-lg font-semibold text-white hover:text-fire-yellow py-4 hover:no-underline">
                         {item.question}
                       </AccordionTrigger>
-                      <AccordionContent className="text-gray-300 leading-relaxed pb-4 pt-2">
-                        <div className="prose prose-invert prose-p:text-gray-300 prose-p:my-2 prose-strong:text-white max-w-none">
+                      <AccordionContent className="pb-4 pt-2">
+                        <OrganizationMarkdown className="max-w-none">
                           {item.answer}
-                        </div>
+                        </OrganizationMarkdown>
                       </AccordionContent>
                     </AccordionItem>
                   ))}
                 </Accordion>
               </div>
             ))}
+
+            {noteMarkdown ? (
+              <div className="pt-2">
+                <OrganizationMarkdown className="max-w-none border-t border-fire-orange/25 pt-6">
+                  {noteMarkdown}
+                </OrganizationMarkdown>
+              </div>
+            ) : null}
           </div>
         </div>
       </section>
