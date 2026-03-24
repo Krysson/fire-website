@@ -2,9 +2,9 @@
 name: Desmond & Ellise
 slug: desmond-ellise
 pronouns:
-  - "he/him"
-  - "she/her"
-photo: /images/presenters/desmond-ellise.jpg
+  - 'he/him'
+  - 'she/her'
+photo: /images/presenters/preview16.jpg
 social:
   fetlife:
     - https://fetlife.com/users/8036439

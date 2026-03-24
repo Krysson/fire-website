@@ -4,7 +4,7 @@ slug: owl
 pronouns:
   - 'he/him'
   - 'she/her'
-photo: /images/presenters/desmond-ellise.jpg
+photo: /images/presenters/preview16.jpg
 social:
   fetlife:
     - https://fetlife.com/users/8036439

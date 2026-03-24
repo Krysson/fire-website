@@ -4,7 +4,7 @@ slug: mako-breeze
 pronouns:
   - 'he/him'
   - 'she/her'
-photo: /images/presenters/desmond-ellise.jpg
+photo: /images/presenters/mako-breeze.jpg
 social:
   fetlife:
     - https://fetlife.com/users/8036439
