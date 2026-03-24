@@ -4,136 +4,168 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { ChevronDown } from 'lucide-react'
+import Countdown from './Countdown'
 
-export default function Hero() {
-	const [isVisible, setIsVisible] = useState(false)
 
-	useEffect(() => {
-		setIsVisible(true)
-	}, [])
+// Deterministic ember positions — avoids hydration mismatch from Math.random()
+const EMBERS = [
+  { left: '5%',  delay: '0s',   dur: '9s',  size: 3, color: '#f9c74f' },
+  { left: '12%', delay: '1.5s', dur: '11s', size: 4, color: '#f4a261' },
+  { left: '20%', delay: '3s',   dur: '8s',  size: 2, color: '#e63946' },
+  { left: '28%', delay: '0.5s', dur: '13s', size: 5, color: '#f9c74f' },
+  { left: '35%', delay: '2s',   dur: '10s', size: 3, color: '#f4a261' },
+  { left: '42%', delay: '4s',   dur: '7s',  size: 2, color: '#f9c74f' },
+  { left: '50%', delay: '1s',   dur: '12s', size: 4, color: '#e63946' },
+  { left: '58%', delay: '3.5s', dur: '9s',  size: 3, color: '#f4a261' },
+  { left: '65%', delay: '0.8s', dur: '11s', size: 5, color: '#f9c74f' },
+  { left: '72%', delay: '2.5s', dur: '8s',  size: 2, color: '#e63946' },
+  { left: '80%', delay: '1.2s', dur: '14s', size: 4, color: '#f4a261' },
+  { left: '88%', delay: '4.5s', dur: '10s', size: 3, color: '#f9c74f' },
+  { left: '93%', delay: '0.3s', dur: '9s',  size: 2, color: '#e63946' },
+  { left: '8%',  delay: '6s',   dur: '12s', size: 3, color: '#f4a261' },
+  { left: '96%', delay: '5s',   dur: '8s',  size: 4, color: '#f9c74f' },
+]
 
-	return (
-		<section className="relative w-full min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex items-center justify-center overflow-hidden">
-			{/* Animated Gradient Background */}
-			<div className="absolute inset-0 gradient-fire-animated opacity-90" />
+export default function Hero({ ticketUrl }: { ticketUrl: string }) {
+  const [visible, setVisible] = useState(false)
 
-			{/* Additional animated gradient layer for more movement */}
-			<div className="absolute inset-0 gradient-fire-animated-reverse opacity-60" />
+  useEffect(() => {
+    const t = setTimeout(() => setVisible(true), 50)
+    return () => clearTimeout(t)
+  }, [])
 
-			{/* Layered gradient overlays for depth */}
-			<div className="absolute inset-0 gradient-fire-radial opacity-30" />
-			<div className="absolute inset-0 bg-fire-black/30" />
+  const fade = () =>
+    `transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`
 
-			{/* Subtle glow effects */}
-			<div className="absolute top-1/4 left-1/4 w-96 h-96 bg-fire-orange/20 rounded-full blur-3xl animate-pulse-slow" />
-			<div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-fire-red/20 rounded-full blur-3xl animate-pulse-slow delay-1000" />
+  return (
+    <section className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-fire-black">
 
-			{/* Content Container */}
-			<div className="relative z-10 container mx-auto px-4 py-20 md:py-32 text-center">
-				{/* FIRE Logo with enhanced presentation */}
-				<div
-					className={`mb-10 md:mb-16 flex justify-center transition-all duration-1000 ${
-						isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-					}`}
-				>
-					<div className="relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 group">
-						<div className="absolute inset-0 bg-fire-orange/20 rounded-full blur-2xl group-hover:blur-3xl transition-all duration-500" />
-						<div className="relative">
-							<Image
-								src="/logos/FIRELOGO_NOYEAR.png"
-								alt="FIRE - Florida Intensive Rope Events"
-								fill
-								priority
-								className="object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-500"
-							/>
-						</div>
-					</div>
-				</div>
+      {/* ── Gradient background layers ── */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_70%,rgba(230,57,70,0.38)_0%,transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_90%,rgba(244,162,97,0.22)_0%,transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_15%,rgba(249,199,79,0.10)_0%,transparent_45%)]" />
 
-				{/* Tagline with improved readability */}
-				<h1
-					className={`text-5xl md:text-6xl lg:text-7xl font-extrabold mb-8 md:mb-10 leading-tight tracking-tight transition-all duration-1000 delay-200 ${
-						isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-					}`}
-				>
-					{/* White text with strong shadow and gradient glow for maximum readability */}
-					<span
-						className="text-white relative inline-block"
-						style={{
-							textShadow: `
-								0 0 20px rgba(0, 0, 0, 0.9),
-								0 0 40px rgba(0, 0, 0, 0.8),
-								0 0 60px rgba(0, 0, 0, 0.7),
-								0 4px 12px rgba(0, 0, 0, 1),
-								0 0 80px rgba(230, 57, 70, 0.4),
-								0 0 120px rgba(244, 162, 97, 0.3)
-							`,
-							WebkitTextStroke: '1px rgba(0, 0, 0, 0.3)',
-						}}
-					>
-						Florida Intensive Rope Events
-					</span>
-				</h1>
+      {/* ── Ember particles ── */}
+      {EMBERS.map((e, i) => (
+        <span
+          key={i}
+          className="animate-ember pointer-events-none absolute bottom-0 rounded-full opacity-0"
+          style={{
+            left: e.left,
+            width: e.size,
+            height: e.size,
+            backgroundColor: e.color,
+            animationDuration: e.dur,
+            animationDelay: e.delay,
+            filter: 'blur(0.5px)',
+          }}
+        />
+      ))}
 
-				{/* Description with improved typography */}
-				<p
-					className={`text-xl md:text-2xl lg:text-3xl text-white/95 max-w-4xl mx-auto mb-12 md:mb-16 leading-relaxed drop-shadow-lg transition-all duration-1000 delay-300 ${
-						isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-					}`}
-				>
-					FIRE is a community-driven organization dedicated to rope bondage education
-					and connection. We host three annual events in Orlando, FL, bringing together
-					practitioners of all skill levels for intensive learning, artistic expression,
-					and meaningful community building.
-				</p>
+      {/* ── Content ── */}
+      <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center px-4 py-24 text-center md:py-32">
 
-				{/* CTA Button with enhanced animations */}
-				<div
-					className={`flex justify-center transition-all duration-1000 delay-500 ${
-						isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-					}`}
-				>
-					<Link
-						href="/events/blaze-2026"
-						className="group inline-flex items-center justify-center px-10 py-5 md:px-12 md:py-6 text-lg md:text-xl font-bold text-white bg-fire-red hover:bg-fire-orange transition-all duration-300 rounded-xl shadow-2xl hover:shadow-fire-orange/60 hover:scale-110 active:scale-105 border-2 border-white/30 hover:border-white/50 relative overflow-hidden"
-					>
-						{/* Button glow effect */}
-						<span className="absolute inset-0 bg-gradient-to-r from-fire-orange to-fire-yellow opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-						<span className="relative z-10 flex items-center gap-3">
-							Explore Our Next Event
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								className="h-6 w-6 group-hover:translate-x-1 transition-transform duration-300"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								strokeWidth={2.5}
-							>
-								<path
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									d="M13 7l5 5m0 0l-5 5m5-5H6"
-								/>
-							</svg>
-						</span>
-					</Link>
-				</div>
-			</div>
+        {/* Logo */}
+        <div
+          className={`mb-10 ${fade()}`}
+          style={{ transitionDelay: '0ms' }}
+        >
+          <div className="relative mx-auto h-40 w-40 md:h-56 md:w-56">
+            <div className="absolute inset-0 rounded-full bg-fire-orange/25 blur-2xl animate-pulse-slow" />
+            <Image
+              src="/logos/FIRELOGO_NOYEAR.png"
+              alt="FIRE — Florida Intensive Rope Events"
+              fill
+              priority
+              className="relative z-10 object-contain drop-shadow-2xl"
+            />
+          </div>
+        </div>
 
-			{/* Scroll Indicator */}
-			<div
-				className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 transition-all duration-1000 delay-700 ${
-					isVisible ? 'opacity-100' : 'opacity-0'
-				}`}
-			>
-				<div className="flex flex-col items-center gap-2 animate-bounce-slow">
-					<span className="text-white/60 text-sm font-medium">Scroll to explore</span>
-					<ChevronDown className="h-6 w-6 text-fire-orange/80" />
-				</div>
-			</div>
+        {/* Eyebrow */}
+        <p
+          className={`mb-4 text-base font-semibold uppercase tracking-[0.2em] text-white/75 sm:text-lg ${fade()}`}
+          style={{ transitionDelay: '100ms' }}
+        >
+          Florida Intensive Rope Events
+        </p>
 
-			{/* Enhanced decorative element */}
-			<div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-fire-black via-fire-black/80 to-transparent pointer-events-none" />
-		</section>
-	)
+        {/* Title */}
+        <h1
+          className={`mb-6 bg-gradient-to-br from-white via-fire-yellow to-fire-red bg-clip-text text-6xl font-black leading-none tracking-tight text-transparent sm:text-7xl lg:text-8xl ${fade()}`}
+          style={{ transitionDelay: '200ms' }}
+        >
+          FIRE Orlando
+        </h1>
+
+        {/* Subtitle */}
+        <p
+          className={`mb-12 max-w-2xl text-lg leading-relaxed text-white/70 md:text-xl ${fade()}`}
+          style={{ transitionDelay: '300ms' }}
+        >
+          Three annual rope bondage education events — from{' '}
+          <strong className="font-semibold text-fire-orange">beginner</strong> to{' '}
+          <strong className="font-semibold text-fire-orange">advanced</strong> — held in
+          Orlando, FL.
+        </p>
+
+        {/* Countdown */}
+        <div
+          className={`mb-10 ${fade()}`}
+          style={{ transitionDelay: '400ms' }}
+        >
+          <p
+            className="mb-4 text-3xl font-black tracking-tight md:text-4xl"
+            style={{
+              background: 'linear-gradient(135deg, #f9c74f, #f4a261)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              filter: 'drop-shadow(0 0 20px rgba(244,162,97,0.65))',
+            }}
+          >
+            ⚡ BLAZE 2026 begins in
+          </p>
+          <Countdown />
+        </div>
+
+        {/* CTAs */}
+        <div
+          className={`flex flex-col gap-4 sm:flex-row sm:justify-center ${fade()}`}
+          style={{ transitionDelay: '500ms' }}
+        >
+          <a
+            href={ticketUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-fire-red to-fire-orange px-8 py-4 text-base font-bold text-white shadow-lg shadow-fire-red/40 transition-all duration-300 hover:scale-105 hover:shadow-fire-orange/50 active:scale-100 md:px-10 md:py-5 md:text-lg"
+          >
+            <span className="absolute inset-0 bg-gradient-to-r from-fire-orange to-fire-yellow opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            <span className="relative z-10">🎟 Get Tickets — BLAZE 2026 →</span>
+          </a>
+
+          <Link
+            href="/#events"
+            className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-8 py-4 text-base font-semibold text-white/85 backdrop-blur-sm transition-all duration-300 hover:border-white/30 hover:bg-white/10 md:px-10 md:py-5 md:text-lg"
+          >
+            Explore All Events
+          </Link>
+        </div>
+      </div>
+
+      {/* ── Scroll indicator ── */}
+      <div
+        className={`absolute bottom-8 left-1/2 -translate-x-1/2 ${fade()}`}
+        style={{ transitionDelay: '700ms' }}
+      >
+        <div className="flex animate-bounce-slow flex-col items-center gap-1">
+          <span className="text-xs uppercase tracking-widest text-white/35">Scroll</span>
+          <ChevronDown className="h-5 w-5 text-fire-orange/60" />
+        </div>
+      </div>
+
+      {/* ── Bottom fade ── */}
+      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-36 bg-gradient-to-t from-fire-black to-transparent" />
+    </section>
+  )
 }
