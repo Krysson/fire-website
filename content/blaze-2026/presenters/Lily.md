@@ -1,6 +1,6 @@
 ---
-name: Lilly
-slug: lilly
+name: Lily
+slug: lily
 pronouns:
   - 'she/her'
 photo: /images/presenters/preview16.jpg
