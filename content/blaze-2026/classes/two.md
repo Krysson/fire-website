@@ -6,7 +6,7 @@ level: Intermediate
 duration: 90 minutes
 ---
 
-This class covers the fundamentals of floor-based rope bondage, perfect for those new to rope or looking to strengthen their foundation. You'll learn essential techniques for creating comfortable and secure ties while maintaining connection with your partner.
+We love pain in this house. We don’t, however, like working hard. In this class we will cover two very simple but highly effective, low effort, torture rope ties and demonstrate a way in which they may be used in a partial suspension sequence to get the most pain out of your Bottom for the least amount of effort
 
 ## What You'll Learn
 
@@ -18,22 +18,14 @@ This class covers the fundamentals of floor-based rope bondage, perfect for thos
 
 ## Prerequisites
 
-No prior rope experience required. This class is designed for complete beginners.
+Top/Tying Person: Suspendable chest harness, basic rope fundamentals, secure uplines and communication skills.
+Bottom/Tied Person: Body awareness, ability to communicate effectively under immense stress
 
 ## What to Bring
 
 - 4-6 pieces of rope (25-30 feet each)
-- A willing partner (or practice with self-tying)
+- A willing partner
 - Comfortable clothing that allows movement
 - Water bottle
+- Rope Cutting Tool
 - Notebook for taking notes (optional)
-
-## Class Format
-
-This hands-on workshop includes:
-
-- 15 minutes of demonstration
-- 60 minutes of guided practice
-- 15 minutes of Q&A and feedback
-
-Come ready to learn, practice, and connect with the rope community!

@@ -6,34 +6,20 @@ level: Intermediate
 duration: 90 minutes
 ---
 
-This class covers the fundamentals of floor-based rope bondage, perfect for those new to rope or looking to strengthen their foundation. You'll learn essential techniques for creating comfortable and secure ties while maintaining connection with your partner.
+Sequences are for floor rope too!
+The Wild Shape Sequence leads the bottom through poses that create interesting shapes while improving sustainability to make your play go the distance.
 
-## What You'll Learn
-
-- Basic floor tie positions and transitions
-- Safety considerations for floor work
-- Communication techniques during tying
-- Creating aesthetic floor patterns
-- Working with different body types
+We will cover the basic components and flow of the wild shape sequence: hojo-cuffs, a simple hands-in-front chest harness, a simple agura, a simple futo, and a hogtie, with emphasis on making one pose flow into the next, and how to modulate the intensity for a range of sensory experiences. Participants should know how to tie a single column and bring 3 x 30’ hanks of rope.
 
 ## Prerequisites
 
-No prior rope experience required. This class is designed for complete beginners.
+A non-cinchable single column, frictions, and familiarity with the shapes that make up agura, futo, and hogtie
 
 ## What to Bring
 
-- 4-6 pieces of rope (25-30 feet each)
-- A willing partner (or practice with self-tying)
+- 3-4 pieces of rope (25-30 feet each)
+- A willing partner
 - Comfortable clothing that allows movement
 - Water bottle
+- Rope Cutting Tool
 - Notebook for taking notes (optional)
-
-## Class Format
-
-This hands-on workshop includes:
-
-- 15 minutes of demonstration
-- 60 minutes of guided practice
-- 15 minutes of Q&A and feedback
-
-Come ready to learn, practice, and connect with the rope community!

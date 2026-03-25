@@ -6,34 +6,23 @@ level: Beginner
 duration: 90 minutes
 ---
 
-This class covers the fundamentals of floor-based rope bondage, perfect for those new to rope or looking to strengthen their foundation. You'll learn essential techniques for creating comfortable and secure ties while maintaining connection with your partner.
+This class is about face rope.
 
-## What You'll Learn
+We’ll teach you a handful of patterns to help you get a handle on a head. Hot and objectifying, over the eyes, between the lips, quieting. Turn the bottom into a blind, drooling, rope monster.
 
-- Basic floor tie positions and transitions
-- Safety considerations for floor work
-- Communication techniques during tying
-- Creating aesthetic floor patterns
-- Working with different body types
+From neat and symmetrical, to messy and functional, we’ll teach you the ropes of face rope.
+
+Seriously though, some of the designs taught in this class will involve rope IN THE MOUTH and possibly OVER THE EYES, therefore, tying pairs should discuss and negotiate risk profiles and strategies to keep rope sanitary and safe-ish. Requires a full (30’) hank.
 
 ## Prerequisites
 
-No prior rope experience required. This class is designed for complete beginners.
+A single column and familiarity with frictions and tension
 
 ## What to Bring
 
-- 4-6 pieces of rope (25-30 feet each)
-- A willing partner (or practice with self-tying)
+- 1 x 30' Rope
+- A willing partner
 - Comfortable clothing that allows movement
 - Water bottle
+- Cutting tool
 - Notebook for taking notes (optional)
-
-## Class Format
-
-This hands-on workshop includes:
-
-- 15 minutes of demonstration
-- 60 minutes of guided practice
-- 15 minutes of Q&A and feedback
-
-Come ready to learn, practice, and connect with the rope community!

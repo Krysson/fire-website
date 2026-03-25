@@ -6,15 +6,14 @@ level: Beginner
 duration: 90 minutes
 ---
 
-This class covers the fundamentals of floor-based rope bondage, perfect for those new to rope or looking to strengthen their foundation. You'll learn essential techniques for creating comfortable and secure ties while maintaining connection with your partner.
+Introducing two versatile harnesses, the Swiss Seat and the Gunslinger Hip Harness.
 
-## What You'll Learn
+Explore their structure, tension, and practical applications in both decorative and functional ties. Practice rope handling, body positioning, and safety while building confidence in constructing stable hip-based harnesses suitable for play or performance.
 
-- Basic floor tie positions and transitions
-- Safety considerations for floor work
-- Communication techniques during tying
-- Creating aesthetic floor patterns
-- Working with different body types
+This class is suitable for beginners with basic rope handling skills as well as intermediate
+practitioners looking to refine their technique.
+
+Consent, communication, and safety will be emphasized throughout. All ties will be self-tie friendly as well as partnered.
 
 ## Prerequisites
 
@@ -22,18 +21,9 @@ No prior rope experience required. This class is designed for complete beginners
 
 ## What to Bring
 
-- 4-6 pieces of rope (25-30 feet each)
+- min of 2 pieces of rope (25-30 feet each)
 - A willing partner (or practice with self-tying)
 - Comfortable clothing that allows movement
+- Cutting tool
 - Water bottle
 - Notebook for taking notes (optional)
-
-## Class Format
-
-This hands-on workshop includes:
-
-- 15 minutes of demonstration
-- 60 minutes of guided practice
-- 15 minutes of Q&A and feedback
-
-Come ready to learn, practice, and connect with the rope community!

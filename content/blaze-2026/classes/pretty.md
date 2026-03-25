@@ -6,15 +6,13 @@ level: Beginner
 duration: 90 minutes
 ---
 
-This class covers the fundamentals of floor-based rope bondage, perfect for those new to rope or looking to strengthen their foundation. You'll learn essential techniques for creating comfortable and secure ties while maintaining connection with your partner.
+The goal of this beginner-level decorative rope class is to teach the basic needed to not only tie a number of standard decorative ties, but to also let you start creating your own!
 
-## What You'll Learn
+As you learn the pentagram and heart chest harnesses, diamond gloves and the pretty booty harness, you’ll learn (or review) decorative techniques like lark’s head, munter and teardrop hitches, joining rope coin knots and how to do double-color ties.
 
-- Basic floor tie positions and transitions
-- Safety considerations for floor work
-- Communication techniques during tying
-- Creating aesthetic floor patterns
-- Working with different body types
+The class will end with advice on how to rope jazz decorative ties to make them your own with supervised practice time to help you make your own creations!
+
+NOTE: While jute works great for decorative ties, if you have colored cotton or nylon that’s been feeling a little lonely, now’s the time to break it out!
 
 ## Prerequisites
 
@@ -22,18 +20,9 @@ No prior rope experience required. This class is designed for complete beginners
 
 ## What to Bring
 
-- 4-6 pieces of rope (25-30 feet each)
-- A willing partner (or practice with self-tying)
+- 3-4 pieces of rope (25-30 feet each)
+- A willing partner
 - Comfortable clothing that allows movement
 - Water bottle
+- Cutting tool
 - Notebook for taking notes (optional)
-
-## Class Format
-
-This hands-on workshop includes:
-
-- 15 minutes of demonstration
-- 60 minutes of guided practice
-- 15 minutes of Q&A and feedback
-
-Come ready to learn, practice, and connect with the rope community!

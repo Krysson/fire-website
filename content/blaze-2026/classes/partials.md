@@ -6,19 +6,15 @@ level: Intermediate
 duration: 90 minutes
 ---
 
-This class covers the fundamentals of floor-based rope bondage, perfect for those new to rope or looking to strengthen their foundation. You'll learn essential techniques for creating comfortable and secure ties while maintaining connection with your partner.
+Forced Exposure is a scene element that plays so nicely with rope bondage.  
+In this class we will talk about things to consider when adding this kink into your rope scenes and from there demonstrate a partial suspension sequence focused on enabling those elements. We will be mainly using a futomomo to show the concept but you can also optionally add in a backloading chest harness if that is in your skillset.
 
-## What You'll Learn
-
-- Basic floor tie positions and transitions
-- Safety considerations for floor work
-- Communication techniques during tying
-- Creating aesthetic floor patterns
-- Working with different body types
+As a general disclaimer this class will include elements of forced exposure/nudity as well as including sexual play elements, if these things make you uncomfortable this is not the class for you!
 
 ## Prerequisites
 
-No prior rope experience required. This class is designed for complete beginners.
+Top/Tyig Person: Suspendable Futomomo, basic rope fundamentals, secure uplines and communication skills: Optional - Suspendable back loading chest harness.
+Bottom/Tied Person: Body awareness, ability to communicate effectively under physical, mental and emotional stress.
 
 ## What to Bring
 
@@ -26,14 +22,5 @@ No prior rope experience required. This class is designed for complete beginners
 - A willing partner (or practice with self-tying)
 - Comfortable clothing that allows movement
 - Water bottle
+- Rope Cutting Tool
 - Notebook for taking notes (optional)
-
-## Class Format
-
-This hands-on workshop includes:
-
-- 15 minutes of demonstration
-- 60 minutes of guided practice
-- 15 minutes of Q&A and feedback
-
-Come ready to learn, practice, and connect with the rope community!

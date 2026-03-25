@@ -6,15 +6,13 @@ level: Beginner
 duration: 90 minutes
 ---
 
-This class covers the fundamentals of floor-based rope bondage, perfect for those new to rope or looking to strengthen their foundation. You'll learn essential techniques for creating comfortable and secure ties while maintaining connection with your partner.
+You join the community and you’re told “Rope tops, pay attention to how to do this thing” and “Rope bottoms, make sure you learn this”... but what about that super secret THIRD option? Rope Switch!
 
-## What You'll Learn
+In this beginner-friendly soft skills focused class, the exercises and conversations will center around learning more about who you are as a switch, offer tips & tricks for accepting and engaging with that side of yourself, and equip yourself for some of the unspoken challenges you may face as you continue to experience more rope.
 
-- Basic floor tie positions and transitions
-- Safety considerations for floor work
-- Communication techniques during tying
-- Creating aesthetic floor patterns
-- Working with different body types
+Even if you are not a rope switch yourself, the partnered exercises will still enable you and your tying partner to learn more about each other. We will introduce some basic rope scene-building soft skill tools, as well as explore the fluidity of the rope switch experience and provide opportunities for introspection on how one likes to switch while still staying true to their authentic selves and desires.
+
+Non-switches welcome, and encouraged, to attend!
 
 ## Prerequisites
 
@@ -23,17 +21,7 @@ No prior rope experience required. This class is designed for complete beginners
 ## What to Bring
 
 - 4-6 pieces of rope (25-30 feet each)
-- A willing partner (or practice with self-tying)
 - Comfortable clothing that allows movement
 - Water bottle
+- Cutting tool
 - Notebook for taking notes (optional)
-
-## Class Format
-
-This hands-on workshop includes:
-
-- 15 minutes of demonstration
-- 60 minutes of guided practice
-- 15 minutes of Q&A and feedback
-
-Come ready to learn, practice, and connect with the rope community!
