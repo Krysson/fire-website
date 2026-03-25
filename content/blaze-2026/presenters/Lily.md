@@ -3,7 +3,7 @@ name: Lily
 slug: lily
 pronouns:
   - 'she/her'
-photo: /images/presenters/preview16.jpg
+photo: /images/presenters/lily.jpg
 social:
   fetlife:
     - https://fetlife.com/water_lily
