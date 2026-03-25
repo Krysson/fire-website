@@ -11,8 +11,12 @@ export default function ClassesPage() {
   );
 
   return (
-    <div className="min-h-screen bg-fire-black py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <div className="relative min-h-screen overflow-hidden bg-fire-black py-12 px-4 sm:px-6 lg:px-8">
+      {/* Gradient background */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_100%,rgba(230,57,70,0.15)_0%,transparent_60%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_15%_50%,rgba(244,162,97,0.07)_0%,transparent_50%)]" />
+
+      <div className="relative z-10 max-w-7xl mx-auto">
         {/* Page Header */}
         <header className="mb-12 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">

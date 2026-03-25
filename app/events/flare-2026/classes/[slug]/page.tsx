@@ -11,12 +11,12 @@ interface ClassPageProps {
   }>;
 }
 
-function getLevelBadgeClasses(level: string): string {
-  const normalizedLevel = level.toLowerCase();
+function getLevelBadgeClasses(level?: string): string {
+  const normalizedLevel = (level ?? '').toLowerCase();
   if (normalizedLevel.includes('beginner')) return 'bg-emerald-600/20 text-emerald-400 border-emerald-600/30';
-  if (normalizedLevel.includes('intermediate')) return 'bg-fire-orange/20 text-fire-orange border-fire-orange/30';
-  if (normalizedLevel.includes('advanced')) return 'bg-fire-red/20 text-fire-red border-fire-red/30';
-  return 'bg-fire-yellow/20 text-fire-yellow border-fire-yellow/30';
+  if (normalizedLevel.includes('intermediate')) return 'bg-amber-500/20 text-amber-400 border-amber-500/30';
+  if (normalizedLevel.includes('advanced')) return 'bg-red-500/20 text-red-400 border-red-500/30';
+  return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30';
 }
 
 export async function generateStaticParams() {
@@ -54,9 +54,13 @@ export default async function ClassPage({ params }: ClassPageProps) {
   const levelBadgeClasses = getLevelBadgeClasses(classItem.level);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-fire-charcoal to-fire-black text-white">
+    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-fire-charcoal to-fire-black text-white">
+      {/* Gradient background */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_100%,rgba(230,57,70,0.15)_0%,transparent_60%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_15%_50%,rgba(244,162,97,0.07)_0%,transparent_50%)]" />
+
       {/* Header */}
-      <div className="border-b border-fire-dark">
+      <div className="relative z-10 border-b border-fire-dark">
         <div className="container mx-auto px-4 py-6">
           <Link href="/events/flare-2026/classes">
             <Button variant="ghost" size="sm" className="gap-2">
@@ -68,7 +72,7 @@ export default async function ClassPage({ params }: ClassPageProps) {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-12">
+      <div className="relative z-10 container mx-auto px-4 py-12">
         <div className="max-w-3xl mx-auto">
           {/* Class Header */}
           <div className="mb-10">

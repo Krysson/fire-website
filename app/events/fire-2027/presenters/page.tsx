@@ -7,8 +7,12 @@ export default function PresentersPage() {
   const eventData = getEventData(eventSlug);
 
   return (
-    <div className="min-h-screen bg-fire-black">
-      <div className="container mx-auto px-4 py-12 md:py-16 lg:py-20">
+    <div className="relative min-h-screen overflow-hidden bg-fire-black">
+      {/* Gradient background */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_100%,rgba(230,57,70,0.15)_0%,transparent_60%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_15%_50%,rgba(244,162,97,0.07)_0%,transparent_50%)]" />
+
+      <div className="relative z-10 container mx-auto px-4 py-12 md:py-16 lg:py-20">
         {/* Page header */}
         <div className="mb-12 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">

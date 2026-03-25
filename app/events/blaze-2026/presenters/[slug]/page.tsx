@@ -74,9 +74,13 @@ export default async function PresenterPage({ params }: PresenterPageProps) {
   const hasSocialLinks = Object.keys(socialLinks).length > 0;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-fire-charcoal to-fire-black text-white">
+    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-fire-charcoal to-fire-black text-white">
+      {/* Gradient background */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_100%,rgba(230,57,70,0.15)_0%,transparent_60%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_15%_50%,rgba(244,162,97,0.07)_0%,transparent_50%)]" />
+
       {/* Header */}
-      <div className="border-b border-fire-dark">
+      <div className="relative z-10 border-b border-fire-dark">
         <div className="container mx-auto px-4 py-6">
           <Link href="/events/blaze-2026/presenters">
             <Button variant="ghost" size="sm" className="gap-2">
@@ -88,7 +92,7 @@ export default async function PresenterPage({ params }: PresenterPageProps) {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-12">
+      <div className="relative z-10 container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           {/* Presenter Header */}
           <div className="flex flex-col md:flex-row gap-8 mb-12">
