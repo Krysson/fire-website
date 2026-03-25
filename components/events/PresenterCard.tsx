@@ -41,38 +41,42 @@ export default function PresenterCard({ presenter, eventSlug }: PresenterCardPro
   return (
     <div className="group bg-fire-charcoal rounded-lg overflow-hidden border-2 border-fire-dark transition-all duration-300 hover:border-fire-orange hover:shadow-lg hover:shadow-fire-orange/20 hover:scale-105 hover:-translate-y-1">
       {/* Presenter photo */}
-      <div className="relative w-full aspect-square bg-fire-dark flex items-center justify-center overflow-hidden">
-        {presenter.photo ? (
-          <Image
-            src={presenter.photo}
-            alt={presenter.name}
-            width={400}
-            height={400}
-            className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
-          />
-        ) : (
-          <div className="flex items-center justify-center w-full h-full">
-            <svg
-              className="w-24 h-24 text-fire-orange/30 transition-all duration-300 group-hover:scale-110 group-hover:text-fire-orange/50"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={1.5}
-                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-              />
-            </svg>
-          </div>
-        )}
-      </div>
+      <Link href={`/events/${eventSlug}/presenters/${presenter.slug}`} className="block">
+        <div className="relative w-full aspect-square bg-fire-dark flex items-center justify-center overflow-hidden">
+          {presenter.photo ? (
+            <Image
+              src={presenter.photo}
+              alt={presenter.name}
+              width={400}
+              height={400}
+              className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
+            />
+          ) : (
+            <div className="flex items-center justify-center w-full h-full">
+              <svg
+                className="w-24 h-24 text-fire-orange/30 transition-all duration-300 group-hover:scale-110 group-hover:text-fire-orange/50"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                />
+              </svg>
+            </div>
+          )}
+        </div>
+      </Link>
 
       {/* Presenter info */}
       <div className="p-6 space-y-4">
         <div>
-          <h3 className="text-xl font-bold text-white transition-colors duration-200 group-hover:text-fire-orange">{presenter.name}</h3>
+          <Link href={`/events/${eventSlug}/presenters/${presenter.slug}`}>
+            <h3 className="text-xl font-bold text-white transition-colors duration-200 group-hover:text-fire-orange hover:underline">{presenter.name}</h3>
+          </Link>
           {pronounsText && (
             <p className="text-fire-orange text-sm mt-1">{pronounsText}</p>
           )}

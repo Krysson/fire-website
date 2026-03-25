@@ -1,7 +1,7 @@
 ---
-title: Introduction to Floor Work2
-slug: intro-floor-work
-presenter: corvid-fern
+title: Wild Shape Sequence
+slug: wild
+presenter: desmond-ellise
 level: Beginner
 duration: 90 minutes
 ---

@@ -1,14 +1,18 @@
 ---
-name: Mako & Breeze
-slug: mako-breeze
+name: Mako(Nevertheless) & Breeze
+slug: mako_breeze
 pronouns:
-  - 'he/him'
+  - 'they/them'
   - 'she/her'
 photo: /images/presenters/mako-breeze.jpg
 social:
   fetlife:
-    - https://fetlife.com/users/8036439
-    - https://fetlife.com/users/7342370
+    - https://fetlife.com/Nevertheless
+    - https://fetlife.com/breezypeezy
+social_labels:
+  fetlife:
+    - FetLife - Mako(Nevertheless)
+    - FetLife - BreezyPeazy
 featured: true
 ---
 

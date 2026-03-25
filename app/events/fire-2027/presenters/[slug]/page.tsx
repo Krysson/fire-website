@@ -146,7 +146,12 @@ export default async function PresenterPage({ params }: PresenterPageProps) {
                             ? 'Website'
                             : platform.charAt(0).toUpperCase() + platform.slice(1);
 
-                        const linkText = urls.length > 1 ? `${displayText} ${index + 1}` : displayText;
+                        // Use custom label from social_labels if available
+                        const rawLabel = presenter.social_labels?.[platform];
+                        const customLabels = rawLabel
+                          ? (Array.isArray(rawLabel) ? rawLabel : [rawLabel])
+                          : [];
+                        const linkText = customLabels[index] ?? (urls.length > 1 ? `${displayText} ${index + 1}` : displayText);
 
                         return (
                           <a

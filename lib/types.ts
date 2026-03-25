@@ -114,6 +114,8 @@ export interface Presenter {
   photo?: string;
   /** Social media links */
   social?: SocialLinks;
+  /** Custom display labels for social links — keys match SocialLinks keys, values are label string(s) */
+  social_labels?: { [key: string]: string | string[] | undefined };
   /** Markdown bio content */
   content?: string;
 }
@@ -126,8 +128,8 @@ export interface Class {
   title: string;
   /** URL-friendly slug identifier */
   slug: string;
-  /** Presenter slug reference */
-  presenter: string;
+  /** Presenter slug reference — single slug or array for co-taught classes */
+  presenter: string | string[];
   /** Skill level (e.g., "Beginner", "Intermediate", "Advanced", "All Levels") */
   level: string;
   /** Class duration (e.g., "90 minutes", "2 hours") */

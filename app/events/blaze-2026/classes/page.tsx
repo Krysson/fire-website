@@ -1,5 +1,4 @@
-import { getClasses } from '@/lib/content';
-import { getEventData } from '@/lib/content';
+import { getClasses, getEventData, getPresenters } from '@/lib/content';
 import ClassCard from '@/components/events/ClassCard';
 import type { Metadata } from 'next';
 
@@ -18,6 +17,9 @@ const EVENT_SLUG = 'blaze-2026';
 export default function ClassesPage() {
   const classes = getClasses(EVENT_SLUG);
   const eventData = getEventData(EVENT_SLUG);
+  const presenterNames = Object.fromEntries(
+    getPresenters(EVENT_SLUG).map((p) => [p.slug, p.name])
+  );
 
   return (
     <div className="min-h-screen bg-fire-black py-12 px-4 sm:px-6 lg:px-8">
@@ -41,6 +43,7 @@ export default function ClassesPage() {
                 key={classItem.slug}
                 class_={classItem}
                 eventSlug={EVENT_SLUG}
+                presenterNames={presenterNames}
               />
             ))}
           </div>

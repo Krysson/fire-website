@@ -1,7 +1,7 @@
 ---
-title: Introduction to Floor Work
-slug: intro-floor-work
-presenter: desmond-ellise
+title: Rope Bottom Round Table
+slug: bottom
+presenter: Open Discussion
 level: Beginner
 duration: 90 minutes
 ---
@@ -31,6 +31,7 @@ No prior rope experience required. This class is designed for complete beginners
 ## Class Format
 
 This hands-on workshop includes:
+
 - 15 minutes of demonstration
 - 60 minutes of guided practice
 - 15 minutes of Q&A and feedback

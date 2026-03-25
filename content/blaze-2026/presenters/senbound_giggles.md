@@ -1,14 +1,18 @@
 ---
 name: Senbound & Giggles
-slug: senbound-giggles
+slug: senbound_giggles
 pronouns:
   - 'he/him'
   - 'she/her'
 photo: /images/presenters/s-g.jpg
 social:
   fetlife:
-    - https://fetlife.com/users/8036439
-    - https://fetlife.com/users/7342370
+    - https://fetlife.com/SenBound
+    - https://fetlife.com/Giggles_
+social_labels:
+  fetlife:
+    - FetLife - SenBound
+    - FetLife - giggles
 featured: true
 ---
 

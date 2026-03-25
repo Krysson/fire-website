@@ -7,8 +7,12 @@ pronouns:
 photo: /images/presenters/preview16.jpg
 social:
   fetlife:
-    - https://fetlife.com/users/8036439
-    - https://fetlife.com/users/7342370
+    - https://fetlife.com/Des_
+    - https://fetlife.com/_elise
+social_labels:
+  fetlife:
+    - Desmond
+    - Ellise
 featured: true
 ---
 

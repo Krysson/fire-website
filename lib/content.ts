@@ -81,6 +81,7 @@ export function getPresenters(eventSlug: string): Presenter[] {
         pronouns: data.pronouns,
         photo: data.photo,
         social: data.social,
+        social_labels: data.social_labels,
         content,
       } as Presenter;
     });
@@ -133,6 +134,7 @@ export function getPresenterBySlug(eventSlug: string, slug: string): Presenter |
       pronouns: data.pronouns,
       photo: data.photo,
       social: data.social,
+      social_labels: data.social_labels,
       content,
     } as Presenter;
   } catch (error) {

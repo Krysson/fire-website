@@ -1,6 +1,6 @@
 ---
 name: Knotty Corvid & Fern_bights
-slug: corvid-fern
+slug: corvid_fern
 pronouns:
   - 'he/him'
   - 'she/her'
@@ -9,6 +9,10 @@ social:
   fetlife:
     - https://fetlife.com/knotty_corvid
     - https://fetlife.com/fern_bights
+social_labels:
+  fetlife:
+    - FetLife - Knotty_Corvid
+    - Fetlife - Fern_Bights
 featured: true
 ---
 

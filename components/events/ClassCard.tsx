@@ -4,6 +4,7 @@ import type { Class } from '@/lib/types';
 interface ClassCardProps {
   class_: Class;
   eventSlug: string;
+  presenterNames?: Record<string, string>;
 }
 
 /**
@@ -50,7 +51,7 @@ function truncateDescription(content: string | undefined, maxLength: number = 15
   return lastSpace > 0 ? truncated.substring(0, lastSpace) + '...' : truncated + '...';
 }
 
-export default function ClassCard({ class_, eventSlug }: ClassCardProps) {
+export default function ClassCard({ class_, eventSlug, presenterNames = {} }: ClassCardProps) {
   const levelBadgeClasses = getLevelBadgeClasses(class_.level);
   const description = truncateDescription(class_.content);
 
@@ -58,9 +59,11 @@ export default function ClassCard({ class_, eventSlug }: ClassCardProps) {
     <article className="group relative bg-fire-charcoal border border-white/10 rounded-lg p-6 transition-all duration-300 hover:border-fire-orange/50 hover:shadow-lg hover:shadow-fire-orange/10 hover:scale-105 hover:-translate-y-1">
       {/* Header Section */}
       <div className="mb-4">
-        <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-fire-orange transition-colors duration-200">
-          {class_.title}
-        </h3>
+        <Link href={`/events/${eventSlug}/classes/${class_.slug}`}>
+          <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-fire-orange transition-colors duration-200 hover:underline">
+            {class_.title}
+          </h3>
+        </Link>
 
         {/* Metadata Row */}
         <div className="flex flex-wrap items-center gap-2 text-sm">
@@ -76,15 +79,20 @@ export default function ClassCard({ class_, eventSlug }: ClassCardProps) {
         </div>
       </div>
 
-      {/* Presenter Link */}
+      {/* Presenter Link(s) */}
       <div className="mb-3">
         <span className="text-sm text-gray-400">Taught by: </span>
-        <Link
-          href={`/events/${eventSlug}/presenters/${class_.presenter}`}
-          className="text-sm text-fire-orange hover:text-fire-yellow transition-colors duration-200 font-medium"
-        >
-          View Presenter
-        </Link>
+        {(Array.isArray(class_.presenter) ? class_.presenter : [class_.presenter]).map((slug, i, arr) => (
+          <span key={slug}>
+            <Link
+              href={`/events/${eventSlug}/presenters/${slug}`}
+              className="text-sm text-fire-orange hover:text-fire-yellow transition-colors duration-200 font-medium"
+            >
+              {presenterNames[slug] ?? slug}
+            </Link>
+            {i < arr.length - 1 && <span className="text-gray-400 text-sm"> & </span>}
+          </span>
+        ))}
       </div>
 
       {/* Description */}
