@@ -2,6 +2,9 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ExternalLink } from 'lucide-react';
+import { remark } from 'remark';
+import remarkGfm from 'remark-gfm';
+import remarkHtml from 'remark-html';
 import { getPresenterBySlug, getPresenters, getClasses } from '@/lib/content';
 import type { Metadata } from 'next';
 
@@ -71,6 +74,10 @@ export default async function PresenterPage({ params }: PresenterPageProps) {
   // Format social links
   const socialLinks = presenter.social || {};
   const hasSocialLinks = Object.keys(socialLinks).length > 0;
+
+  const bioHtml = presenter.content
+    ? (await remark().use(remarkGfm).use(remarkHtml).process(presenter.content)).toString()
+    : '';
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-fire-charcoal to-fire-black text-white">
@@ -180,16 +187,15 @@ export default async function PresenterPage({ params }: PresenterPageProps) {
           </div>
 
           {/* Bio Section */}
-          {presenter.content && (
+          {bioHtml && (
             <div className="mb-12">
               <h2 className="text-2xl font-bold mb-6 text-fire-yellow border-b border-fire-dark pb-2">
                 About
               </h2>
-              <div className="prose prose-invert prose-lg max-w-none">
-                <div className="text-gray-300 leading-relaxed space-y-4 whitespace-pre-line">
-                  {presenter.content}
-                </div>
-              </div>
+              <div
+                className="prose prose-invert prose-lg max-w-none"
+                dangerouslySetInnerHTML={{ __html: bioHtml }}
+              />
             </div>
           )}
 
@@ -217,7 +223,9 @@ export default async function PresenterPage({ params }: PresenterPageProps) {
                       </span>
                     </div>
                     {classItem.content && (
-                      <p className="text-gray-300 line-clamp-3">{classItem.content}</p>
+                      <p className="text-gray-300 line-clamp-3">
+                        {classItem.content.replace(/^#+\s+/gm, '').replace(/[_*`]/g, '')}
+                      </p>
                     )}
                   </div>
                 ))}

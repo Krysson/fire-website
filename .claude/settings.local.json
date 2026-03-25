@@ -16,7 +16,11 @@
       "Bash(find:*)",
       "Bash(bash \"C:/Users/MikeG/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.2/skills/brainstorming/scripts/start-server.sh\" --project-dir \"C:/Users/MikeG/Desktop/repos/fire-website\")",
       "Bash(curl:*)",
-      "Bash(git:*)"
+      "Bash(git:*)",
+      "mcp__plugin_playwright_playwright__browser_resize",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_click",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot"
     ]
   }
 }

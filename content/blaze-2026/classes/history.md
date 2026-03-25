@@ -17,7 +17,7 @@ You'll leave with more questions than answers. Consider it a feature, not a bug.
 - Almost nothing, but confidently
 - Why rope history is mostly "trust me bro" energy
 - That everyone's claiming they invented it differently
-- How to make a family tree that looks official but has zero sources
+- How to make a family tree that looks official but the branches make circles.
 - That "we genuinely don't know" is a valid historical conclusion
 
 ## Prerequisites

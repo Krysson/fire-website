@@ -74,7 +74,7 @@ export default function FireSchedulePage() {
                 href={eventData.tickets.url}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='inline-block bg-fire-red hover:bg-fire-orange text-white font-semibold py-3 px-8 rounded-md transition-colors duration-200'>
+                className='inline-flex items-center justify-center gap-2 rounded-lg border border-[#e63946] px-8 py-3 font-semibold text-[#f4a261] transition-all duration-200 hover:border-[#f4a261] hover:text-white active:scale-95'>
                 Get Tickets
               </a>
             </div>

@@ -84,7 +84,7 @@ export function Header({ ticketUrl }: { ticketUrl: string }) {
           href={ticketUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:inline-flex items-center gap-2 rounded-lg bg-fire-red px-4 py-2 text-sm font-bold text-white transition-all duration-200 hover:bg-fire-orange hover:shadow-md hover:shadow-fire-orange/30 active:scale-95"
+          className="hidden md:inline-flex items-center gap-2 rounded-lg border border-[#e63946] px-4 py-2 text-sm font-semibold text-[#f4a261] transition-all duration-200 hover:border-[#f4a261] hover:text-white active:scale-95"
         >
           🎟 Get Tickets
         </a>
@@ -104,8 +104,8 @@ export function Header({ ticketUrl }: { ticketUrl: string }) {
           </SheetTrigger>
           <SheetContent
             side='right'
-            className='w-[300px] bg-fire-charcoal border-l border-fire-dark'>
-            <div className='flex flex-col gap-6 pt-8'>
+            className='w-[300px] bg-[#1a1a1a] border-l border-[#2a2a2a]'>
+            <div className='flex flex-col gap-6 pt-8 px-6'>
               {/* Mobile Navigation Links */}
               {navigationLinks.map(link => (
                 <SheetClose
@@ -142,7 +142,7 @@ export function Header({ ticketUrl }: { ticketUrl: string }) {
                 href={ticketUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-fire-red to-fire-orange px-6 py-4 text-base font-bold text-white shadow-md shadow-fire-red/30 transition-all duration-200 hover:shadow-fire-orange/40 active:scale-95"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#e63946] px-5 py-3 text-sm font-semibold text-[#f4a261] transition-all duration-200 hover:border-[#f4a261] hover:text-white active:scale-95"
               >
                 🎟 Get Tickets — BLAZE 2026
               </a>

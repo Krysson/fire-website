@@ -1,5 +1,8 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import { remark } from 'remark';
+import remarkGfm from 'remark-gfm';
+import remarkHtml from 'remark-html';
 import { getClassBySlug, getClasses, getPresenterBySlug } from '@/lib/content';
 import type { Metadata } from 'next';
 
@@ -50,6 +53,10 @@ export default async function ClassPage({ params }: ClassPageProps) {
     .filter(Boolean);
 
   const levelBadgeClasses = getLevelBadgeClasses(classItem.level);
+
+  const contentHtml = classItem.content
+    ? (await remark().use(remarkGfm).use(remarkHtml).process(classItem.content)).toString()
+    : '';
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-fire-charcoal to-fire-black text-white">
@@ -107,12 +114,11 @@ export default async function ClassPage({ params }: ClassPageProps) {
           </div>
 
           {/* Class Description */}
-          {classItem.content && (
-            <div className="prose prose-invert prose-lg max-w-none">
-              <div className="text-gray-300 leading-relaxed space-y-4 whitespace-pre-line">
-                {classItem.content}
-              </div>
-            </div>
+          {contentHtml && (
+            <div
+              className="prose prose-invert prose-lg max-w-none"
+              dangerouslySetInnerHTML={{ __html: contentHtml }}
+            />
           )}
         </div>
       </div>

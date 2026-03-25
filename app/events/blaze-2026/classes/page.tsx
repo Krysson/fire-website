@@ -114,7 +114,7 @@ export default function ClassesPage() {
                 href={eventData.tickets.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-fire-black bg-fire-orange hover:bg-fire-yellow transition-colors rounded-lg"
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#e63946] px-8 py-3 text-base font-semibold text-[#f4a261] transition-all duration-200 hover:border-[#f4a261] hover:text-white active:scale-95"
               >
                 Get Tickets
               </a>

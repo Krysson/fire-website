@@ -137,9 +137,8 @@ export default function EventCards({ blazeTicketUrl }: { blazeTicketUrl: string 
                   href={event.ticketUrl}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='group/btn relative inline-flex w-full items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-fire-red to-fire-orange py-3.5 text-sm font-bold text-white shadow-md shadow-fire-red/30 transition-all duration-300 hover:scale-[1.02] hover:shadow-fire-orange/40 active:scale-100'>
-                  <span className='absolute inset-0 bg-gradient-to-r from-fire-orange to-fire-yellow opacity-0 transition-opacity duration-300 group-hover/btn:opacity-100' />
-                  <span className='relative z-10'>🎟 Get Tickets →</span>
+                  className='inline-flex w-full items-center justify-center gap-2 rounded-xl border border-[#e63946] py-3.5 text-sm font-semibold text-[#f4a261] transition-all duration-200 hover:border-[#f4a261] hover:text-white active:scale-[1.02]'>
+                  🎟 Get Tickets →
                 </a>
               ) : (
                 <Link

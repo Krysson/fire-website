@@ -99,7 +99,7 @@ export default function BlazePage() {
               href={event.tickets.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 rounded-lg bg-fire-red px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all hover:bg-fire-red/90 hover:shadow-xl hover:scale-105"
+              className="inline-flex items-center gap-2 rounded-lg border border-[#e63946] px-8 py-4 text-lg font-semibold text-[#f4a261] transition-all duration-200 hover:border-[#f4a261] hover:text-white active:scale-95"
             >
               <Ticket className="h-5 w-5" />
               Get Tickets
@@ -216,7 +216,7 @@ export default function BlazePage() {
             href={event.tickets.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg bg-fire-red px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all hover:bg-fire-red/90 hover:shadow-xl hover:scale-105"
+            className="inline-flex items-center gap-2 rounded-lg border border-[#e63946] px-8 py-4 text-lg font-semibold text-[#f4a261] transition-all duration-200 hover:border-[#f4a261] hover:text-white active:scale-95"
           >
             <Ticket className="h-5 w-5" />
             Purchase Tickets

@@ -138,10 +138,9 @@ export default function Hero({ ticketUrl }: { ticketUrl: string }) {
             href={ticketUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-gradient-to-r from-fire-red to-fire-orange px-8 py-4 text-base font-bold text-white shadow-lg shadow-fire-red/40 transition-all duration-300 hover:scale-105 hover:shadow-fire-orange/50 active:scale-100 md:px-10 md:py-5 md:text-lg"
+            className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#e63946] px-8 py-4 text-base font-semibold text-[#f4a261] transition-all duration-200 hover:border-[#f4a261] hover:text-white active:scale-95 md:px-10 md:py-5 md:text-lg"
           >
-            <span className="absolute inset-0 bg-gradient-to-r from-fire-orange to-fire-yellow opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-            <span className="relative z-10">🎟 Get Tickets — BLAZE 2026 →</span>
+            🎟 Get Tickets — BLAZE 2026 →
           </a>
 
           <Link
