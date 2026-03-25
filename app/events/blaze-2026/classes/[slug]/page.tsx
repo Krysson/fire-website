@@ -1,8 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { getClassBySlug, getClasses, getPresenterBySlug } from '@/lib/content';
-import { Button } from '@/components/ui/button';
 import type { Metadata } from 'next';
 
 interface ClassPageProps {
@@ -11,12 +9,12 @@ interface ClassPageProps {
   }>;
 }
 
-function getLevelBadgeClasses(level: string): string {
-  const normalizedLevel = level.toLowerCase();
+function getLevelBadgeClasses(level?: string): string {
+  const normalizedLevel = (level ?? '').toLowerCase();
   if (normalizedLevel.includes('beginner')) return 'bg-emerald-600/20 text-emerald-400 border-emerald-600/30';
-  if (normalizedLevel.includes('intermediate')) return 'bg-fire-orange/20 text-fire-orange border-fire-orange/30';
-  if (normalizedLevel.includes('advanced')) return 'bg-fire-red/20 text-fire-red border-fire-red/30';
-  return 'bg-fire-yellow/20 text-fire-yellow border-fire-yellow/30';
+  if (normalizedLevel.includes('intermediate')) return 'bg-amber-500/20 text-amber-400 border-amber-500/30';
+  if (normalizedLevel.includes('advanced')) return 'bg-red-500/20 text-red-400 border-red-500/30';
+  return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30';
 }
 
 export async function generateStaticParams() {
@@ -55,15 +53,18 @@ export default async function ClassPage({ params }: ClassPageProps) {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-fire-charcoal to-fire-black text-white">
-      {/* Header */}
+      {/* Breadcrumb */}
       <div className="border-b border-fire-dark">
-        <div className="container mx-auto px-4 py-6">
-          <Link href="/events/blaze-2026/classes">
-            <Button variant="ghost" size="sm" className="gap-2">
-              <ArrowLeft className="size-4" />
-              Back to Classes
-            </Button>
-          </Link>
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center gap-2 text-sm text-gray-400">
+            <Link href="/" className="hover:text-fire-orange transition-colors">Home</Link>
+            <span>/</span>
+            <Link href="/events/blaze-2026" className="hover:text-fire-orange transition-colors">BLAZE 2026</Link>
+            <span>/</span>
+            <Link href="/events/blaze-2026/classes" className="hover:text-fire-orange transition-colors">Classes</Link>
+            <span>/</span>
+            <span className="text-fire-orange">{classItem.title}</span>
+          </div>
         </div>
       </div>
 

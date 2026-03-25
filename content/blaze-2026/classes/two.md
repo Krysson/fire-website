@@ -2,7 +2,7 @@
 title: A Tale of Two Torture Ties
 slug: two
 presenter: mako_breeze
-level: Beginner
+level: Intermediate
 duration: 90 minutes
 ---
 

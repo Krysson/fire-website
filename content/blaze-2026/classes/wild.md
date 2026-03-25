@@ -2,7 +2,7 @@
 title: Wild Shape Sequence
 slug: wild
 presenter: desmond-ellise
-level: Beginner
+level: Intermediate
 duration: 90 minutes
 ---
 

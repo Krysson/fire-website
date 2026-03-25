@@ -2,7 +2,7 @@
 title: Rope Top Round Table
 slug: top
 presenter: Open Discussion
-level: Beginner
+level: All Levels
 duration: 90 minutes
 ---
 

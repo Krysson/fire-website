@@ -2,7 +2,7 @@
 title: Traditional Full Body Lacing for Partials
 slug: lacing
 presenter: senbound_giggles
-level: Beginner
+level: Intermediate
 duration: 90 minutes
 ---
 

@@ -44,6 +44,17 @@ export default function FirePage() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_100%,rgba(230,57,70,0.15)_0%,transparent_60%)]" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_15%_50%,rgba(244,162,97,0.07)_0%,transparent_50%)]" />
 
+      {/* Breadcrumb */}
+      <div className="relative z-10 py-3 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex items-center gap-2 text-sm text-gray-400">
+            <Link href="/" className="hover:text-fire-orange transition-colors">Home</Link>
+            <span>/</span>
+            <span className="text-fire-orange">FIRE 2027</span>
+          </div>
+        </div>
+      </div>
+
       {/* Hero Section */}
       <section className="relative z-10 overflow-hidden bg-fire-dark">
         <div className="absolute inset-0 bg-gradient-to-br from-fire-red/20 to-fire-orange/10" />

@@ -29,7 +29,7 @@ export function Header({ ticketUrl }: { ticketUrl: string }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className='sticky top-0 z-50 w-full border-b border-border bg-fire-black'>
+    <header className='sticky top-0 z-50 w-full border-b border-[#2a2a2a] bg-[#1a1a1a]'>
       <div className='container mx-auto flex h-16 items-center justify-between px-4'>
         {/* Logo */}
         <Link
@@ -104,7 +104,7 @@ export function Header({ ticketUrl }: { ticketUrl: string }) {
           </SheetTrigger>
           <SheetContent
             side='right'
-            className='w-[300px] bg-fire-charcoal'>
+            className='w-[300px] bg-fire-charcoal border-l border-fire-dark'>
             <div className='flex flex-col gap-6 pt-8'>
               {/* Mobile Navigation Links */}
               {navigationLinks.map(link => (

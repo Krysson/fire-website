@@ -1,8 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeft } from 'lucide-react';
 import { getClassBySlug, getClasses, getPresenterBySlug } from '@/lib/content';
-import { Button } from '@/components/ui/button';
 import type { Metadata } from 'next';
 
 interface ClassPageProps {
@@ -59,15 +57,18 @@ export default async function ClassPage({ params }: ClassPageProps) {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_100%,rgba(230,57,70,0.15)_0%,transparent_60%)]" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_15%_50%,rgba(244,162,97,0.07)_0%,transparent_50%)]" />
 
-      {/* Header */}
-      <div className="relative z-10 border-b border-fire-dark">
-        <div className="container mx-auto px-4 py-6">
-          <Link href="/events/flare-2026/classes">
-            <Button variant="ghost" size="sm" className="gap-2">
-              <ArrowLeft className="size-4" />
-              Back to Classes
-            </Button>
-          </Link>
+      {/* Breadcrumb */}
+      <div className="border-b border-fire-dark">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center gap-2 text-sm text-gray-400">
+            <Link href="/" className="hover:text-fire-orange transition-colors">Home</Link>
+            <span>/</span>
+            <Link href="/events/flare-2026" className="hover:text-fire-orange transition-colors">FLARE 2026</Link>
+            <span>/</span>
+            <Link href="/events/flare-2026/classes" className="hover:text-fire-orange transition-colors">Classes</Link>
+            <span>/</span>
+            <span className="text-fire-orange">{classItem.title}</span>
+          </div>
         </div>
       </div>
 

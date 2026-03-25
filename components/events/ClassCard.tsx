@@ -10,21 +10,21 @@ interface ClassCardProps {
 /**
  * Get color classes for skill level badges
  */
-function getLevelBadgeClasses(level: string): string {
-  const normalizedLevel = level.toLowerCase();
+function getLevelBadgeClasses(level?: string): string {
+  const normalizedLevel = (level ?? '').toLowerCase();
 
   if (normalizedLevel.includes('beginner')) {
     return 'bg-emerald-600/20 text-emerald-400 border-emerald-600/30';
   }
   if (normalizedLevel.includes('intermediate')) {
-    return 'bg-fire-orange/20 text-fire-orange border-fire-orange/30';
+    return 'bg-amber-500/20 text-amber-400 border-amber-500/30';
   }
   if (normalizedLevel.includes('advanced')) {
-    return 'bg-fire-red/20 text-fire-red border-fire-red/30';
+    return 'bg-red-500/20 text-red-400 border-red-500/30';
   }
 
   // Default for "All Levels" or other variations
-  return 'bg-fire-yellow/20 text-fire-yellow border-fire-yellow/30';
+  return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30';
 }
 
 /**

@@ -2,7 +2,7 @@
 title: Partial Suspension Exposed
 slug: partials
 presenter: mako_breeze
-level: Beginner
+level: Intermediate
 duration: 90 minutes
 ---
 

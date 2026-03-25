@@ -1,5 +1,6 @@
 import { getPresenters, getEventData } from '@/lib/content';
 import PresenterCard from '@/components/events/PresenterCard';
+import Link from 'next/link';
 
 export default function PresentersPage() {
   const eventSlug = 'fire-2027';
@@ -13,6 +14,17 @@ export default function PresentersPage() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_15%_50%,rgba(244,162,97,0.07)_0%,transparent_50%)]" />
 
       <div className="relative z-10 container mx-auto px-4 py-12 md:py-16 lg:py-20">
+        {/* Breadcrumb */}
+        <div className="mb-8">
+          <div className="flex items-center gap-2 text-sm text-gray-400">
+            <Link href="/" className="hover:text-fire-orange transition-colors">Home</Link>
+            <span>/</span>
+            <Link href="/events/fire-2027" className="hover:text-fire-orange transition-colors">FIRE 2027</Link>
+            <span>/</span>
+            <span className="text-fire-orange">Presenters</span>
+          </div>
+        </div>
+
         {/* Page header */}
         <div className="mb-12 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">

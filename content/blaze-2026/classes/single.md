@@ -2,7 +2,7 @@
 title: Single Rope Skills, Drills & Scenes
 slug: single
 presenter: senbound_giggles
-level: Beginner
+level: Intermediate
 duration: 90 minutes
 ---
 

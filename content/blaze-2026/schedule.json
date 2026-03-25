@@ -13,35 +13,39 @@
           "time": "4:30 PM",
           "title": "Rope 101",
           "presenter": "sorin",
+          "classSlug": "Rope-101",
           "room": "Blue Side",
           "type": "class"
         },
         {
           "time": "4:30 PM",
           "title": "Partial Suspension Exposed!",
-          "presenter": "mako-breeze",
+          "presenter": "mako_breeze",
+          "classSlug": "partials",
           "room": "Green Side",
           "type": "class"
         },
         {
           "time": "6:00 PM",
           "title": "The Nerve",
-          "presenter": "Nova-Mako",
+          "presenter": "nova_mako",
+          "classSlug": "nerve",
           "room": "Blue Side",
           "type": "class"
         },
         {
           "time": "6:00 PM",
           "title": "Single Rope Skills, Drill, & Scenes",
-          "presenter": "senbound-giggles",
+          "presenter": "senbound_giggles",
+          "classSlug": "single",
           "room": "Green Side",
           "type": "class"
         },
         {
           "time": "8:00 PM",
-          "title": "BLAZE 2026 Play Party",
+          "title": "BLAZE 2026 Play Party - 8:00pm - 02:00am",
           "type": "social",
-          "room": "Green Side"
+          "room": "All Rooms"
         }
       ]
     },
@@ -51,57 +55,83 @@
       "slots": [
         {
           "time": "10:00 AM",
-          "title": "Single Column Ties",
-          "presenter": "john-doe",
-          "room": "Room A",
+          "title": "Rope Performance",
+          "presenter": ["owl", "lily"],
+          "classSlug": "perf",
+          "room": "Blue Side",
           "type": "class"
         },
         {
           "time": "10:00 AM",
-          "title": "Body Harnesses 101",
-          "presenter": "jane-smith",
-          "room": "Room B",
+          "title": "Hips Don't Lie",
+          "presenter": "corvid_fern",
+          "room": "Green Side",
+          "classSlug": "hips",
           "type": "class"
         },
         {
           "time": "12:00 PM",
+          "title": "Bedroom Rope",
+          "presenter": "vagabond_vix",
+          "classSlug": "bedroom",
+          "room": "Blue Side",
+          "classSlug": "hips",
+          "type": "class"
+        },
+        {
+          "time": "12:00 PM",
+          "title": "Wildshape Sequence",
+          "presenter": "desmond_ellise",
+          "classSlug": "wild",
+          "room": "Green Side",
+          "classSlug": "wild",
+          "type": "class"
+        },
+        {
+          "time": "1:30 PM",
           "title": "Lunch Break",
-          "type": "general"
+          "type": "break"
         },
         {
-          "time": "2:00 PM",
-          "title": "Hip Harnesses & Transitions",
-          "presenter": "desmond-ellise",
-          "room": "Room A",
-          "type": "class"
+          "time": "3:00 PM",
+          "title": "Rope Bottom Round Table",
+          "presenter": "Open Discussion",
+          "classSlug": "bottom",
+          "room": "Blue Side",
+          "type": "discussion"
         },
         {
-          "time": "2:00 PM",
-          "title": "Communication in Rope",
-          "presenter": "jane-smith",
-          "room": "Room B",
-          "type": "class"
-        },
-        {
-          "time": "4:00 PM",
-          "title": "Afternoon Break",
-          "type": "general"
+          "time": "3:00 PM",
+          "title": "Rope Top Round Table",
+          "presenter": "Open Discussion",
+          "classSlug": "top",
+          "room": "Green Side",
+          "type": "discussion"
         },
         {
           "time": "5:00 PM",
-          "title": "Futomomo Ties",
-          "presenter": "john-doe",
-          "room": "Room A",
+          "title": "Rope Switching",
+          "presenter": "sorin",
+          "classSlug": "switching",
+          "room": "Blue Side",
           "type": "class"
         },
         {
-          "time": "7:00 PM",
-          "title": "Dinner Break",
-          "type": "general"
+          "time": "5:00 PM",
+          "title": "Simnple or Structured",
+          "presenter": "nova_mako",
+          "classSlug": "simple",
+          "room": "Green Side",
+          "type": "class"
         },
         {
-          "time": "9:00 PM",
-          "title": "Evening Rope Social",
+          "time": "6:30 PM",
+          "title": "Dinner Break",
+          "type": "break"
+        },
+        {
+          "time": "8:00 PM",
+          "title": "BLAZE 2026 Play Party - 8:00pm - 02:00am",
           "type": "social",
           "room": "All Rooms"
         }
@@ -112,35 +142,63 @@
       "label": "Sunday",
       "slots": [
         {
-          "time": "10:00 AM",
-          "title": "Advanced Floor Work",
+          "time": "11:00 AM",
+          "title": "Love Your Face",
           "presenter": "desmond-ellise",
-          "room": "Room A",
+          "classSlug": "face",
+          "room": "Blue Side",
           "type": "class"
         },
         {
-          "time": "10:00 AM",
-          "title": "Rope Care & Maintenance",
-          "presenter": "john-doe",
-          "room": "Room B",
+          "time": "11:00 AM",
+          "title": "Traditional Full Body Lacing for Partials",
+          "presenter": "senbound_giggles",
+          "classSlug": "lacing",
+          "room": "Green Side",
           "type": "class"
         },
         {
-          "time": "12:00 PM",
-          "title": "Lunch Break",
-          "type": "general"
+          "time": "1:00 PM",
+          "title": "Let's Make it Pretty",
+          "presenter": "vagabond_vix",
+          "classSlug": "pretty",
+          "room": "Blue Side",
+          "type": "class"
         },
         {
-          "time": "2:00 PM",
-          "title": "Closing Demonstration",
-          "type": "general",
-          "room": "Main Room"
+          "time": "1:00 PM",
+          "title": "A Tale of Two Torture Ties",
+          "presenter": "mako_breeze",
+          "classSlug": "two",
+          "room": "Green Side",
+          "type": "class"
         },
         {
           "time": "3:00 PM",
-          "title": "Farewell & Thank You",
+          "title": "Rope Care & Maintenance",
+          "presenter": ["owl", "lily"],
+          "classSlug": "care",
+          "room": "Blue Side",
+          "type": "class"
+        },
+        {
+          "time": "3:00 PM",
+          "title": "An Absolutly 100% Incomplete History",
+          "presenter": "senbound_giggles",
+          "classSlug": "history",
+          "room": "Green Side",
+          "type": "class"
+        },
+        {
+          "time": "5:00 PM",
+          "title": "Wrap-Up & Farewell",
+          "type": "general"
+        },
+        {
+          "time": "5:30 PM",
+          "title": "Tear Down & Cleanup",
           "type": "general",
-          "room": "Main Room"
+          "room": "All Rooms"
         }
       ]
     }

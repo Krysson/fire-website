@@ -1,5 +1,6 @@
 import { getClasses, getEventData, getPresenters } from '@/lib/content';
 import ClassCard from '@/components/events/ClassCard';
+import Link from 'next/link';
 
 const EVENT_SLUG = 'flare-2026';
 
@@ -17,6 +18,17 @@ export default function ClassesPage() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_15%_50%,rgba(244,162,97,0.07)_0%,transparent_50%)]" />
 
       <div className="relative z-10 max-w-7xl mx-auto">
+        {/* Breadcrumb */}
+        <div className="mb-8">
+          <div className="flex items-center gap-2 text-sm text-gray-400">
+            <Link href="/" className="hover:text-fire-orange transition-colors">Home</Link>
+            <span>/</span>
+            <Link href="/events/flare-2026" className="hover:text-fire-orange transition-colors">FLARE 2026</Link>
+            <span>/</span>
+            <span className="text-fire-orange">Classes</span>
+          </div>
+        </div>
+
         {/* Page Header */}
         <header className="mb-12 text-center">
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">

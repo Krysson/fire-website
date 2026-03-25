@@ -146,8 +146,10 @@ export interface ScheduleSlot {
   time: string;
   /** Event/class title */
   title: string;
-  /** Presenter slug (optional, for classes) */
-  presenter?: string;
+  /** Presenter slug(s) — single slug or array for co-taught classes */
+  presenter?: string | string[];
+  /** Class slug for linking to the class detail page (optional) */
+  classSlug?: string;
   /** Room/location name (optional) */
   room?: string;
   /** Slot type */

@@ -2,7 +2,7 @@
 title: Rope Bottom Round Table
 slug: bottom
 presenter: Open Discussion
-level: Beginner
+level: All Levels
 duration: 90 minutes
 ---
 
