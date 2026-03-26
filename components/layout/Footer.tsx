@@ -1,8 +1,10 @@
 import Link from 'next/link'
 import { Mail, ExternalLink } from 'lucide-react'
+import { getSiteConfig } from '@/lib/content'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
+  const config = getSiteConfig()
 
   const quickLinks = [
     { label: 'About', href: '/about' },
@@ -15,7 +17,7 @@ export default function Footer() {
   const socialLinks = [
     {
       name: 'FetLife',
-      href: '#',
+      href: config.social.fetlife || '#',
       icon: (
         <svg
           className='w-5 h-5'
@@ -32,7 +34,7 @@ export default function Footer() {
     },
     {
       name: 'Instagram',
-      href: '#',
+      href: config.social.instagram || '#',
       icon: (
         <svg
           className='w-5 h-5'
@@ -44,7 +46,7 @@ export default function Footer() {
     },
     {
       name: 'Facebook',
-      href: '#',
+      href: config.social.facebook || '#',
       icon: (
         <svg
           className='w-5 h-5'
@@ -56,7 +58,7 @@ export default function Footer() {
     },
     {
       name: 'TikTok',
-      href: '#',
+      href: config.social.tiktok || '#',
       icon: (
         <svg
           className='w-5 h-5'
@@ -81,10 +83,10 @@ export default function Footer() {
               BLAZE, FLARE, and FIRE.
             </p>
             <a
-              href={`mailto:eventinfo@FireOrlando.com`}
+              href={`mailto:${config.contact.general}`}
               className='inline-flex items-center gap-2 text-fire-orange hover:text-fire-yellow transition-colors text-sm'>
               <Mail className='w-4 h-4' />
-              EventInfo@FireOrlando.com
+              {config.contact.general}
             </a>
           </div>
 

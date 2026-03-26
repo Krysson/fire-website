@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Mail, Users } from 'lucide-react'
+import { getSiteConfig } from '@/lib/content'
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -8,6 +9,8 @@ export const metadata: Metadata = {
 }
 
 export default function ContactPage() {
+  const config = getSiteConfig()
+
   return (
     <div className='min-h-screen bg-fire-black'>
       {/* Hero Section */}
@@ -44,9 +47,9 @@ export default function ContactPage() {
                     or sponsorship information, send us an email.
                   </p>
                   <a
-                    href='mailto:eventinfo@fireorlando.com'
+                    href={`mailto:${config.contact.general}`}
                     className='inline-flex items-center text-lg font-semibold text-fire-orange hover:text-fire-yellow transition-colors'>
-                    eventinfo@fireorlando.com
+                    {config.contact.general}
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
                       className='ml-2 h-5 w-5'
@@ -118,7 +121,7 @@ export default function ContactPage() {
             <div className='grid md:grid-cols-2 gap-6'>
               <div className='bg-fire-black/50 border border-fire-orange/20 rounded-lg p-6'>
                 <h3 className='text-xl font-bold text-fire-orange mb-3'>
-                  <a href='mailto:eventinfo@fireorlando.com'>Event Questions</a>
+                  <a href={`mailto:${config.contact.general}`}>Event Questions</a>
                 </h3>
                 <p className='text-gray-300 leading-relaxed'>
                   Have questions about attending an event? Need clarification on policies,
@@ -127,7 +130,7 @@ export default function ContactPage() {
               </div>
               <div className='bg-fire-black/50 border border-fire-orange/20 rounded-lg p-6'>
                 <h3 className='text-xl font-bold text-fire-orange mb-3'>
-                  <a href='mailto:Presenters@fireorlando.com'>Become a Presenter</a>
+                  <a href={`mailto:${config.contact.presenters}`}>Become a Presenter</a>
                 </h3>
                 <p className='text-gray-300 leading-relaxed'>
                   Interested in teaching at a FIRE event? Share your teaching experience and
@@ -136,7 +139,7 @@ export default function ContactPage() {
               </div>
               <div className='bg-fire-black/50 border border-fire-orange/20 rounded-lg p-6'>
                 <h3 className='text-xl font-bold text-fire-orange mb-3'>
-                  <a href='mailto:Volunteers@fireorlando.com'>Volunteer Opportunities</a>
+                  <a href={`mailto:${config.contact.volunteers}`}>Volunteer Opportunities</a>
                 </h3>
                 <p className='text-gray-300 leading-relaxed'>
                   Want to support the community by volunteering at an event? Let us know you&apos;re
@@ -145,7 +148,7 @@ export default function ContactPage() {
               </div>
               <div className='bg-fire-black/50 border border-fire-orange/20 rounded-lg p-6'>
                 <h3 className='text-xl font-bold text-fire-orange mb-3'>
-                  <a href='mailto:Vendors@fireorlando.com'>Sponsorship & Vending</a>
+                  <a href={`mailto:${config.contact.vendors}`}>Sponsorship & Vending</a>
                 </h3>
                 <p className='text-gray-300 leading-relaxed'>
                   Interested in sponsoring or vending at a FIRE event? Contact us to discuss

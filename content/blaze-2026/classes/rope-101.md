@@ -1,7 +1,9 @@
 ---
 title: Rope 101
 slug: Rope-101
-presenter: sorin
+presenter:
+  - sorin
+  - dovah
 level: Beginner
 duration: 90 minutes
 ---

@@ -5,6 +5,65 @@ import type { Event, Schedule, Presenter, Class } from './types';
 
 const CONTENT_DIR = path.join(process.cwd(), 'content');
 
+export interface SiteConfig {
+  contact: {
+    general: string
+    presenters: string
+    volunteers: string
+    vendors: string
+  }
+  social: {
+    fetlife: string
+    instagram: string
+    facebook: string
+    tiktok: string
+  }
+  homepage: {
+    featuredEventId: string
+    events: Array<{
+      id: string
+      name: string
+      year: number
+      logo: string
+      dates: string
+      focus: string
+      focusVariant: 'beginner' | 'intermediate' | 'all'
+      internalLink: string
+      ticketEventSlug: string
+    }>
+  }
+  classLevels: Array<{
+    label: string
+    color: string
+  }>
+}
+
+export function getSiteConfig(): SiteConfig {
+  try {
+    const configPath = path.join(CONTENT_DIR, 'organization', 'config.json');
+    const fileContents = fs.readFileSync(configPath, 'utf8');
+    return JSON.parse(fileContents) as SiteConfig;
+  } catch (error) {
+    console.error('Error loading site config:', error);
+    return {
+      contact: {
+        general: 'eventinfo@fireorlando.com',
+        presenters: 'Presenters@fireorlando.com',
+        volunteers: 'Volunteers@fireorlando.com',
+        vendors: 'Vendors@fireorlando.com',
+      },
+      social: { fetlife: '', instagram: '', facebook: '', tiktok: '' },
+      homepage: { featuredEventId: 'blaze', events: [] },
+      classLevels: [
+        { label: 'Beginner', color: 'green' },
+        { label: 'Intermediate', color: 'amber' },
+        { label: 'Advanced', color: 'red' },
+        { label: 'All Levels', color: 'yellow' },
+      ],
+    };
+  }
+}
+
 /**
  * Get event data from event.json
  * @param eventSlug - Event identifier (e.g., 'blaze-2026', 'flare-2026')

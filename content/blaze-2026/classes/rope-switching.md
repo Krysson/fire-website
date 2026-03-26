@@ -1,7 +1,9 @@
 ---
 title: Rope Switching
-slug: sample-class3
-presenter: sorin
+slug: rope-switching
+presenter:
+  - sorin
+  - dovah
 level: Beginner
 duration: 90 minutes
 ---

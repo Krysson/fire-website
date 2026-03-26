@@ -18,51 +18,13 @@ interface EventConfig {
   featured?: boolean
 }
 
-const EVENTS_BASE: Omit<EventConfig, 'ticketUrl'>[] = [
-  {
-    id: 'blaze',
-    name: 'BLAZE',
-    year: 2026,
-    logo: '/logos/blaze-2026.png',
-    dates: 'April 17–19, 2026',
-    focus: 'Beginner to Intermediate',
-    focusVariant: 'beginner',
-    internalLink: '/events/blaze-2026',
-    featured: true
-  },
-  {
-    id: 'flare',
-    name: 'FLARE',
-    year: 2026,
-    logo: '/logos/flare-2026.png',
-    dates: 'August 2026',
-    focus: 'Intermediate to Advanced',
-    focusVariant: 'intermediate',
-    internalLink: '/events/flare-2026'
-  },
-  {
-    id: 'fire',
-    name: 'FIRE',
-    year: 2027,
-    logo: '/logos/FIRELOGO_NOYEAR.png',
-    dates: 'Comming Back in 2027',
-    focus: 'All Levels',
-    focusVariant: 'all',
-    internalLink: '/events/fire-2027'
-  }
-]
-
 const focusBadgeClasses: Record<EventConfig['focusVariant'], string> = {
   beginner: 'bg-fire-yellow/15 text-fire-yellow border-fire-yellow/30',
   intermediate: 'bg-fire-orange/15 text-fire-orange border-fire-orange/30',
   all: 'bg-fire-red/15    text-red-400     border-fire-red/30'
 }
 
-export default function EventCards({ blazeTicketUrl }: { blazeTicketUrl: string }) {
-  const EVENTS: EventConfig[] = EVENTS_BASE.map(e =>
-    e.id === 'blaze' ? { ...e, ticketUrl: blazeTicketUrl } : e
-  )
-
+export default function EventCards({ events }: { events: EventConfig[] }) {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
@@ -72,7 +34,7 @@ export default function EventCards({ blazeTicketUrl }: { blazeTicketUrl: string 
 
   return (
     <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3'>
-      {EVENTS.map((event, i) => (
+      {events.map((event, i) => (
         <div
           key={event.id}
           className={`group relative flex flex-col overflow-hidden rounded-2xl border bg-white/[0.03] transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl ${

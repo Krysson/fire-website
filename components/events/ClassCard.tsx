@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { Class } from '@/lib/types';
+import { getSiteConfig } from '@/lib/content';
 
 interface ClassCardProps {
   class_: Class;
@@ -7,24 +8,25 @@ interface ClassCardProps {
   presenterNames?: Record<string, string>;
 }
 
-/**
- * Get color classes for skill level badges
- */
+// All supported color options — must be listed here for Tailwind to include them
+const LEVEL_COLOR_CLASSES: Record<string, string> = {
+  green:  'bg-emerald-600/20 text-emerald-400 border-emerald-600/30',
+  amber:  'bg-amber-500/20 text-amber-400 border-amber-500/30',
+  red:    'bg-red-500/20 text-red-400 border-red-500/30',
+  yellow: 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30',
+  blue:   'bg-blue-500/20 text-blue-400 border-blue-500/30',
+  purple: 'bg-purple-500/20 text-purple-400 border-purple-500/30',
+  orange: 'bg-orange-500/20 text-orange-400 border-orange-500/30',
+};
+
 function getLevelBadgeClasses(level?: string): string {
+  const config = getSiteConfig();
   const normalizedLevel = (level ?? '').toLowerCase();
-
-  if (normalizedLevel.includes('beginner')) {
-    return 'bg-emerald-600/20 text-emerald-400 border-emerald-600/30';
-  }
-  if (normalizedLevel.includes('intermediate')) {
-    return 'bg-amber-500/20 text-amber-400 border-amber-500/30';
-  }
-  if (normalizedLevel.includes('advanced')) {
-    return 'bg-red-500/20 text-red-400 border-red-500/30';
-  }
-
-  // Default for "All Levels" or other variations
-  return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30';
+  const match = config.classLevels.find(
+    l => normalizedLevel.includes(l.label.toLowerCase())
+  );
+  const colorKey = match?.color ?? 'yellow';
+  return LEVEL_COLOR_CLASSES[colorKey] ?? LEVEL_COLOR_CLASSES.yellow;
 }
 
 /**

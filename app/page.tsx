@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Hero from '@/components/home/Hero'
 import EventCards from '@/components/home/EventCards'
-import { getEventData } from '@/lib/content'
+import { getEventData, getSiteConfig } from '@/lib/content'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -18,13 +18,24 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
-  const blazeEvent = getEventData('blaze-2026')
-  const blazeTicketUrl = blazeEvent?.tickets?.url ?? ''
+  const config = getSiteConfig()
+  const featuredEntry = config.homepage.events.find(e => e.id === config.homepage.featuredEventId)
+  const featuredTicketUrl = featuredEntry?.ticketEventSlug
+    ? (getEventData(featuredEntry.ticketEventSlug)?.tickets?.url ?? '')
+    : ''
+
+  const events = config.homepage.events.map(e => ({
+    ...e,
+    ticketUrl: e.ticketEventSlug
+      ? (getEventData(e.ticketEventSlug)?.tickets?.url ?? undefined)
+      : undefined,
+    featured: e.id === config.homepage.featuredEventId,
+  }))
 
   return (
     <div className='min-h-screen bg-fire-black'>
       {/* ── Hero ── */}
-      <Hero ticketUrl={blazeTicketUrl} />
+      <Hero ticketUrl={featuredTicketUrl} />
 
       {/* ── Our Events ── */}
       <section
@@ -49,7 +60,7 @@ export default function Home() {
               learning goals in the rope bondage community.
             </p>
           </div>
-          <EventCards blazeTicketUrl={blazeTicketUrl} />
+          <EventCards events={events} />
         </div>
       </section>
 
@@ -171,19 +182,19 @@ export default function Home() {
             Ready to <span className='gradient-fire-text'>Ignite</span> Your Journey?
           </h2>
           <p className='mb-10 text-lg leading-relaxed text-gray-400'>
-            Tickets for BLAZE 2026 are on sale now. Beginner-friendly, community-focused, and
+            Tickets for {featuredEntry ? `${featuredEntry.name} ${featuredEntry.year}` : 'our next event'} are on sale now. Beginner-friendly, community-focused, and
             unforgettable.
           </p>
           <div className='flex flex-col items-center gap-4 sm:flex-row sm:justify-center'>
             <a
-              href={blazeTicketUrl}
+              href={featuredTicketUrl}
               target='_blank'
               rel='noopener noreferrer'
               className='inline-flex items-center justify-center gap-2 rounded-xl border border-[#e63946] px-10 py-4 text-base font-semibold text-[#f4a261] transition-all duration-200 hover:border-[#f4a261] hover:text-white active:scale-95 md:text-lg'>
               🎟 Get Tickets
             </a>
             <Link
-              href='/events/blaze-2026'
+              href={featuredEntry?.internalLink ?? '/events'}
               className='inline-flex items-center justify-center rounded-xl border border-white/15 bg-transparent px-10 py-4 text-base font-semibold text-white/80 transition-all duration-300 hover:border-white/30 hover:bg-white/5 md:text-lg'>
               View Event Details
             </Link>

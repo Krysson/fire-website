@@ -1,0 +1,63 @@
+{
+  "contact": {
+    "general": "eventinfo@fireorlando.com",
+    "presenters": "Presenters@fireorlando.com",
+    "volunteers": "Volunteers@fireorlando.com",
+    "vendors": "Vendors@fireorlando.com"
+  },
+
+  "social": {
+    "fetlife": "https://fetlife.com/F_I_R_E",
+    "instagram": "https://www.instagram.com/woodshedorlando/",
+    "facebook": "",
+    "tiktok": ""
+  },
+
+  "homepage": {
+    "featuredEventId": "blaze",
+
+    "events": [
+      {
+        "id": "blaze",
+        "name": "BLAZE",
+        "year": 2026,
+        "logo": "/logos/blaze-2026.png",
+        "dates": "April 17–19, 2026",
+        "focus": "Beginner to Intermediate",
+        "focusVariant": "beginner",
+        "internalLink": "/events/blaze-2026",
+        "ticketEventSlug": "blaze-2026"
+      },
+      {
+        "id": "flare",
+        "name": "FLARE",
+        "year": 2026,
+        "logo": "/logos/flare-2026.png",
+        "dates": "October 2026",
+        "focus": "Intermediate to Advanced",
+        "focusVariant": "intermediate",
+        "internalLink": "/events/flare-2026",
+        "ticketEventSlug": ""
+      },
+      {
+        "id": "fire",
+        "name": "FIRE",
+        "year": 2027,
+        "logo": "/logos/FIRELOGO_NOYEAR.png",
+        "dates": "TBD",
+        "focus": "All Levels",
+        "focusVariant": "all",
+        "internalLink": "/events/fire-2027",
+        "ticketEventSlug": ""
+      }
+    ]
+  },
+
+  "classLevels": [
+    { "label": "Beginner", "color": "green" },
+    { "label": "Intermediate", "color": "amber" },
+    { "label": "Advanced", "color": "red" },
+    { "label": "Discussion", "color": "blue" },
+    { "label": "All Levels", "color": "yellow" }
+  ]
+}

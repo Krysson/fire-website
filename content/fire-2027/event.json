@@ -24,8 +24,8 @@
     "displayNote": "Venue details coming soon"
   },
   "tickets": {
-    "url": "https://forbiddentickets.com/events/fire-2027",
-    "onSaleDate": "Spring 2027",
+    "url": "https://forbiddentickets.com/",
+    "onSaleDate": "TBD",
     "soldAsPairs": true,
     "pairsNote": "Tickets are sold as a tying pair for maximum learning benefit"
   },
@@ -33,7 +33,7 @@
     "fetlife": "https://fetlife.com/groups/89922",
     "hashtag": "#FIRE2027"
   },
-  "logo": "/logos/fire-logo.png",
+  "logo": "/logos/FIRELOGO_NOYEAR.png",
   "theme": {
     "primary": "#e63946",
     "secondary": "#f9c74f"

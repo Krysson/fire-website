@@ -32,7 +32,7 @@ const eventLinks = [
   { href: '/events/fire-2027', label: 'FIRE' }
 ]
 
-export function Header({ ticketUrl }: { ticketUrl: string }) {
+export function Header({ ticketUrl, ticketLabel }: { ticketUrl: string; ticketLabel: string }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -151,7 +151,7 @@ export function Header({ ticketUrl }: { ticketUrl: string }) {
                 target='_blank'
                 rel='noopener noreferrer'
                 className='inline-flex items-center justify-center gap-2 rounded-lg border border-[#e63946] px-5 py-3 text-sm font-semibold text-[#f4a261] transition-all duration-200 hover:border-[#f4a261] hover:text-white active:scale-95'>
-                🎟 Get Tickets — BLAZE 2026
+                🎟 Get Tickets — {ticketLabel}
               </a>
             </div>
           </SheetContent>
