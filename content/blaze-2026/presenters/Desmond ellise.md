@@ -16,6 +16,8 @@ social_labels:
 featured: true
 ---
 
+# Des and Ellise
+
 Des and Ellise have both been practicing rope since 2018 and tying together since 2019. Their rope play leans natural fiber, eastern-inspired, hurty, and connected.
 
 They've been leading Rope Lab, a monthly beginner-ish class in the Tampa Bay area since June 2023 where they work to create an inclusive and welcoming space, and teach classes that are thoughtful, accessible, and practical.

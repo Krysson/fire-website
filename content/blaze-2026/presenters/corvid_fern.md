@@ -16,6 +16,8 @@ social_labels:
 featured: true
 ---
 
+# Corvid and Fern
+
 Corvid and Fern have been a tying pair for 2 years at Deviance in Largo. They are active members of their local kink community and have been teaching rope basics classes since July 2025.
 
 They advocate for building community around rope with safety and accountability. Their classes are tailored for novice rope enthusiast. Their style is warm and welcoming with a focus on fundamentals and patience.

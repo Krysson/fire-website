@@ -3,7 +3,7 @@ name: Dovah
 slug: dovah
 pronouns:
   - 'she/her'
-photo: /images/presenters/preview16.jpg
+photo: /images/presenters/dovah.jpg
 social:
   fetlife:
     - https://fetlife.com/dovah
@@ -13,4 +13,6 @@ social_labels:
 featured: true
 ---
 
-Dovah
+# Dovah
+
+## Bio Coming Soon!

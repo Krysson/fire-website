@@ -10,7 +10,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu'
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet'
+import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle, SheetDescription } from '@/components/ui/sheet'
 import { Button } from '@/components/ui/button'
 
 const navigationLinks = [
@@ -105,6 +105,8 @@ export function Header({ ticketUrl }: { ticketUrl: string }) {
           <SheetContent
             side='right'
             className='w-[300px] bg-[#1a1a1a] border-l border-[#2a2a2a]'>
+            <SheetTitle className='sr-only'>Navigation Menu</SheetTitle>
+            <SheetDescription className='sr-only'>Site navigation links</SheetDescription>
             <div className='flex flex-col gap-6 pt-8 px-6'>
               {/* Mobile Navigation Links */}
               {navigationLinks.map(link => (

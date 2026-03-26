@@ -3,7 +3,7 @@ name: OwlsGaze
 slug: owl
 pronouns:
   - 'she/her'
-photo: /images/presenters/preview16.jpg
+photo: /images/presenters/owl.jpg
 social:
   fetlife:
     - https://fetlife.com/owlsgaze
@@ -12,7 +12,7 @@ social_labels:
 featured: true
 ---
 
-Owl
+# Owl
 
 Owls Gaze is a rope switch with top-leaning and self-tying experience. Starting her rope journey in Fall 2024, she focuses on self-tying suspensions and partials as a meditative practice with an interest in affectionate sadism for partnered rope. As a burlesque performer and co-producer of The Bombshells Cosplay, she is passionate about incorporating her extensive experience in theatrical performance with the art of rope tying, creating dynamic and impactful scenes for audiences.
 

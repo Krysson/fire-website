@@ -16,4 +16,6 @@ social_labels:
 featured: true
 ---
 
-Senbound & giggles
+# Senbound & giggles
+
+## Bios Comming Soon!

@@ -57,9 +57,10 @@ export default async function PresenterPage({ params }: PresenterPageProps) {
 
   // Get classes taught by this presenter
   const allClasses = getClasses('blaze-2026');
-  const presenterClasses = allClasses.filter(
-    (classItem) => classItem.presenter === presenter.slug
-  );
+  const presenterClasses = allClasses.filter((classItem) => {
+    const p = classItem.presenter;
+    return Array.isArray(p) ? p.includes(presenter.slug) : p === presenter.slug;
+  });
 
   // Format pronouns - handle both string and array formats
   let pronounsDisplay: string | null = null;

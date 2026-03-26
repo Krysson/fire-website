@@ -13,4 +13,6 @@ social_labels:
 featured: true
 ---
 
-Lily
+# Lily
+
+## Bio Coming Soon!
