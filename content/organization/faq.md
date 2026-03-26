@@ -104,7 +104,7 @@ Tickets must be purchased through ForbiddenTickets.com, which accepts major cred
 
 ### How can I contact the FIRE team?
 
-Email us at <fireeventproducer@gmail.com>. We typically respond within 48 hours. For urgent matters during an event, contact information for on-site staff will be provided to registered attendees.
+Email us at <EventInfo@FireOrlando.com>. We typically respond within 48 hours. For urgent matters during an event, contact information for on-site staff will be provided to registered attendees.
 
 ### Can I volunteer at FIRE events?
 
