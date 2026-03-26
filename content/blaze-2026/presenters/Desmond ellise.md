@@ -4,7 +4,7 @@ slug: desmond-ellise
 pronouns:
   - 'he/him'
   - 'she/her'
-photo: /images/presenters/preview16.jpg
+photo: /images/presenters/des_ellise.jpg
 social:
   fetlife:
     - https://fetlife.com/Des_

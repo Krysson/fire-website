@@ -3,7 +3,7 @@ title: Rope 101
 slug: Rope-101
 presenter:
   - sorin
-  - dovah
+  - lily
 level: Beginner
 duration: 90 minutes
 ---
@@ -19,9 +19,8 @@ Bring rope and an open mind.
 ## What You'll Learn
 
 - Rope safety and communication fundamentals
-- Double and single column ties
+- Single column ties
 - Frictions, wraps, and latches
-- Building chest and leg harnesses
 
 ## Prerequisites
 

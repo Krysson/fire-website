@@ -1,7 +1,7 @@
 ---
 title: The Nerve
 slug: nerve
-presenter: nova_mako
+presenter: nova
 level: Beginner
 duration: 90 minutes
 ---

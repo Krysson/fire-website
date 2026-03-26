@@ -1,7 +1,9 @@
 ---
 title: Partial Suspension Exposed
 slug: partials
-presenter: mako_breeze
+presenter:
+  - mako
+  - breeze
 level: Intermediate
 duration: 90 minutes
 ---

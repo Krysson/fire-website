@@ -1,7 +1,9 @@
 ---
 title: Simple or Structured
 slug: simple
-presenter: nova_mako
+presenter:
+  - nova
+  - mako
 level: Intermediate
 duration: 90 minutes
 ---
