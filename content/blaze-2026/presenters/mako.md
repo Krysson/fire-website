@@ -3,7 +3,7 @@ name: Mako(Nevertheless)
 slug: mako
 pronouns:
   - 'they/them'
-photo: /images/presenters/mako.jpg
+photo: /images/presenters/Mako.jpg
 social:
   fetlife:
     - https://fetlife.com/Nevertheless
