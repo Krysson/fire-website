@@ -10,7 +10,14 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu'
-import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle, SheetDescription } from '@/components/ui/sheet'
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetClose,
+  SheetTitle,
+  SheetDescription
+} from '@/components/ui/sheet'
 import { Button } from '@/components/ui/button'
 
 const navigationLinks = [
@@ -36,7 +43,7 @@ export function Header({ ticketUrl }: { ticketUrl: string }) {
           href='/'
           className='flex items-center gap-2'>
           <Image
-            src='/logos/fire-logo.png'
+            src='/logos/flower-FLAT.png'
             alt='FIRE Logo'
             width={40}
             height={40}
@@ -82,10 +89,9 @@ export function Header({ ticketUrl }: { ticketUrl: string }) {
         {/* Desktop Ticket CTA */}
         <a
           href={ticketUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden md:inline-flex items-center gap-2 rounded-lg border border-[#e63946] px-4 py-2 text-sm font-semibold text-[#f4a261] transition-all duration-200 hover:border-[#f4a261] hover:text-white active:scale-95"
-        >
+          target='_blank'
+          rel='noopener noreferrer'
+          className='hidden md:inline-flex items-center gap-2 rounded-lg border border-[#e63946] px-4 py-2 text-sm font-semibold text-[#f4a261] transition-all duration-200 hover:border-[#f4a261] hover:text-white active:scale-95'>
           🎟 Get Tickets
         </a>
 
@@ -142,10 +148,9 @@ export function Header({ ticketUrl }: { ticketUrl: string }) {
               {/* Mobile Ticket CTA */}
               <a
                 href={ticketUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#e63946] px-5 py-3 text-sm font-semibold text-[#f4a261] transition-all duration-200 hover:border-[#f4a261] hover:text-white active:scale-95"
-              >
+                target='_blank'
+                rel='noopener noreferrer'
+                className='inline-flex items-center justify-center gap-2 rounded-lg border border-[#e63946] px-5 py-3 text-sm font-semibold text-[#f4a261] transition-all duration-200 hover:border-[#f4a261] hover:text-white active:scale-95'>
                 🎟 Get Tickets — BLAZE 2026
               </a>
             </div>
