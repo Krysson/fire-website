@@ -15,7 +15,7 @@ As a general disclaimer this class will include elements of forced exposure/nudi
 
 ## Prerequisites
 
-Top/Tyig Person: Suspendable Futomomo, basic rope fundamentals, secure uplines and communication skills: Optional - Suspendable back loading chest harness.
+Top/Tying Person: Suspendable Futomomo, basic rope fundamentals, secure uplines and communication skills: Optional - Suspendable back loading chest harness.
 Bottom/Tied Person: Body awareness, ability to communicate effectively under physical, mental and emotional stress.
 
 ## What to Bring
