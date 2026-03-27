@@ -23,7 +23,7 @@ export default function ClassesPage() {
           <div className="flex items-center gap-2 text-sm text-gray-400">
             <Link href="/" className="hover:text-fire-orange transition-colors">Home</Link>
             <span>/</span>
-            <Link href="/events/fire-2027" className="hover:text-fire-orange transition-colors">FIRE 2027</Link>
+            <Link href="/events/fire-2027" className="hover:text-fire-orange transition-colors">FIRE</Link>
             <span>/</span>
             <span className="text-fire-orange">Classes</span>
           </div>

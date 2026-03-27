@@ -19,7 +19,7 @@ export default function PresentersPage() {
           <div className="flex items-center gap-2 text-sm text-gray-400">
             <Link href="/" className="hover:text-fire-orange transition-colors">Home</Link>
             <span>/</span>
-            <Link href="/events/fire-2027" className="hover:text-fire-orange transition-colors">FIRE 2027</Link>
+            <Link href="/events/fire-2027" className="hover:text-fire-orange transition-colors">FIRE</Link>
             <span>/</span>
             <span className="text-fire-orange">Presenters</span>
           </div>
@@ -31,7 +31,7 @@ export default function PresentersPage() {
             {eventData?.name || 'FIRE'} Presenters
           </h1>
           <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto">
-            Meet the talented instructors teaching at {eventData?.name || 'FIRE'} {eventData?.year || '2027'}
+            Meet the talented instructors teaching at {eventData?.name || 'FIRE'}.
           </p>
         </div>
 
@@ -66,7 +66,7 @@ export default function PresentersPage() {
                 Presenters Coming Soon
               </h2>
               <p className="text-gray-300 leading-relaxed">
-                We're finalizing our amazing lineup of presenters for {eventData?.name || 'FIRE'} {eventData?.year || '2027'}.
+                We're finalizing our amazing lineup of presenters for {eventData?.name || 'FIRE'}.
                 Check back soon to learn more about the talented instructors who will be sharing their knowledge and passion for rope bondage.
               </p>
             </div>

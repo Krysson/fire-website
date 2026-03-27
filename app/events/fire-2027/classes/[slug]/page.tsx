@@ -29,8 +29,8 @@ export async function generateMetadata({ params }: ClassPageProps): Promise<Meta
   if (!classItem) return { title: 'Class Not Found' };
 
   return {
-    title: `${classItem.title} - FIRE 2027`,
-    description: classItem.content?.substring(0, 160) || `${classItem.title} at FIRE 2027`,
+    title: `${classItem.title} - FIRE`,
+    description: classItem.content?.substring(0, 160) || `${classItem.title} at FIRE`,
   };
 }
 
@@ -52,7 +52,7 @@ export default async function ClassPage({ params }: ClassPageProps) {
   const levelBadgeClasses = getLevelBadgeClasses(classItem.level);
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-fire-charcoal to-fire-black text-white">
+    <div className="relative min-h-screen overflow-hidden bg-linear-to-b from-fire-charcoal to-fire-black text-white">
       {/* Gradient background */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_100%,rgba(230,57,70,0.15)_0%,transparent_60%)]" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_15%_50%,rgba(244,162,97,0.07)_0%,transparent_50%)]" />
@@ -63,7 +63,7 @@ export default async function ClassPage({ params }: ClassPageProps) {
           <div className="flex items-center gap-2 text-sm text-gray-400">
             <Link href="/" className="hover:text-fire-orange transition-colors">Home</Link>
             <span>/</span>
-            <Link href="/events/fire-2027" className="hover:text-fire-orange transition-colors">FIRE 2027</Link>
+            <Link href="/events/fire-2027" className="hover:text-fire-orange transition-colors">FIRE</Link>
             <span>/</span>
             <Link href="/events/fire-2027/classes" className="hover:text-fire-orange transition-colors">Classes</Link>
             <span>/</span>

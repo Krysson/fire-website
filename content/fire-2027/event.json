@@ -1,11 +1,11 @@
 {
   "id": "fire-2027",
   "name": "FIRE",
-  "year": 2027,
+  "year": "TBD",
   "tagline": "The Premier Rope Bondage Experience",
-  "description": "Our largest and most comprehensive event of the year, FIRE brings together the rope bondage community for an unforgettable experience. Featuring world-class presenters, diverse programming for all skill levels, and unparalleled opportunities for learning and connection. This is the flagship event that started it all.",
+  "description": "F.I.R.E. (Florida Intense Rope Experience) Our largest and most comprehensive event of the year, FIRE brings together the rope bondage community for an unforgettable experience. Featuring world-class presenters, diverse programming for all skill levels, and unparalleled opportunities for learning and connection. This is the flagship event that started it all.",
   "dates": {
-    "display": "Coming Back in 2027 (Dates TBD)",
+    "display": "(Dates TBD)",
     "start": null,
     "end": null,
     "confirmed": false,
@@ -15,7 +15,7 @@
   "size": "Our flagship and largest event",
   "venue": {
     "name": "Venue TBD",
-    "address": null,
+    "address": "6431 Milner Blvd Suite #4",
     "city": "Orlando",
     "state": "FL",
     "zip": null,
@@ -27,11 +27,11 @@
     "url": "https://forbiddentickets.com/",
     "onSaleDate": "TBD",
     "soldAsPairs": true,
-    "pairsNote": "Tickets are sold as a tying pair for maximum learning benefit"
+    "pairsNote": ""
   },
   "social": {
     "fetlife": "https://fetlife.com/groups/89922",
-    "hashtag": "#FIRE2027"
+    "hashtag": "#FIREOrlando"
   },
   "logo": "/logos/FIRELOGO_NOYEAR.png",
   "theme": {

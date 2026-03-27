@@ -36,8 +36,8 @@ export async function generateMetadata({ params }: PresenterPageProps): Promise<
   }
 
   return {
-    title: `${presenter.name} - FIRE 2027 Presenter`,
-    description: presenter.content?.substring(0, 160) || `${presenter.name} is presenting at FIRE 2027`,
+    title: `${presenter.name} - FIRE Presenter`,
+    description: presenter.content?.substring(0, 160) || `${presenter.name} is presenting at FIRE`,
   };
 }
 
@@ -73,7 +73,7 @@ export default async function PresenterPage({ params }: PresenterPageProps) {
   const hasSocialLinks = Object.keys(socialLinks).length > 0;
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-fire-charcoal to-fire-black text-white">
+    <div className="relative min-h-screen overflow-hidden bg-linear-to-b from-fire-charcoal to-fire-black text-white">
       {/* Gradient background */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_100%,rgba(230,57,70,0.15)_0%,transparent_60%)]" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_15%_50%,rgba(244,162,97,0.07)_0%,transparent_50%)]" />
@@ -84,7 +84,7 @@ export default async function PresenterPage({ params }: PresenterPageProps) {
           <div className="flex items-center gap-2 text-sm text-gray-400">
             <Link href="/" className="hover:text-fire-orange transition-colors">Home</Link>
             <span>/</span>
-            <Link href="/events/fire-2027" className="hover:text-fire-orange transition-colors">FIRE 2027</Link>
+            <Link href="/events/fire-2027" className="hover:text-fire-orange transition-colors">FIRE</Link>
             <span>/</span>
             <Link href="/events/fire-2027/presenters" className="hover:text-fire-orange transition-colors">Presenters</Link>
             <span>/</span>
@@ -99,7 +99,7 @@ export default async function PresenterPage({ params }: PresenterPageProps) {
           {/* Presenter Header */}
           <div className="flex flex-col md:flex-row gap-8 mb-12">
             {/* Photo */}
-            <div className="flex-shrink-0">
+            <div className="shrink-0">
               <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto md:mx-0 rounded-lg overflow-hidden bg-fire-dark">
                 {presenter.photo ? (
                   <Image
@@ -196,7 +196,7 @@ export default async function PresenterPage({ params }: PresenterPageProps) {
           {/* Classes Section */}
           <div>
             <h2 className="text-2xl font-bold mb-6 text-fire-yellow border-b border-fire-dark pb-2">
-              Classes at FIRE 2027
+              Classes at FIRE
             </h2>
             {presenterClasses.length > 0 ? (
               <div className="grid gap-4">

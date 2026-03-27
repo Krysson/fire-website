@@ -10,7 +10,7 @@ Since our founding, FIRE has become a cornerstone of rope bondage education in t
 
 - **BLAZE** - Our spring event focused on beginner to intermediate rope skills, providing a welcoming entry point for those new to rope or looking to strengthen their foundations.
 - **FLARE** - A summer intensive for intermediate to advanced practitioners ready to push their boundaries and explore complex techniques.
-- **FIRE** - Our flagship fall convention, offering advanced and expert-level content for serious rope artists and educators.
+- **FIRE** - The Florida Intense Rope Experience - Our flagship fall convention, offering advanced and expert-level content for serious rope artists and educators.
 
 ## Our Values
 
@@ -50,7 +50,7 @@ FIRE's BLAZE and FLARE events are primarily held at **The Woodshed**, a premier 
 6431 Milner Blvd Suite #4
 Orlando, FL 32809
 
-Our FLAGSHIP Event F.I.R.E. (Florida Intese Rope Experience) , returning in 2027 is typically held in an area Hotel and Convention Center space in Orlando, Florida. The larger venue allows us to bring more classes, educators, catering, meet & greets, photo lounges and more to our FLAGSHIP event
+Our FLAGSHIP Event F.I.R.E. (Florida Intese Rope Experience) , is typically held in an area Hotel and Convention Center space in Orlando, Florida. The larger venue allows us to bring more classes, educators, catering, meet & greets, photo lounges and more to our FLAGSHIP event
 
 ## Get Involved
 
@@ -60,21 +60,21 @@ The best way to experience FIRE is to join us at one of our events. Check out ou
 
 ### Become a Presenter
 
-Are you an experienced rope educator interested in teaching at a FIRE event? We're always looking for passionate instructors who align with our values. Contact us to learn more about presenter opportunities.
+Are you an experienced rope educator interested in teaching at a FIRE event? We're always looking for passionate instructors who align with our values. Contact us to learn more about presenter opportunities. <Presenters@FireOrlando.com>
 
 ### Volunteer
 
-FIRE events wouldn't be possible without our amazing volunteers. If you'd like to support the community by helping at an event, reach out to our team.
+FIRE events wouldn't be possible without our amazing volunteers. If you'd like to support the community by helping at an event, reach out to our team. <Volunteers@FireOrlando.com>
 
 ### Sponsor or Vendor
 
-We partner with vendors and sponsors who share our commitment to quality rope education. Contact us to discuss sponsorship and vending opportunities.
+We partner with vendors and sponsors who share our commitment to quality rope education. Contact us to discuss sponsorship and vending opportunities. <Vendors@FireOrlando.com>
 
 ## Contact Us
 
-Have questions? Want to get involved? We'd love to hear from you.
+Have questions? Want to get involved? We'd love to hear from you. <EventInfo@FireOrlando.com>
 
-**Email:** fireeventproducer@gmail.com
+**Email:** EventInfo@FireOrlando.com
 
 Follow us on social media for updates, announcements, and community highlights.
 
