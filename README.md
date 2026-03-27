@@ -14,23 +14,75 @@ After saving and committing your changes, the site will automatically rebuild an
 
 ---
 
-## Site Structure at a Glance
+## Quick Reference — What Do You Want to Change?
+
+Use this table to find the right file immediately. Everything below it explains each file in detail.
+
+| I want to change... | Edit this file |
+|---|---|
+| Contact emails | `content/organization/config.json` |
+| Social media links | `content/organization/config.json` |
+| Homepage event cards (dates, focus badge, ticket button) | `content/organization/config.json` |
+| Which event shows the "Next Event" banner | `content/organization/config.json` |
+| Event landing page (dates, venue, tagline, countdown, ticket link) | `content/[event]/event.json` |
+| Event schedule | `content/[event]/schedule.json` |
+| A presenter's bio, photo, or social links | `content/[event]/presenters/[presenter-name].md` |
+| A class description, level, or duration | `content/[event]/classes/[class-name].md` |
+| The About page | `content/organization/about.md` |
+| The FAQ page | `content/organization/faq.md` |
+
+> **Note on dates:** Event dates appear in **two places** — once on the homepage card and once on the event landing page. They are stored separately, so if you update dates you need to update both files: `config.json` (homepage card) and `event.json` (landing page).
+
+---
+
+## How Content Is Organized
+
+There are two layers of content on this site:
+
+### Layer 1 — Site-Wide Settings (`content/organization/config.json`)
+
+This file controls things that apply across the whole site and are not specific to one event:
+
+- Contact email addresses
+- Social media links
+- The homepage event cards (the three tiles on the front page)
+- Class level badge colors
+
+**This is the only file you need to touch for those things.** No code changes required.
+
+### Layer 2 — Per-Event Content (`content/[event]/`)
+
+Each event (BLAZE, FLARE, FIRE) has its own folder with its own files:
+
+| File | Controls |
+|---|---|
+| `event.json` | Event name, dates, tagline, venue, ticket link |
+| `schedule.json` | The full schedule for that event |
+| `presenters/` | One `.md` file per presenter |
+| `classes/` | One `.md` file per class |
+
+These files are completely independent from each other and from `config.json`. Editing BLAZE's files will not affect FLARE or FIRE.
+
+---
+
+## File Structure
 
 ```
 content/
+├── organization/
+│   ├── config.json         ← Site-wide: emails, social links, homepage cards
+│   ├── about.md            ← About page content
+│   ├── faq.md              ← FAQ page content
+│   └── policies.md         ← Policies content
 ├── blaze-2026/
-│   ├── event.json          ← Dates, venue, ticket link, tagline
-│   ├── schedule.json       ← Full event schedule
-│   ├── presenters/         ← One .md file per presenter
-│   └── classes/            ← One .md file per class
+│   ├── event.json          ← BLAZE landing page: dates, venue, tickets, tagline
+│   ├── schedule.json       ← BLAZE schedule
+│   ├── presenters/         ← One .md file per BLAZE presenter
+│   └── classes/            ← One .md file per BLAZE class
 ├── flare-2026/
-│   └── (same structure)
-├── fire-2027/
-│   └── (same structure)
-└── organization/
-    ├── about.md
-    ├── faq.md
-    └── policies.md
+│   └── (same structure as blaze-2026)
+└── fire-2027/
+    └── (same structure as blaze-2026)
 
 public/
 └── images/
@@ -39,17 +91,72 @@ public/
 
 ---
 
-## Managing Events
+## Updating Site-Wide Settings (`config.json`)
 
-### Updating Event Details (dates, venue, tickets)
+File: `content/organization/config.json`
 
-Edit the file: `content/[event-name]/event.json`
+### Contact Emails
 
-Note: the event landing pages (for example `/events/blaze-2026`) read dates and focus
-directly from `content/[event-name]/event.json`. The homepage event cards (`/`) use
-a separate hard-coded configuration (see the next section).
+```json
+"contact": {
+  "general": "eventinfo@fireorlando.com",
+  "presenters": "Presenters@fireorlando.com",
+  "volunteers": "Volunteers@fireorlando.com",
+  "vendors": "Vendors@fireorlando.com"
+}
+```
 
-Example — `content/blaze-2026/event.json`:
+Change the value to the right of the colon. The footer and contact page read directly from this file.
+
+### Social Media Links
+
+```json
+"social": {
+  "fetlife": "https://fetlife.com/F_I_R_E",
+  "instagram": "https://www.instagram.com/woodshedorlando/",
+  "facebook": "",
+  "tiktok": ""
+}
+```
+
+Leave a value blank (`""`) to hide that platform's icon/link on the site.
+
+### Homepage Event Cards
+
+```json
+"homepage": {
+  "featuredEventId": "blaze",
+  "events": [
+    {
+      "id": "blaze",
+      "name": "BLAZE",
+      "year": 2026,
+      "logo": "/logos/blaze-2026.png",
+      "dates": "April 17–19, 2026",
+      "focus": "Beginner to Intermediate",
+      "focusVariant": "beginner",
+      "internalLink": "/events/blaze-2026",
+      "ticketEventSlug": "blaze-2026"
+    }
+  ]
+}
+```
+
+Fields to update:
+- `dates` — the date text shown on the homepage card
+- `focus` — the level label shown on the badge
+- `focusVariant` — controls badge color: `beginner` (green), `intermediate` (amber), or `all` (yellow)
+- `featuredEventId` — set to the `id` of whichever event should show the "Next Event" banner
+- `ticketEventSlug` — the slug used to build the ticket link; leave blank (`""`) if tickets aren't on sale yet
+
+> Remember: these dates only update the **homepage card**. Also update `content/[event]/event.json` to update the event landing page.
+
+---
+
+## Updating an Event Landing Page (`event.json`)
+
+File: `content/[event]/event.json` — for example `content/blaze-2026/event.json`
+
 ```json
 {
   "name": "BLAZE",
@@ -75,37 +182,14 @@ Example — `content/blaze-2026/event.json`:
 
 Fields to update most often:
 
-- `dates.display` — the human-readable date range shown on the site
-- `dates.start` / `dates.end` — ISO format dates used by the countdown timer
-- `focus` — the level/focus label shown on the site
-- `tickets.url` — the Forbidden Tickets link for this event
-- `tickets.onSaleDate` — shown on the site before tickets are available
-- `tagline` — the short phrase shown in the hero
+- `dates.display` — the human-readable date range shown on the event landing page
+- `dates.start` / `dates.end` — ISO format dates (YYYY-MM-DD) used by the countdown timer
+- `tickets.url` — the full Forbidden Tickets link for this event
+- `tickets.onSaleDate` — shown on the site before tickets go on sale
+- `tagline` — the short phrase shown in the event hero
 - `venue` — update if the venue changes
 
----
-
-### Updating the Homepage Event Cards (dates, levels)
-
-The homepage cards (the three cards for BLAZE, FLARE, FIRE on `/`) use hard-coded values
-from `components/home/EventCards.tsx`.
-
-1. Open `components/home/EventCards.tsx`
-2. Edit the `EVENTS_BASE` entries for:
-   - `id: 'blaze'`
-   - `id: 'flare'`
-   - `id: 'fire'`
-3. Update:
-   - `dates` — the date text shown on the card
-   - `focus` — the level text shown on the badge
-   - `focusVariant` — controls the badge color (`beginner`, `intermediate`, `all`)
-4. (Optional) To show the "🔥 Next Event" banner, set `featured: true` on that entry.
-
-Ticket CTA note:
-
-- Only the BLAZE homepage card's ticket link is wired up today via `app/page.tsx`
-  using `content/blaze-2026/event.json` (`tickets.url`). The FLARE and FIRE cards
-  currently show "Learn More" unless you add ticket wiring.
+> Remember: these dates only update the **event landing page**. Also update `content/organization/config.json` to update the homepage card.
 
 ---
 
@@ -236,7 +320,7 @@ The matching is case-insensitive, so `beginner`, `Beginner`, and `BEGINNER` all 
 
 ## Managing the Schedule
 
-Edit the file: `content/[event]/schedule.json`
+File: `content/[event]/schedule.json`
 
 ```json
 {
@@ -284,6 +368,16 @@ To add a new type (e.g. `"workshop"` with its own color and badge), a developer 
 
 ---
 
+## Adding Presenter Photos
+
+1. Prepare the photo: square crop works best, at least 400×400px, JPG or PNG
+2. Save it to `public/images/presenters/` — name it to match the presenter's slug (e.g. `jane-doe.jpg`)
+3. In the presenter's `.md` file, set: `photo: /images/presenters/jane-doe.jpg`
+
+If no photo is set, the site shows a silhouette placeholder automatically.
+
+---
+
 ## Navigating Between Events
 
 The site has three events, each with their own section:
@@ -302,24 +396,6 @@ Each event has the same sub-pages:
 - `/events/[event]/classes/[slug]` — individual class detail
 - `/events/[event]/schedule` — event schedule
 - `/events/[event]/venue` — venue information
-
-To add content for a new event, just add files to the appropriate `content/[event]/` folder.
-
----
-
-## Adding Presenter Photos
-
-1. Prepare the photo: square crop works best, at least 400×400px, JPG or PNG
-2. Save it to `public/images/presenters/` — name it to match the presenter's slug (e.g. `jane-doe.jpg`)
-3. In the presenter's `.md` file, set: `photo: /images/presenters/jane-doe.jpg`
-
-If no photo is set, the site shows a silhouette placeholder automatically.
-
----
-
-## Updating the Contact Email
-
-The contact email (`fireeventproducer@gmail.com`) appears in the footer. To change it, search the codebase for the email address and update it in `components/layout/Footer.tsx`.
 
 ---
 
@@ -357,6 +433,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 | File | Purpose |
 |------|---------|
+| `content/organization/config.json` | Site-wide settings (emails, social, homepage cards) |
 | `lib/content.ts` | All content loading functions |
 | `lib/types.ts` | TypeScript interfaces for all data |
 | `components/events/PresenterCard.tsx` | Presenter listing card |

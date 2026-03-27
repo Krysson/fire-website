@@ -68,6 +68,8 @@ fire-website/
 │   ├── flare-2026/
 │   ├── fire-2027/
 │   └── organization/
+│       ├── config.json         # SINGLE SOURCE OF TRUTH: contact emails, social links,
+│       │                       # homepage event cards, class level colors
 │       ├── about.md
 │       ├── faq.md
 │       └── policies.md
@@ -127,6 +129,20 @@ colors: {
 ---
 
 ## Content File Formats
+
+### config.json (Single Source of Truth)
+
+`content/organization/config.json` controls site-wide settings. Edit this file — not component code — for:
+
+- **Contact emails** (`contact.general`, `contact.presenters`, `contact.volunteers`, `contact.vendors`)
+- **Social media links** (`social.fetlife`, `social.instagram`, `social.facebook`, `social.tiktok`)
+- **Homepage event cards** (`homepage.events[]`) — dates, focus level, badge color, ticket slug, logo
+- **Featured event** (`homepage.featuredEventId`) — which event shows the "Next Event" banner
+- **Class level badge colors** (`classLevels[]`)
+
+Never hard-code these values in component files. Always read from `getSiteConfig()`.
+
+---
 
 ### event.json
 ```json
@@ -230,14 +246,7 @@ This class covers the fundamentals of floor-based rope bondage...
 
 ## External Links
 
-All ticket purchases redirect to forbiddentickets.com:
-```typescript
-const TICKET_URLS = {
-  'blaze-2026': 'https://forbiddentickets.com/events/blaze-2026',
-  'flare-2026': 'https://forbiddentickets.com/events/flare-2026',
-  'fire-2027': 'https://forbiddentickets.com/events/fire-2027'
-}
-```
+Ticket URLs are built from the `ticketEventSlug` field in each event entry inside `content/organization/config.json`. The base URL is `https://forbiddentickets.com/events/`. Leave `ticketEventSlug` blank to hide the ticket button for that event.
 
 ---
 
@@ -246,8 +255,9 @@ const TICKET_URLS = {
 ```env
 # .env.local (if needed)
 NEXT_PUBLIC_SITE_URL=https://fireorlando.com
-NEXT_PUBLIC_CONTACT_EMAIL=fireeventproducer@gmail.com
 ```
+
+Contact emails and social links are stored in `content/organization/config.json`, not environment variables.
 
 ---
 
@@ -263,11 +273,13 @@ NEXT_PUBLIC_CONTACT_EMAIL=fireeventproducer@gmail.com
 
 To add/update content:
 
-1. **New presenter:** Add markdown file to `/content/[event]/presenters/`
-2. **New class:** Add markdown file to `/content/[event]/classes/`
-3. **Update schedule:** Edit `/content/[event]/schedule.json`
-4. **New images:** Add to `/public/images/`
-5. Commit and push - Vercel rebuilds automatically
+1. **Contact emails / social links / homepage cards:** Edit `content/organization/config.json`
+2. **New presenter:** Add markdown file to `/content/[event]/presenters/`
+3. **New class:** Add markdown file to `/content/[event]/classes/`
+4. **Update schedule:** Edit `/content/[event]/schedule.json`
+5. **Event details (dates, venue, tagline, tickets):** Edit `/content/[event]/event.json`
+6. **New images:** Add to `/public/images/`
+7. Commit and push - Vercel rebuilds automatically
 
 ---
 
@@ -282,12 +294,13 @@ To add/update content:
 
 ### Change ticket URL
 ```bash
-# Edit: content/[event]/event.json
-# Update "ticketUrl" field
+# Edit: content/organization/config.json
+# Update "ticketEventSlug" for the relevant event in homepage.events[]
+# Also update "tickets.url" in content/[event]/event.json for the event landing page
 ```
 
-### Update contact email
+### Update contact email or social links
 ```bash
-# Edit: .env.local or directly in components/Footer.tsx
-# Search for: fireeventproducer@gmail.com
+# Edit: content/organization/config.json
+# Update the relevant field under "contact" or "social"
 ```
