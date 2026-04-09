@@ -4,6 +4,7 @@ slug: top
 presenter: Open Discussion
 level: Discussion
 duration: 90 minutes
+feedbackUrl: https://tally.so/r/QKJ561
 ---
 
 This is a space for rope tops to gather, share, and learn from each other.

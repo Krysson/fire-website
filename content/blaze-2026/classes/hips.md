@@ -4,6 +4,7 @@ slug: hips
 presenter: corvid_fern
 level: Beginner
 duration: 90 minutes
+feedbackUrl: https://tally.so/r/QKJ561
 ---
 
 Introducing two versatile harnesses, the Swiss Seat and the Gunslinger Hip Harness.

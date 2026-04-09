@@ -221,6 +221,16 @@ export default function BlazePage() {
             <Ticket className="h-5 w-5" />
             Purchase Tickets
           </a>
+          {event.feedbackUrl && (
+            <a
+              href={event.feedbackUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-2 rounded-lg border border-gray-600 px-6 py-3 text-base font-medium text-gray-300 transition-all duration-200 hover:border-gray-400 hover:text-white active:scale-95"
+            >
+              Event Feedback
+            </a>
+          )}
         </div>
       </section>
     </div>

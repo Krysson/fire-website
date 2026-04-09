@@ -4,6 +4,7 @@ slug: pretty
 presenter: vagabond_vix
 level: Beginner
 duration: 90 minutes
+feedbackUrl: https://tally.so/r/QKJ561
 ---
 
 The goal of this beginner-level decorative rope class is to teach the basic needed to not only tie a number of standard decorative ties, but to also let you start creating your own!

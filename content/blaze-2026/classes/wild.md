@@ -4,6 +4,7 @@ slug: wild
 presenter: desmond-ellise
 level: Intermediate
 duration: 90 minutes
+feedbackUrl: https://tally.so/r/QKJ561
 ---
 
 Sequences are for floor rope too!

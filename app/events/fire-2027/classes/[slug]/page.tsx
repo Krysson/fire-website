@@ -89,6 +89,15 @@ export default async function ClassPage({ params }: ClassPageProps) {
               {classItem.duration && (
                 <span className="text-gray-400 text-sm">{classItem.duration}</span>
               )}
+              {classItem.feedbackUrl && (
+                <a
+                  href={classItem.feedbackUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-fire-orange/40 bg-fire-orange/10 text-fire-orange text-sm font-medium hover:bg-fire-orange/20 transition-colors">
+                  Class Feedback
+                </a>
+              )}
             </div>
 
             {/* Presenter(s) */}

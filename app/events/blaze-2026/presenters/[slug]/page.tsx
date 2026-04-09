@@ -208,11 +208,12 @@ export default async function PresenterPage({ params }: PresenterPageProps) {
             {presenterClasses.length > 0 ? (
               <div className="grid gap-4">
                 {presenterClasses.map((classItem) => (
-                  <div
+                  <Link
                     key={classItem.slug}
-                    className="bg-fire-dark rounded-lg p-6 border border-fire-red/20 hover:border-fire-red/40 transition-colors"
+                    href={`/events/blaze-2026/classes/${classItem.slug}`}
+                    className="block bg-fire-dark rounded-lg p-6 border border-fire-red/20 hover:border-fire-red/40 transition-colors"
                   >
-                    <h3 className="text-xl font-semibold text-fire-orange mb-2">
+                    <h3 className="text-xl font-semibold text-fire-orange mb-2 hover:underline">
                       {classItem.title}
                     </h3>
                     <div className="flex flex-wrap gap-4 text-sm text-gray-400 mb-3">
@@ -228,7 +229,7 @@ export default async function PresenterPage({ params }: PresenterPageProps) {
                         {classItem.content.replace(/^#+\s+/gm, '').replace(/[_*`]/g, '')}
                       </p>
                     )}
-                  </div>
+                  </Link>
                 ))}
               </div>
             ) : (

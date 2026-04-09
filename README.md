@@ -25,9 +25,12 @@ Use this table to find the right file immediately. Everything below it explains 
 | Homepage event cards (dates, focus badge, ticket button) | `content/organization/config.json` |
 | Which event shows the "Next Event" banner | `content/organization/config.json` |
 | Event landing page (dates, venue, tagline, countdown, ticket link) | `content/[event]/event.json` |
+| Event feedback form URL | `content/[event]/event.json` → `feedbackUrl` field |
+| Ticket links (move from one event to the next) | `content/organization/config.json` + `content/[event]/event.json` |
 | Event schedule | `content/[event]/schedule.json` |
 | A presenter's bio, photo, or social links | `content/[event]/presenters/[presenter-name].md` |
 | A class description, level, or duration | `content/[event]/classes/[class-name].md` |
+| A class feedback form URL | `content/[event]/classes/[class-name].md` → `feedbackUrl` field |
 | The About page | `content/organization/about.md` |
 | The FAQ page | `content/organization/faq.md` |
 
@@ -188,8 +191,67 @@ Fields to update most often:
 - `tickets.onSaleDate` — shown on the site before tickets go on sale
 - `tagline` — the short phrase shown in the event hero
 - `venue` — update if the venue changes
+- `feedbackUrl` — URL for the event-level feedback form (shown as an "Event Feedback" button on the event landing page; omit the field entirely to hide the button)
 
 > Remember: these dates only update the **event landing page**. Also update `content/organization/config.json` to update the homepage card.
+
+---
+
+## Changing Ticket Links Between Events
+
+When one event ends and the next event's tickets go on sale, update **two files**:
+
+### Step 1 — Update `content/organization/config.json`
+
+Find the entry for the new event in `homepage.events[]` and set `ticketEventSlug` to the Forbidden Tickets slug for that event. This controls the ticket button on the **homepage card**.
+
+```json
+{
+  "id": "flare",
+  "name": "FLARE",
+  ...
+  "ticketEventSlug": "the-woodshed-orlando/2026-07-XX-flare-2026"
+}
+```
+
+Set the old event's `ticketEventSlug` to `""` (empty string) to remove its ticket button from the homepage.
+
+### Step 2 — Update `content/[new-event]/event.json`
+
+Set `tickets.url` to the full Forbidden Tickets URL and update `tickets.onSaleDate` to the actual on-sale date.
+
+```json
+"tickets": {
+  "url": "https://forbiddentickets.com/events/the-woodshed-orlando/2026-07-XX-flare-2026",
+  "onSaleDate": "April 22, 2026"
+}
+```
+
+That's all. No code changes needed — the event landing page and homepage both read from these files automatically.
+
+---
+
+## Changing Feedback Form URLs
+
+### Event feedback form
+
+Edit `content/[event]/event.json` and update the `feedbackUrl` field:
+
+```json
+"feedbackUrl": "https://tally.so/r/XXXXXX"
+```
+
+Remove the `feedbackUrl` line entirely to hide the button for that event.
+
+### Class feedback form
+
+Each class has its own `feedbackUrl` in its markdown frontmatter. Open the class file at `content/[event]/classes/[class-name].md` and update the field:
+
+```yaml
+feedbackUrl: https://tally.so/r/XXXXXX
+```
+
+To use the same form URL for all classes in an event, set every class file to the same URL. To hide the button for a specific class, remove the `feedbackUrl` line from that class's file.
 
 ---
 
@@ -281,6 +343,7 @@ slug: floor-work-basics
 presenter: jane-doe
 level: Beginner
 duration: 90 minutes
+feedbackUrl: https://tally.so/r/QKJ561
 ---
 
 Class description goes here. Describe what students will learn, prerequisites, and what to bring.
@@ -295,6 +358,7 @@ Class description goes here. Describe what students will learn, prerequisites, a
 | `presenter` | Yes | The presenter's `slug` value (must match exactly) |
 | `level` | Yes | One of: `Beginner`, `Intermediate`, `Advanced`, `All Levels` |
 | `duration` | No | e.g. `90 minutes`, `2 hours` |
+| `feedbackUrl` | No | URL for the class feedback form; omit to hide the button |
 
 ### Classes with Multiple Presenters (co-taught)
 

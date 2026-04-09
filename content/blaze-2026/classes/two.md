@@ -6,6 +6,7 @@ presenter:
   - breeze
 level: Intermediate
 duration: 90 minutes
+feedbackUrl: https://tally.so/r/QKJ561
 ---
 
 We love pain in this house. We don’t, however, like working hard. In this class we will cover two very simple but highly effective, low effort, torture rope ties and demonstrate a way in which they may be used in a partial suspension sequence to get the most pain out of your Bottom for the least amount of effort

@@ -4,6 +4,7 @@ slug: nerve
 presenter: nova
 level: Beginner
 duration: 90 minutes
+feedbackUrl: https://tally.so/r/QKJ561
 ---
 
 We all know what it's like to get on someone's nerves, but what about when we're doing rope?

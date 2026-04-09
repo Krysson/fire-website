@@ -98,6 +98,8 @@ export interface Event {
     primary: string;
     secondary: string;
   };
+  /** URL for event feedback form */
+  feedbackUrl?: string;
 }
 
 /**
@@ -136,6 +138,8 @@ export interface Class {
   duration: string;
   /** Markdown class description/content */
   content?: string;
+  /** URL for class feedback form */
+  feedbackUrl?: string;
 }
 
 /**

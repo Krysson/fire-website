@@ -4,6 +4,7 @@ slug: single
 presenter: senbound_giggles
 level: Intermediate
 duration: 90 minutes
+feedbackUrl: https://tally.so/r/QKJ561
 ---
 
 UPDATE COMING

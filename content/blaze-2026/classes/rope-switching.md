@@ -6,6 +6,7 @@ presenter:
   - dovah
 level: Beginner
 duration: 90 minutes
+feedbackUrl: https://tally.so/r/QKJ561
 ---
 
 You join the community and you’re told “Rope tops, pay attention to how to do this thing” and “Rope bottoms, make sure you learn this”... but what about that super secret THIRD option? Rope Switch!

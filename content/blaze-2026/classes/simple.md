@@ -6,6 +6,7 @@ presenter:
   - mako
 level: Intermediate
 duration: 90 minutes
+feedbackUrl: https://tally.so/r/QKJ561
 ---
 
 When one goes to build a harness, one must ask, when is it enough? In this class, we’ll discuss when we build more structure and reinforcements into our ties, and when we go with simpler, more minimalist options. We’ll cover the benefits and drawbacks of each choice, and strive to tie the most appropriate level of stability for what we’re trying to accomplish.

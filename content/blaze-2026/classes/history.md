@@ -4,6 +4,7 @@ slug: history
 presenter: senbound_giggles
 level: Beginner
 duration: 90 minutes
+feedbackUrl: https://tally.so/r/QKJ561
 ---
 
 Want to learn the _actual_ history of rope bondage? Cool, cool. Prepare to be disappointed—but in the fun way. You think you know where rope bondage came from? Buckle up, because the answer is "lol no one really knows, and the people who _do_ mostly made it up anyway."

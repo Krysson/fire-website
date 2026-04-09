@@ -231,6 +231,7 @@ export function getClasses(eventSlug: string): Class[] {
         level: data.level,
         duration: data.duration,
         content,
+        feedbackUrl: data.feedbackUrl,
       } as Class;
     });
 
@@ -283,6 +284,7 @@ export function getClassBySlug(eventSlug: string, slug: string): Class | null {
       level: data.level,
       duration: data.duration,
       content,
+      feedbackUrl: data.feedbackUrl,
     } as Class;
   } catch (error) {
     console.error(`Error loading class ${slug} for ${eventSlug}:`, error);

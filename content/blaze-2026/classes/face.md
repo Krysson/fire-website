@@ -4,6 +4,7 @@ slug: face
 presenter: desmond-ellise
 level: Beginner
 duration: 90 minutes
+feedbackUrl: https://tally.so/r/QKJ561
 ---
 
 This class is about face rope.
