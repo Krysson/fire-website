@@ -58,14 +58,14 @@
           "title": "Rope Performance",
           "presenter": ["owl", "lily"],
           "classSlug": "perf",
-          "room": "Blue Side",
+          "room": "Green Side",
           "type": "class"
         },
         {
           "time": "10:00 AM",
           "title": "Hips Don't Lie",
           "presenter": "corvid_fern",
-          "room": "Green Side",
+          "room": "Blue Side",
           "classSlug": "hips",
           "type": "class"
         },
