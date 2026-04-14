@@ -1,5 +1,5 @@
 ---
-title: CONVERSATIONAL FOUNDATIONS - Banishing robots and grocery lists.
+title: Conversational Foundations - Banishing robots and grocery lists.
 slug: single
 presenter: senbound_giggles
 level: Intermediate
