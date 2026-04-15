@@ -2,7 +2,7 @@ import { getEventData } from '@/lib/content';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Calendar, MapPin, Users, Ticket } from 'lucide-react';
+import { Calendar, MapPin, Users, Ticket, Hotel } from 'lucide-react';
 
 export default function FlarePage() {
   const event = getEventData('flare-2026');
@@ -91,6 +91,17 @@ export default function FlarePage() {
             >
               <Ticket className="h-5 w-5" />
               Get Tickets
+            </a>
+
+            {/* Hotel Room Block */}
+            <a
+              href="https://www.hyatt.com/events/en-US/group-booking/ORLZA/G-BLAZ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-2 rounded-lg border border-gray-500 px-6 py-3 text-base font-medium text-gray-300 transition-all duration-200 hover:border-fire-orange hover:text-white active:scale-95"
+            >
+              <Hotel className="h-5 w-5" />
+              Book Your Hotel Room
             </a>
 
             {/* Tickets on Sale Date */}
@@ -200,25 +211,36 @@ export default function FlarePage() {
           <p className="mb-8 text-lg text-gray-300">
             Join us for an unforgettable weekend of advanced learning and connection
           </p>
-          <a
-            href={event.tickets.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg border border-[#e63946] px-8 py-4 text-lg font-semibold text-[#f4a261] transition-all duration-200 hover:border-[#f4a261] hover:text-white active:scale-95"
-          >
-            <Ticket className="h-5 w-5" />
-            Purchase Tickets
-          </a>
-          {event.feedbackUrl && (
+          <div className="flex flex-wrap items-center justify-center gap-4">
             <a
-              href={event.feedbackUrl}
+              href={event.tickets.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-2 rounded-lg border border-gray-600 px-6 py-3 text-base font-medium text-gray-300 transition-all duration-200 hover:border-gray-400 hover:text-white active:scale-95"
+              className="inline-flex items-center gap-2 rounded-lg border border-[#e63946] px-8 py-4 text-lg font-semibold text-[#f4a261] transition-all duration-200 hover:border-[#f4a261] hover:text-white active:scale-95"
             >
-              Event Feedback
+              <Ticket className="h-5 w-5" />
+              Purchase Tickets
             </a>
-          )}
+            <a
+              href="https://www.hyatt.com/events/en-US/group-booking/ORLZA/G-BLAZ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg border border-gray-500 px-6 py-3 text-base font-medium text-gray-300 transition-all duration-200 hover:border-fire-orange hover:text-white active:scale-95"
+            >
+              <Hotel className="h-5 w-5" />
+              Book Your Hotel Room
+            </a>
+            {event.feedbackUrl && (
+              <a
+                href={event.feedbackUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg border border-gray-600 px-6 py-3 text-base font-medium text-gray-300 transition-all duration-200 hover:border-gray-400 hover:text-white active:scale-95"
+              >
+                Event Feedback
+              </a>
+            )}
+          </div>
         </div>
       </section>
     </div>
