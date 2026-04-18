@@ -1,14 +1,17 @@
 ---
-name: Test
-slug: test
+name: Chingon_Cuerdas & CreppyJane
+slug: cccj
 pronouns:
+  - 'he/him'
   - 'she/her'
 photo: /images/presenters/test.jpg
 social:
   fetlife:
     - https://fetlife.com/Test
+    - https://fetlife.com/Test
 social_labels:
   fetlife:
+    - FetLife - Test
     - FetLife - Test
 featured: true
 ---
