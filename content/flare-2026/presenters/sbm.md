@@ -1,8 +1,8 @@
 ---
-name: -EM- & Nirathekitten
+name: ShaktiBliss & -Magnolia-
 slug: emnira
 pronouns:
-  - 'he/him'
+  - 'she/they'
   - 'she/her'
 photo: /images/presenters/test.jpg
 social:

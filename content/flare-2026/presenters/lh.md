@@ -1,9 +1,9 @@
 ---
-name: -EM- & Nirathekitten
+name: Leif & Icky
 slug: emnira
 pronouns:
-  - 'he/him'
-  - 'she/her'
+  - 'he/they'
+  - 'he/they'
 photo: /images/presenters/test.jpg
 social:
   fetlife:
