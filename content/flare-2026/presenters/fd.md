@@ -16,6 +16,6 @@ social_labels:
 featured: true
 ---
 
-# Test
+# Fuoco & Demo
 
 ## Update Coming Soon!

@@ -16,6 +16,6 @@ social_labels:
 featured: true
 ---
 
-# Test
+# Leif & Icky
 
 ## Update Coming Soon!

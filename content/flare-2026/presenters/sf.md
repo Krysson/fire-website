@@ -16,6 +16,6 @@ social_labels:
 featured: true
 ---
 
-# Test
+# Sydona & Faerie Bruises
 
 ## Update Coming Soon!
