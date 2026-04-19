@@ -2,8 +2,8 @@
 name: Fuoco & Demo
 slug: fd
 pronouns:
-  - 'he/him'
   - 'she/her'
+  - 'he/him'
 photo: /images/presenters/test.jpg
 social:
   fetlife:

@@ -2,8 +2,8 @@
 name: Sydona & Faerie Bruises
 slug: sf
 pronouns:
-  - 'he/him'
   - 'she/her'
+  - 'she/they'
 photo: /images/presenters/test.jpg
 social:
   fetlife:

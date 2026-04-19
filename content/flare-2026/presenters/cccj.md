@@ -3,7 +3,7 @@ name: Chingon_Cuerdas & CreppyJane
 slug: cccj
 pronouns:
   - 'he/him'
-  - 'she/her'
+  - 'they/them'
 photo: /images/presenters/test.jpg
 social:
   fetlife:
