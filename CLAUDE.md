@@ -150,16 +150,25 @@ Never hard-code these values in component files. Always read from `getSiteConfig
   "name": "BLAZE",
   "year": 2026,
   "tagline": "Ignite Your Rope Journey",
-  "dates": "April 17-19, 2026",
+  "description": "A short paragraph about the event.\n\nUse \\n\\n to separate paragraphs. HTML tags like <strong> and <em> are supported.",
+  "dates": {
+    "display": "April 17-19, 2026",
+    "start": "2026-04-17",
+    "end": "2026-04-19"
+  },
   "focus": "Beginner to Intermediate",
   "venue": {
     "name": "The Woodshed",
     "address": "6431 Milner Blvd Suite #4, Orlando, FL 32809"
   },
-  "ticketUrl": "https://forbiddentickets.com/events/blaze-2026",
-  "ticketsOnSale": "February 14, 2026"
+  "tickets": {
+    "url": "https://forbiddentickets.com/events/...",
+    "onSaleDate": "February 14, 2026"
+  }
 }
 ```
+
+> **`description` formatting:** Use `\n\n` (double backslash-n) between paragraphs to create line breaks. HTML tags such as `<strong>`, `<em>`, and `<br>` are rendered. The `dates.start` ISO value drives the homepage countdown timer.
 
 ### schedule.json
 ```json
@@ -246,7 +255,9 @@ This class covers the fundamentals of floor-based rope bondage...
 
 ## External Links
 
-Ticket URLs are built from the `ticketEventSlug` field in each event entry inside `content/organization/config.json`. The base URL is `https://forbiddentickets.com/events/`. Leave `ticketEventSlug` blank to hide the ticket button for that event.
+`ticketEventSlug` in `content/organization/config.json` is the **event folder name** (e.g. `"flare-2026"`), not a Forbidden Tickets path. The code calls `getEventData(ticketEventSlug)` to load that event's `event.json` and reads `tickets.url` from it. The actual Forbidden Tickets URL lives in `content/[event]/event.json` under `tickets.url`.
+
+Leave `ticketEventSlug` blank (`""`) to hide the ticket button for that event on the homepage and show "Learn More" instead.
 
 ---
 
@@ -292,11 +303,16 @@ To add/update content:
 # Update schedule.json if they're teaching
 ```
 
-### Change ticket URL
+### Roll to the next event (e.g. BLAZE is over, FLARE is next)
 ```bash
-# Edit: content/organization/config.json
-# Update "ticketEventSlug" for the relevant event in homepage.events[]
-# Also update "tickets.url" in content/[event]/event.json for the event landing page
+# 1. Edit content/organization/config.json:
+#    - Set featuredEventId to the new event's id (e.g. "flare")
+#    - Set the old event's ticketEventSlug to "" (removes its ticket button)
+#    - Set the new event's ticketEventSlug to its folder name (e.g. "flare-2026")
+#
+# 2. Edit content/[new-event]/event.json:
+#    - Confirm tickets.url is the correct Forbidden Tickets URL
+#    - Confirm dates.start is correct (drives the homepage countdown timer)
 ```
 
 ### Update contact email or social links

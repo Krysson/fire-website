@@ -78,9 +78,11 @@ export default function FlarePage() {
             </h1>
 
             {/* Description */}
-            <p className="mb-8 max-w-2xl text-lg text-gray-300 sm:text-xl">
-              {event.description}
-            </p>
+            <div className="mb-8 max-w-2xl space-y-4 text-left text-lg text-gray-300 sm:text-xl">
+              {event.description.split('\n\n').map((para, i) => (
+                <p key={i} dangerouslySetInnerHTML={{ __html: para }} />
+              ))}
+            </div>
 
             {/* Ticket CTA Button */}
             <a

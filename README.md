@@ -149,8 +149,8 @@ Fields to update:
 - `dates` — the date text shown on the homepage card
 - `focus` — the level label shown on the badge
 - `focusVariant` — controls badge color: `beginner` (green), `intermediate` (amber), or `all` (yellow)
-- `featuredEventId` — set to the `id` of whichever event should show the "Next Event" banner
-- `ticketEventSlug` — the slug used to build the ticket link; leave blank (`""`) if tickets aren't on sale yet
+- `featuredEventId` — set to the `id` of whichever event should show the "Next Event" banner and drive the homepage countdown timer
+- `ticketEventSlug` — the **event folder name** (e.g. `"flare-2026"`); used to look up that event's `tickets.url` from its `event.json`. Leave blank (`""`) to hide the ticket button and show "Learn More" instead.
 
 > Remember: these dates only update the **homepage card**. Also update `content/[event]/event.json` to update the event landing page.
 
@@ -186,10 +186,11 @@ File: `content/[event]/event.json` — for example `content/blaze-2026/event.jso
 Fields to update most often:
 
 - `dates.display` — the human-readable date range shown on the event landing page
-- `dates.start` / `dates.end` — ISO format dates (YYYY-MM-DD) used by the countdown timer
-- `tickets.url` — the full Forbidden Tickets link for this event
+- `dates.start` / `dates.end` — ISO format dates (YYYY-MM-DD); `dates.start` drives the homepage countdown timer for the featured event
+- `tickets.url` — the full Forbidden Tickets URL for this event (can be any path, e.g. `https://forbiddentickets.com/events/the-woodshed-orlando/e49e661298`)
 - `tickets.onSaleDate` — shown on the site before tickets go on sale
 - `tagline` — the short phrase shown in the event hero
+- `description` — the event description shown below the tagline. Use `\n\n` between paragraphs for line breaks. HTML tags like `<strong>` and `<em>` are supported.
 - `venue` — update if the venue changes
 - `feedbackUrl` — URL for the event-level feedback form (shown as an "Event Feedback" button on the event landing page; omit the field entirely to hide the button)
 
@@ -197,37 +198,39 @@ Fields to update most often:
 
 ---
 
-## Changing Ticket Links Between Events
+## Rolling to the Next Event
 
-When one event ends and the next event's tickets go on sale, update **two files**:
+When one event ends and it's time to feature the next one, update **two files**:
 
 ### Step 1 — Update `content/organization/config.json`
 
-Find the entry for the new event in `homepage.events[]` and set `ticketEventSlug` to the Forbidden Tickets slug for that event. This controls the ticket button on the **homepage card**.
+1. Set `featuredEventId` to the new event's `id` (e.g. `"flare"`). This controls the homepage countdown timer label, hero ticket button, and "Next Event" banner.
+2. Set the **old** event's `ticketEventSlug` to `""` — this removes its ticket button and shows "Learn More" instead.
+3. Set the **new** event's `ticketEventSlug` to its folder name (e.g. `"flare-2026"`).
 
 ```json
-{
-  "id": "flare",
-  "name": "FLARE",
-  ...
-  "ticketEventSlug": "the-woodshed-orlando/2026-07-XX-flare-2026"
-}
+"featuredEventId": "flare",
+"events": [
+  { "id": "blaze", ..., "ticketEventSlug": "" },
+  { "id": "flare", ..., "ticketEventSlug": "flare-2026" }
+]
 ```
 
-Set the old event's `ticketEventSlug` to `""` (empty string) to remove its ticket button from the homepage.
+> `ticketEventSlug` is the **event folder name**, not a Forbidden Tickets path. The site uses it to look up `tickets.url` from that event's `event.json`.
 
-### Step 2 — Update `content/[new-event]/event.json`
+### Step 2 — Confirm `content/[new-event]/event.json`
 
-Set `tickets.url` to the full Forbidden Tickets URL and update `tickets.onSaleDate` to the actual on-sale date.
+Make sure `tickets.url` is the correct full Forbidden Tickets URL and `dates.start` is the correct ISO start date (this drives the countdown timer).
 
 ```json
+"dates": { "start": "2026-10-15", ... },
 "tickets": {
-  "url": "https://forbiddentickets.com/events/the-woodshed-orlando/2026-07-XX-flare-2026",
-  "onSaleDate": "April 22, 2026"
+  "url": "https://forbiddentickets.com/events/the-woodshed-orlando/e49e661298",
+  "onSaleDate": "April 21, 2026"
 }
 ```
 
-That's all. No code changes needed — the event landing page and homepage both read from these files automatically.
+That's all. No code changes needed — the homepage hero, countdown, header ticket button, and event landing page all update automatically.
 
 ---
 
