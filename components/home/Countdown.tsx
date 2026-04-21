@@ -9,10 +9,8 @@ interface TimeLeft {
   seconds: number
 }
 
-const TARGET_DATE = new Date('2026-04-17T00:00:00')
-
-function getTimeLeft(): TimeLeft {
-  const diff = TARGET_DATE.getTime() - Date.now()
+function getTimeLeft(targetDate: Date): TimeLeft {
+  const diff = targetDate.getTime() - Date.now()
   if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 }
   return {
     days:    Math.floor(diff / (1000 * 60 * 60 * 24)),
@@ -26,14 +24,14 @@ function pad(n: number): string {
   return String(n).padStart(2, '0')
 }
 
-export default function Countdown() {
+export default function Countdown({ targetDate }: { targetDate: Date }) {
   const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null)
 
   useEffect(() => {
-    setTimeLeft(getTimeLeft())
-    const id = setInterval(() => setTimeLeft(getTimeLeft()), 1000)
+    setTimeLeft(getTimeLeft(targetDate))
+    const id = setInterval(() => setTimeLeft(getTimeLeft(targetDate)), 1000)
     return () => clearInterval(id)
-  }, [])
+  }, [targetDate])
 
   const isPast = timeLeft !== null && timeLeft.days === 0 && timeLeft.hours === 0 && timeLeft.minutes === 0 && timeLeft.seconds === 0
 

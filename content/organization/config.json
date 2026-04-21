@@ -26,7 +26,7 @@
         "focus": "Beginner to Intermediate",
         "focusVariant": "beginner",
         "internalLink": "/events/blaze-2026",
-        "ticketEventSlug": "blaze-2026"
+        "ticketEventSlug": ""
       },
       {
         "id": "flare",
@@ -37,7 +37,7 @@
         "focus": "Intermediate to Advanced",
         "focusVariant": "intermediate",
         "internalLink": "/events/flare-2026",
-        "ticketEventSlug": ""
+        "ticketEventSlug": "flare-2026"
       },
       {
         "id": "fire",

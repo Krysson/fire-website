@@ -20,9 +20,13 @@ export const metadata: Metadata = {
 export default function Home() {
   const config = getSiteConfig()
   const featuredEntry = config.homepage.events.find(e => e.id === config.homepage.featuredEventId)
-  const featuredTicketUrl = featuredEntry?.ticketEventSlug
-    ? (getEventData(featuredEntry.ticketEventSlug)?.tickets?.url ?? '')
-    : ''
+  const featuredEventData = featuredEntry?.ticketEventSlug
+    ? getEventData(featuredEntry.ticketEventSlug)
+    : null
+  const featuredTicketUrl = featuredEventData?.tickets?.url ?? ''
+  const featuredStartDate = featuredEventData?.dates?.start
+    ? new Date(`${featuredEventData.dates.start}T00:00:00`)
+    : new Date()
 
   const events = config.homepage.events.map(e => ({
     ...e,
@@ -35,7 +39,12 @@ export default function Home() {
   return (
     <div className='min-h-screen bg-fire-black'>
       {/* ── Hero ── */}
-      <Hero ticketUrl={featuredTicketUrl} />
+      <Hero
+        ticketUrl={featuredTicketUrl}
+        eventName={featuredEntry?.name ?? 'FLARE'}
+        eventYear={featuredEntry?.year ?? 2026}
+        eventStartDate={featuredStartDate}
+      />
 
       {/* ── Our Events ── */}
       <section

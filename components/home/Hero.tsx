@@ -25,7 +25,17 @@ const EMBERS = [
   { left: '96%', delay: '5s', dur: '8s', size: 4, color: '#f9c74f' }
 ]
 
-export default function Hero({ ticketUrl }: { ticketUrl: string }) {
+export default function Hero({
+  ticketUrl,
+  eventName,
+  eventYear,
+  eventStartDate,
+}: {
+  ticketUrl: string
+  eventName: string
+  eventYear: string | number
+  eventStartDate: Date
+}) {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
@@ -115,9 +125,9 @@ export default function Hero({ ticketUrl }: { ticketUrl: string }) {
               backgroundClip: 'text',
               filter: 'drop-shadow(0 0 20px rgba(244,162,97,0.65))'
             }}>
-            ⚡ BLAZE 2026 begins in
+            ⚡ {eventName} {eventYear} begins in
           </p>
-          <Countdown />
+          <Countdown targetDate={eventStartDate} />
         </div>
 
         {/* CTAs */}
@@ -129,7 +139,7 @@ export default function Hero({ ticketUrl }: { ticketUrl: string }) {
             target='_blank'
             rel='noopener noreferrer'
             className='inline-flex items-center justify-center gap-2 rounded-xl border border-[#e63946] px-8 py-4 text-base font-semibold text-[#f4a261] transition-all duration-200 hover:border-[#f4a261] hover:text-white active:scale-95 md:px-10 md:py-5 md:text-lg'>
-            🎟 Get Tickets — BLAZE 2026 →
+            🎟 Get Tickets — {eventName} {eventYear} →
           </a>
 
           <Link
