@@ -11,8 +11,8 @@ social:
     - https://fetlife.com/CreepyJane
 social_labels:
   fetlife:
-    - FetLife - Test
-    - FetLife - Test
+    - FetLife - Chingon_Cuerdas
+    - FetLife - CreepyJane
 featured: true
 ---
 

@@ -11,8 +11,8 @@ social:
     - https://fetlife.com/hedonist_queer
 social_labels:
   fetlife:
-    - FetLife - Test
-    - FetLife - Test
+    - FetLife - Lief
+    - FetLife - hedonist_queer
 featured: true
 ---
 

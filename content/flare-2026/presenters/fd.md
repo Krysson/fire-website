@@ -11,8 +11,8 @@ social:
     - https://fetlife.com/demolition_dirty
 social_labels:
   fetlife:
-    - FetLife - Test
-    - FetLife - Test
+    - FetLife - -fuoco-
+    - FetLife - demolition_dirty
 featured: true
 ---
 

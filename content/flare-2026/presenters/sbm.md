@@ -11,8 +11,8 @@ social:
     - https://fetlife.com/-Magnolia-
 social_labels:
   fetlife:
-    - FetLife - Test
-    - FetLife - Test
+    - FetLife - ShaktiBliss
+    - FetLife - -Magnolia-
 featured: true
 ---
 

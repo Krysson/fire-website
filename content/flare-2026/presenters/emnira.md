@@ -11,8 +11,8 @@ social:
     - https://fetlife.com/NiraTheKitten
 social_labels:
   fetlife:
-    - FetLife - Test
-    - FetLife - Test
+    - FetLife - -EM-
+    - FetLife - NiraTheKitten
 featured: true
 ---
 

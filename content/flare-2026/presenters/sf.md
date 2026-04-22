@@ -12,7 +12,7 @@ social:
 social_labels:
   fetlife:
     - FetLife - Test
-    - FetLife - Test
+    - FetLife - faeriebruises
 featured: true
 ---
 
