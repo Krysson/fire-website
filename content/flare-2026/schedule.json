@@ -1,113 +1,150 @@
 {
   "days": [
     {
-      "date": "2026-04-17",
-      "label": "Friday",
+      "date": "2026-10-15",
+      "label": "Thursday",
       "slots": [
         {
-          "time": "6:00 PM",
+          "time": "1:00 PM",
           "title": "Registration Opens",
           "type": "general"
         },
         {
-          "time": "7:00 PM",
-          "title": "Opening Welcome & Orientation",
-          "type": "general",
-          "room": "Main Room"
+          "time": "3:00 PM",
+          "title": "Class Block 1B",
+          "type": "class",
+          "room": "Blue Side"
+        },
+        {
+          "time": "3:00 PM",
+          "title": "Class Block 1G",
+          "type": "class",
+          "room": "Green Side"
         },
         {
           "time": "8:00 PM",
-          "title": "Introduction to Floor Work",
-          "presenter": "desmond-ellise",
-          "room": "Main Room",
-          "type": "class"
-        },
-        {
-          "time": "10:00 PM",
-          "title": "Open Rope Time",
-          "type": "social",
-          "room": "All Rooms"
+          "title": "Rope Jam Until 12:00 AM",
+          "type": "general",
+          "room": "Green Side"
         }
       ]
     },
     {
-      "date": "2026-04-18",
-      "label": "Saturday",
+      "date": "2026-10-16",
+      "label": "Friday",
       "slots": [
         {
-          "time": "10:00 AM",
-          "title": "Single Column Ties",
-          "presenter": "john-doe",
-          "room": "Room A",
+          "time": "09:30 AM",
+          "title": "Class Block 2G",
+          "presenter": " ",
+          "room": "Green Side",
           "type": "class"
         },
         {
-          "time": "10:00 AM",
-          "title": "Body Harnesses 101",
-          "presenter": "jane-smith",
-          "room": "Room B",
+          "time": "09:30 AM",
+          "title": "Class Block 2B",
+          "presenter": " ",
+          "room": "Blue Side",
           "type": "class"
         },
         {
-          "time": "12:00 PM",
+          "time": "01:00 PM",
           "title": "Lunch Break",
           "type": "general"
         },
         {
           "time": "2:00 PM",
-          "title": "Hip Harnesses & Transitions",
-          "presenter": "desmond-ellise",
-          "room": "Room A",
+          "title": "Class Block 3G",
+          "presenter": " ",
+          "room": "Green Side",
           "type": "class"
         },
         {
           "time": "2:00 PM",
-          "title": "Communication in Rope",
-          "presenter": "jane-smith",
-          "room": "Room B",
+          "title": "Class Block 3B",
+          "presenter": " ",
+          "room": "Blue Side",
           "type": "class"
         },
         {
-          "time": "4:00 PM",
-          "title": "Afternoon Break",
-          "type": "general"
-        },
-        {
-          "time": "5:00 PM",
-          "title": "Futomomo Ties",
-          "presenter": "john-doe",
-          "room": "Room A",
-          "type": "class"
-        },
-        {
-          "time": "7:00 PM",
+          "time": "5:30 PM",
           "title": "Dinner Break",
           "type": "general"
         },
         {
-          "time": "9:00 PM",
-          "title": "Evening Rope Social",
+          "time": "8:00 PM",
+          "title": "Open Dungeon Time Until 2:00 AM",
           "type": "social",
           "room": "All Rooms"
         }
       ]
     },
     {
-      "date": "2026-04-19",
-      "label": "Sunday",
+      "date": "2026-10-17",
+      "label": "Saturday",
       "slots": [
         {
-          "time": "10:00 AM",
-          "title": "Advanced Floor Work",
-          "presenter": "desmond-ellise",
-          "room": "Room A",
+          "time": "09:30 AM",
+          "title": "Class Block 4G",
+          "presenter": " ",
+          "room": "Green Side",
           "type": "class"
         },
         {
-          "time": "10:00 AM",
-          "title": "Rope Care & Maintenance",
-          "presenter": "john-doe",
-          "room": "Room B",
+          "time": "09:30 AM",
+          "title": "Class Block 4B",
+          "presenter": " ",
+          "room": "Blue Side",
+          "type": "class"
+        },
+        {
+          "time": "01:00 PM",
+          "title": "Lunch Break",
+          "type": "general"
+        },
+        {
+          "time": "2:00 PM",
+          "title": "Class Block 5G",
+          "presenter": " ",
+          "room": "Green Side",
+          "type": "class"
+        },
+        {
+          "time": "2:00 PM",
+          "title": "Class Block 5B",
+          "presenter": " ",
+          "room": "Blue Side",
+          "type": "class"
+        },
+        {
+          "time": "5:30 PM",
+          "title": "Dinner Break",
+          "type": "general"
+        },
+        {
+          "time": "8:00 PM",
+          "title": "Open Dungeon Time Until 2:00 AM",
+          "type": "social",
+          "room": "All Rooms"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-18",
+      "label": "Sunday",
+      "slots": [
+        {
+          "time": "10:30 AM",
+          "title": "Class Block 6G Part 1 (90 minutes)",
+          "presenter": " ",
+          "room": "Green Side",
+          "type": "class"
+        },
+        {
+          "time": "10:30 AM",
+          "title": "Class Block 6B Part 1 (90 minutes)",
+          "presenter": " ",
+          "room": "Blue Side",
           "type": "class"
         },
         {
@@ -116,16 +153,38 @@
           "type": "general"
         },
         {
-          "time": "2:00 PM",
-          "title": "Closing Demonstration",
-          "type": "general",
-          "room": "Main Room"
+          "time": "1:00 PM",
+          "title": "Class Block 6G Part 2 (90 minutes)",
+          "presenter": " ",
+          "room": "Green Side",
+          "type": "class"
+        },
+        {
+          "time": "1:00 PM",
+          "title": "Class Block 6B Part 2 (90 minutes)",
+          "presenter": " ",
+          "room": "Blue Side",
+          "type": "class"
         },
         {
           "time": "3:00 PM",
-          "title": "Farewell & Thank You",
-          "type": "general",
-          "room": "Main Room"
+          "title": "Self Tie #1 (90 minutes)",
+          "presenter": " ",
+          "room": "Green Side",
+          "type": "class"
+        },
+        {
+          "time": "3:00 PM",
+          "title": "Self Tie #2 (90 minutes)",
+          "presenter": " ",
+          "room": "Blue Side",
+          "type": "class"
+        },
+        {
+          "time": "5:00 PM",
+          "title": "Open Tie Lounge Until 7:00 PM",
+          "type": "social",
+          "room": "All Rooms"
         }
       ]
     }

@@ -97,7 +97,7 @@ export default function FlareSchedulePage() {
           <div className='space-y-3 text-gray-300'>
             <p>
               <span className='text-fire-orange font-semibold'>Class Duration:</span> Most classes
-              are 90 minutes unless otherwise noted.
+              are 3 Hours (180 minutes) unless otherwise noted.
             </p>
             <p>
               <span className='text-fire-orange font-semibold'>Room Assignments:</span> All room
