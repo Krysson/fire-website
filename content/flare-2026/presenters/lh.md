@@ -1,10 +1,10 @@
 ---
 name: Leif & Hedonist_queer
-slug: emnira
+slug: lh
 pronouns:
   - 'he/they'
   - 'he/they'
-photo: /images/presenters/test.jpg
+photo: /images/presenters/flameHolder.png
 social:
   fetlife:
     - https://fetlife.com/Lief

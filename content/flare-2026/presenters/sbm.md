@@ -1,10 +1,10 @@
 ---
 name: ShaktiBliss & -Magnolia-
-slug: emnira
+slug: sbm
 pronouns:
   - 'she/they'
   - 'she/her'
-photo: /images/presenters/test.jpg
+photo: /images/presenters/flameHolder.png
 social:
   fetlife:
     - https://fetlife.com/ShaktiBliss

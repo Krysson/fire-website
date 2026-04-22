@@ -4,7 +4,7 @@ slug: emnira
 pronouns:
   - 'he/him'
   - 'she/her'
-photo: /images/presenters/test.jpg
+photo: /images/presenters/flameHolder.png
 social:
   fetlife:
     - https://fetlife.com/-EM-

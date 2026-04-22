@@ -4,7 +4,7 @@ slug: cccj
 pronouns:
   - 'he/him'
   - 'they/them'
-photo: /images/presenters/test.jpg
+photo: /images/presenters/flameHolder.png
 social:
   fetlife:
     - https://fetlife.com/Chingon_Cuerdas
