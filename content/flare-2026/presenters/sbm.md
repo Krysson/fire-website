@@ -7,8 +7,8 @@ pronouns:
 photo: /images/presenters/test.jpg
 social:
   fetlife:
-    - https://fetlife.com/Test
-    - https://fetlife.com/Test
+    - https://fetlife.com/ShaktiBliss
+    - https://fetlife.com/-Magnolia-
 social_labels:
   fetlife:
     - FetLife - Test

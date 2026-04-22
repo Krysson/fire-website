@@ -7,8 +7,8 @@ pronouns:
 photo: /images/presenters/test.jpg
 social:
   fetlife:
-    - https://fetlife.com/Test
-    - https://fetlife.com/Test
+    - https://fetlife.com/-fuoco-
+    - https://fetlife.com/demolition_dirty
 social_labels:
   fetlife:
     - FetLife - Test

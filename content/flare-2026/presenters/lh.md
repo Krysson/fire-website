@@ -1,5 +1,5 @@
 ---
-name: Leif & Icky
+name: Leif & Hedonist_queer
 slug: emnira
 pronouns:
   - 'he/they'
@@ -7,8 +7,8 @@ pronouns:
 photo: /images/presenters/test.jpg
 social:
   fetlife:
-    - https://fetlife.com/Test
-    - https://fetlife.com/Test
+    - https://fetlife.com/Lief
+    - https://fetlife.com/hedonist_queer
 social_labels:
   fetlife:
     - FetLife - Test

@@ -7,8 +7,8 @@ pronouns:
 photo: /images/presenters/test.jpg
 social:
   fetlife:
-    - https://fetlife.com/Test
-    - https://fetlife.com/Test
+    - https://fetlife.com/Chingon_Cuerdas
+    - https://fetlife.com/CreepyJane
 social_labels:
   fetlife:
     - FetLife - Test

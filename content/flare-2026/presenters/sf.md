@@ -8,7 +8,7 @@ photo: /images/presenters/test.jpg
 social:
   fetlife:
     - https://fetlife.com/Test
-    - https://fetlife.com/Test
+    - https://fetlife.com/faeriebruises
 social_labels:
   fetlife:
     - FetLife - Test
