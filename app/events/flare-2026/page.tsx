@@ -61,6 +61,30 @@ export default function FlarePage() {
         </div>
       </div>
 
+      {/* Feedback Banner — only when feedbackUrl is set */}
+      {event.feedbackUrl && (
+        <div className='relative z-10 border-b-2 border-fire-orange bg-fire-orange/10'>
+          <div className='mx-auto flex max-w-7xl items-center gap-4 px-4 py-3 sm:px-6 lg:px-8'>
+            <span className='flex-shrink-0 text-xl'>📋</span>
+            <div className='flex-1'>
+              <p className='text-sm font-bold text-fire-orange'>
+                How was {event.name} {event.year}?
+              </p>
+              <p className='text-xs text-gray-400'>
+                Share your experience and help us improve future events.
+              </p>
+            </div>
+            <a
+              href={event.feedbackUrl}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='flex-shrink-0 whitespace-nowrap rounded-lg bg-fire-orange px-4 py-2 text-sm font-bold text-black transition-colors hover:bg-fire-yellow'>
+              Give Feedback →
+            </a>
+          </div>
+        </div>
+      )}
+
       {/* Hero Section */}
       <section className="relative z-10 overflow-hidden bg-fire-dark">
         <div className="absolute inset-0 bg-gradient-to-br from-fire-red/20 to-fire-orange/10" />
@@ -238,16 +262,6 @@ export default function FlarePage() {
               <Hotel className="h-5 w-5" />
               Book Your Hotel Room
             </a>
-            {event.feedbackUrl && (
-              <a
-                href={event.feedbackUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border border-gray-600 px-6 py-3 text-base font-medium text-gray-300 transition-all duration-200 hover:border-gray-400 hover:text-white active:scale-95"
-              >
-                Event Feedback
-              </a>
-            )}
           </div>
         </div>
       </section>
