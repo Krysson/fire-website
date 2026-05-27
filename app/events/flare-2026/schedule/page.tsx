@@ -115,6 +115,28 @@ export default function FlareSchedulePage() {
                 EventInfo@FireOrlando.com
               </a>
             </p>
+            {(eventData.feedbackUrl || eventData.classFeedbackUrl) && (
+              <div className='flex flex-wrap gap-3 pt-4 border-t border-fire-dark'>
+                {eventData.classFeedbackUrl && (
+                  <a
+                    href={eventData.classFeedbackUrl}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='inline-flex items-center gap-2 rounded-lg border border-fire-orange/40 bg-fire-orange/20 px-4 py-2 text-sm font-medium text-fire-orange transition-colors hover:bg-fire-orange/30'>
+                    📋 Class Feedback
+                  </a>
+                )}
+                {eventData.feedbackUrl && (
+                  <a
+                    href={eventData.feedbackUrl}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='inline-flex items-center gap-2 rounded-lg border border-fire-red/40 bg-fire-red/20 px-4 py-2 text-sm font-medium text-fire-red transition-colors hover:bg-fire-red/30'>
+                    🎪 Event Feedback
+                  </a>
+                )}
+              </div>
+            )}
           </div>
         </div>
 

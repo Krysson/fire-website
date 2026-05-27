@@ -33,5 +33,7 @@
   "theme": {
     "primary": "#f4a261",
     "secondary": "#e63946"
-  }
+  },
+  "feedbackUrl": "",
+  "classFeedbackUrl": ""
 }
