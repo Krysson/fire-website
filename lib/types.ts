@@ -100,6 +100,8 @@ export interface Event {
   };
   /** URL for event feedback form */
   feedbackUrl?: string;
+  /** URL for a general class feedback form linked from the schedule page */
+  classFeedbackUrl?: string;
 }
 
 /**
@@ -140,6 +142,22 @@ export interface Class {
   content?: string;
   /** URL for class feedback form */
   feedbackUrl?: string;
+}
+
+/**
+ * A sponsor or vendor for an event
+ */
+export interface Sponsor {
+  /** Tier determines display size and position */
+  tier: 'gold' | 'silver' | 'bronze' | 'community';
+  /** Display name */
+  name: string;
+  /** Path to logo image (relative to /public) */
+  logo: string;
+  /** Link to sponsor website */
+  url: string;
+  /** Short tagline — Gold/Silver/Bronze only, omit for Community */
+  tagline?: string;
 }
 
 /**
