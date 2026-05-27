@@ -1,3 +1,51 @@
 {
-  "sponsors": []
+  "sponsors": [
+    {
+      "tier": "gold",
+      "name": "TwoSix Rope",
+      "logo": "/images/sponsors/twosix-rope.png",
+      "url": "https://example.com/twosix-rope",
+      "tagline": "Premium handcrafted jute for every style"
+    },
+    {
+      "tier": "silver",
+      "name": "Ropecraft Supply Co.",
+      "logo": "/images/sponsors/ropecraft-supply.png",
+      "url": "https://example.com/ropecraft-supply",
+      "tagline": "Everything you need to tie"
+    },
+    {
+      "tier": "silver",
+      "name": "Bound & Determined",
+      "logo": "/images/sponsors/bound-and-determined.png",
+      "url": "https://example.com/bound-and-determined",
+      "tagline": "Quality gear for serious practitioners"
+    },
+    {
+      "tier": "bronze",
+      "name": "Firefly Jute",
+      "logo": "/images/sponsors/firefly-jute.png",
+      "url": "https://example.com/firefly-jute",
+      "tagline": "Small batch jute, big quality"
+    },
+    {
+      "tier": "bronze",
+      "name": "ShibariStyle",
+      "logo": "/images/sponsors/shibari-style.png",
+      "url": "https://example.com/shibari-style",
+      "tagline": "Fashion meets function"
+    },
+    {
+      "tier": "community",
+      "name": "RopeLove",
+      "logo": "/images/sponsors/rope-love.png",
+      "url": "https://example.com/rope-love"
+    },
+    {
+      "tier": "community",
+      "name": "Shibari Society",
+      "logo": "/images/sponsors/shibari-society.png",
+      "url": "https://example.com/shibari-society"
+    }
+  ]
 }

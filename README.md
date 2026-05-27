@@ -31,6 +31,7 @@ Use this table to find the right file immediately. Everything below it explains 
 | A presenter's bio, photo, or social links | `content/[event]/presenters/[presenter-name].md` |
 | A class description, level, or duration | `content/[event]/classes/[class-name].md` |
 | A class feedback form URL | `content/[event]/classes/[class-name].md` → `feedbackUrl` field |
+| Sponsors and vendors for an event | `content/[event]/sponsors.json` |
 | The About page | `content/organization/about.md` |
 | The FAQ page | `content/organization/faq.md` |
 
@@ -61,6 +62,7 @@ Each event (BLAZE, FLARE, FIRE) has its own folder with its own files:
 |---|---|
 | `event.json` | Event name, dates, tagline, venue, ticket link |
 | `schedule.json` | The full schedule for that event |
+| `sponsors.json` | Sponsors and vendors for that event |
 | `presenters/` | One `.md` file per presenter |
 | `classes/` | One `.md` file per class |
 
@@ -80,6 +82,7 @@ content/
 ├── blaze-2026/
 │   ├── event.json          ← BLAZE landing page: dates, venue, tickets, tagline
 │   ├── schedule.json       ← BLAZE schedule
+│   ├── sponsors.json       ← BLAZE sponsors and vendors
 │   ├── presenters/         ← One .md file per BLAZE presenter
 │   └── classes/            ← One .md file per BLAZE class
 ├── flare-2026/
@@ -89,7 +92,8 @@ content/
 
 public/
 └── images/
-    └── presenters/         ← Presenter photos go here
+    ├── presenters/         ← Presenter photos go here
+    └── sponsors/           ← Sponsor logo images go here
 ```
 
 ---
@@ -435,6 +439,83 @@ To add a new type (e.g. `"workshop"` with its own color and badge), a developer 
 
 ---
 
+## Managing Sponsors
+
+File: `content/[event]/sponsors.json` — for example `content/blaze-2026/sponsors.json`
+
+Each event has its own sponsors list. The page displays sponsors grouped by tier, largest first.
+
+### sponsors.json Format
+
+```json
+{
+  "sponsors": [
+    {
+      "tier": "gold",
+      "name": "TwoSix Rope",
+      "logo": "/images/sponsors/twosix-rope.png",
+      "url": "https://twosixrope.com",
+      "tagline": "Premium handcrafted jute for every style"
+    },
+    {
+      "tier": "silver",
+      "name": "Ropecraft Supply Co.",
+      "logo": "/images/sponsors/ropecraft-supply.png",
+      "url": "https://ropecrftsupply.com",
+      "tagline": "Everything you need to tie"
+    },
+    {
+      "tier": "community",
+      "name": "RopeLove",
+      "logo": "/images/sponsors/rope-love.png",
+      "url": "https://ropelove.com"
+    }
+  ]
+}
+```
+
+### Tier Reference
+
+Tiers control display size and grid layout:
+
+| Tier | Logo size | Grid columns | Use `tagline`? |
+|---|---|---|---|
+| `gold` | Largest | 1–2 cols | Yes |
+| `silver` | Medium | 2–3 cols | Yes |
+| `bronze` | Smaller | 2–4 cols | Yes |
+| `community` | Smallest | 3–5 cols | No — omit the field |
+
+### Field Reference
+
+| Field | Required | Description |
+|-------|----------|-------------|
+| `tier` | Yes | One of: `gold`, `silver`, `bronze`, `community` |
+| `name` | Yes | Display name shown below the logo |
+| `logo` | Yes | Path to logo image in `/public/images/sponsors/` |
+| `url` | Yes | Link to the sponsor's website (opens in a new tab) |
+| `tagline` | No | Short phrase shown in italics. Use for Gold/Silver/Bronze; omit for Community |
+
+### Adding a Sponsor
+
+1. Add the sponsor's logo to `public/images/sponsors/` — transparent PNG works best
+2. Open `content/[event]/sponsors.json`
+3. Add an entry to the `sponsors` array with the correct tier, name, logo path, and URL
+4. Commit and push — the sponsors page updates automatically
+
+### Removing a Sponsor
+
+Delete their entry from the `sponsors` array in `content/[event]/sponsors.json`.
+
+If the array is empty, the sponsors page shows "Sponsors will be announced soon" instead of an empty grid.
+
+### Sponsor Logo Tips
+
+- Transparent PNG format works best against the dark site background
+- Consistent aspect ratios within a tier look better in the grid
+- Recommended sizes: Gold ~240×160px, Silver ~176×120px, Bronze ~144×96px, Community ~112×72px
+
+---
+
 ## Adding Presenter Photos
 
 1. Prepare the photo: square crop works best, at least 400×400px, JPG or PNG
@@ -463,6 +544,7 @@ Each event has the same sub-pages:
 - `/events/[event]/classes/[slug]` — individual class detail
 - `/events/[event]/schedule` — event schedule
 - `/events/[event]/venue` — venue information
+- `/events/[event]/sponsors` — sponsors and vendors
 
 ---
 

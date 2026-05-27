@@ -1,3 +1,85 @@
 {
-  "sponsors": []
+  "sponsors": [
+    {
+      "tier": "gold",
+      "name": "TwoSix Rope",
+      "logo": "/images/sponsors/twosix-rope.png",
+      "url": "https://example.com/twosix-rope",
+      "tagline": "Premium handcrafted jute for every style"
+    },
+    {
+      "tier": "gold",
+      "name": "Anatomie Supply",
+      "logo": "/images/sponsors/anatomie-supply.png",
+      "url": "https://example.com/anatomie-supply",
+      "tagline": "Bondage-safe gear, made with care"
+    },
+    {
+      "tier": "silver",
+      "name": "Ropecraft Supply Co.",
+      "logo": "/images/sponsors/ropecraft-supply.png",
+      "url": "https://example.com/ropecraft-supply",
+      "tagline": "Everything you need to tie"
+    },
+    {
+      "tier": "silver",
+      "name": "Bound & Determined",
+      "logo": "/images/sponsors/bound-and-determined.png",
+      "url": "https://example.com/bound-and-determined",
+      "tagline": "Quality gear for serious practitioners"
+    },
+    {
+      "tier": "silver",
+      "name": "The Rope Dojo",
+      "logo": "/images/sponsors/the-rope-dojo.png",
+      "url": "https://example.com/the-rope-dojo",
+      "tagline": "Education and community"
+    },
+    {
+      "tier": "bronze",
+      "name": "Firefly Jute",
+      "logo": "/images/sponsors/firefly-jute.png",
+      "url": "https://example.com/firefly-jute",
+      "tagline": "Small batch jute, big quality"
+    },
+    {
+      "tier": "bronze",
+      "name": "ShibariStyle",
+      "logo": "/images/sponsors/shibari-style.png",
+      "url": "https://example.com/shibari-style",
+      "tagline": "Fashion meets function"
+    },
+    {
+      "tier": "bronze",
+      "name": "Tension & Knots",
+      "logo": "/images/sponsors/tension-and-knots.png",
+      "url": "https://example.com/tension-and-knots",
+      "tagline": "Rope finishing supplies"
+    },
+    {
+      "tier": "bronze",
+      "name": "KnottyNicole",
+      "logo": "/images/sponsors/knotty-nicole.png",
+      "url": "https://example.com/knotty-nicole",
+      "tagline": "Online rope education"
+    },
+    {
+      "tier": "community",
+      "name": "RopeLove",
+      "logo": "/images/sponsors/rope-love.png",
+      "url": "https://example.com/rope-love"
+    },
+    {
+      "tier": "community",
+      "name": "TieMe Studio",
+      "logo": "/images/sponsors/tie-me-studio.png",
+      "url": "https://example.com/tie-me-studio"
+    },
+    {
+      "tier": "community",
+      "name": "Shibari Society",
+      "logo": "/images/sponsors/shibari-society.png",
+      "url": "https://example.com/shibari-society"
+    }
+  ]
 }

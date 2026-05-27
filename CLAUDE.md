@@ -63,6 +63,7 @@ fire-website/
 │   ├── blaze-2026/
 │   │   ├── event.json
 │   │   ├── schedule.json
+│   │   ├── sponsors.json
 │   │   ├── presenters/
 │   │   └── classes/
 │   ├── flare-2026/
@@ -210,6 +211,52 @@ social:
 Des and Ellise have both been practicing rope since 2018...
 ```
 
+### sponsors.json
+```json
+{
+  "sponsors": [
+    {
+      "tier": "gold",
+      "name": "Sponsor Name",
+      "logo": "/images/sponsors/sponsor-name.png",
+      "url": "https://example.com",
+      "tagline": "Short tagline — shown on Gold/Silver/Bronze cards"
+    },
+    {
+      "tier": "silver",
+      "name": "Another Sponsor",
+      "logo": "/images/sponsors/another-sponsor.png",
+      "url": "https://example.com"
+    },
+    {
+      "tier": "community",
+      "name": "Community Friend",
+      "logo": "/images/sponsors/community-friend.png",
+      "url": "https://example.com"
+    }
+  ]
+}
+```
+
+**Tiers** (controls display size and position):
+- `gold` — largest cards, 2-column grid
+- `silver` — medium cards, 3-column grid
+- `bronze` — smaller cards, 4-column grid
+- `community` — smallest cards, 5-column grid
+
+**Fields:**
+- `tier` — required. One of `gold`, `silver`, `bronze`, `community`
+- `name` — required. Display name shown below the logo
+- `logo` — required. Path to logo image in `/public/images/sponsors/`
+- `url` — required. Link to sponsor's website (opens in new tab)
+- `tagline` — optional. Short phrase shown in italics below the name. Use for Gold/Silver/Bronze; omit for Community tier
+
+If `sponsors.json` is empty or the `sponsors` array has no entries, the page shows "Sponsors will be announced soon."
+
+Logo images should be placed in `public/images/sponsors/`. Transparent PNG works best; aim for consistent aspect ratios within a tier.
+
+---
+
 ### Class Markdown
 ```markdown
 ---
@@ -301,6 +348,14 @@ To add/update content:
 # Create file: content/blaze-2026/presenters/new-presenter.md
 # Add photo: public/images/presenters/new-presenter.jpg
 # Update schedule.json if they're teaching
+```
+
+### Add or update a sponsor
+```bash
+# Edit: content/[event]/sponsors.json
+# Add logo image: public/images/sponsors/[sponsor-name].png
+# Tiers: gold, silver, bronze, community
+# tagline field is optional (Gold/Silver/Bronze only)
 ```
 
 ### Roll to the next event (e.g. BLAZE is over, FLARE is next)
