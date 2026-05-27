@@ -105,15 +105,6 @@ export default async function ClassPage({ params }: ClassPageProps) {
               {classItem.duration && (
                 <span className='text-gray-400 text-sm'>{classItem.duration}</span>
               )}
-              {classItem.feedbackUrl && (
-                <a
-                  href={classItem.feedbackUrl}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-fire-orange/40 bg-fire-orange/10 text-fire-orange text-sm font-medium hover:bg-fire-orange/20 transition-colors'>
-                  Class Feedback
-                </a>
-              )}
             </div>
 
             {/* Presenter(s) */}
@@ -142,6 +133,26 @@ export default async function ClassPage({ params }: ClassPageProps) {
               className='prose prose-invert prose-lg max-w-none'
               dangerouslySetInnerHTML={{ __html: contentHtml }}
             />
+          )}
+
+          {/* Feedback card */}
+          {classItem.feedbackUrl && (
+            <div className='mt-10 flex items-center gap-4 rounded-lg border border-fire-orange/40 bg-fire-orange/10 p-5'>
+              <span className='flex-shrink-0 text-2xl'>📝</span>
+              <div className='flex-1'>
+                <p className='font-bold text-fire-orange'>Enjoyed this class?</p>
+                <p className='mt-1 text-sm text-gray-400'>
+                  Your feedback goes directly to the presenter and helps them improve.
+                </p>
+              </div>
+              <a
+                href={classItem.feedbackUrl}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='flex-shrink-0 whitespace-nowrap rounded-lg bg-fire-orange px-4 py-2 text-sm font-bold text-black transition-colors hover:bg-fire-yellow'>
+                Leave Feedback →
+              </a>
+            </div>
           )}
         </div>
       </div>
