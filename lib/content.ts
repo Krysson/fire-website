@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import type { Event, Schedule, Presenter, Class } from './types';
+import type { Event, Schedule, Presenter, Class, Sponsor } from './types';
 
 const CONTENT_DIR = path.join(process.cwd(), 'content');
 
@@ -313,5 +313,23 @@ export function getOrganizationContent(filename: string): { content: string; dat
   } catch (error) {
     console.error(`Error loading organization content ${filename}:`, error);
     return null;
+  }
+}
+
+/**
+ * Get sponsors for an event from sponsors.json
+ * @param eventSlug - Event identifier (e.g., 'flare-2026')
+ * @returns Array of sponsors or empty array if file absent
+ */
+export function getSponsors(eventSlug: string): Sponsor[] {
+  try {
+    const sponsorsPath = path.join(CONTENT_DIR, eventSlug, 'sponsors.json')
+    if (!fs.existsSync(sponsorsPath)) return []
+    const fileContents = fs.readFileSync(sponsorsPath, 'utf8')
+    const data = JSON.parse(fileContents) as { sponsors: Sponsor[] }
+    return data.sponsors ?? []
+  } catch (error) {
+    console.error(`Error loading sponsors for ${eventSlug}:`, error)
+    return []
   }
 }
