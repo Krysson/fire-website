@@ -2,7 +2,9 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import type { Schedule, ScheduleSlot } from '@/lib/types'
+import { Star } from 'lucide-react'
+import { useFavorites } from '@/hooks/useFavorites'
+import type { Schedule, ScheduleDay, ScheduleSlot } from '@/lib/types'
 
 interface ScheduleGridProps {
   schedule: Schedule | null
@@ -10,6 +12,8 @@ interface ScheduleGridProps {
   presenterNames?: Record<string, string>
   classLevels?: Record<string, string>
 }
+
+const MY_SCHEDULE_IDX = -1
 
 export default function ScheduleGrid({
   schedule,
@@ -19,6 +23,7 @@ export default function ScheduleGrid({
 }: ScheduleGridProps) {
   const [selectedDay, setSelectedDay] = useState(0)
   const [levelFilter, setLevelFilter] = useState('all')
+  const [favorites, toggleFavorite] = useFavorites(eventSlug)
 
   if (!schedule || !schedule.days || schedule.days.length === 0) {
     return (
@@ -32,7 +37,6 @@ export default function ScheduleGrid({
     )
   }
 
-  // Show level filter only if any slot across any day has known level data
   const hasLevelData = schedule.days.some(day =>
     day.slots.some(slot => slot.classSlug && classLevels[slot.classSlug])
   )
@@ -44,8 +48,6 @@ export default function ScheduleGrid({
     { value: 'advanced', label: 'Advanced' },
   ]
 
-  const currentDay = schedule.days[selectedDay]
-
   const isSlotVisible = (slot: ScheduleSlot): boolean => {
     if (levelFilter === 'all') return true
     if (slot.type !== 'class') return true
@@ -53,18 +55,20 @@ export default function ScheduleGrid({
     return classLevels[slot.classSlug].toLowerCase().includes(levelFilter)
   }
 
-  // Group slots by time, preserving original order
-  const orderedTimes = [...new Set(currentDay.slots.map(s => s.time))]
-  const timeGroups: Record<string, ScheduleSlot[]> = {}
-  currentDay.slots.forEach(slot => {
-    if (!timeGroups[slot.time]) timeGroups[slot.time] = []
-    timeGroups[slot.time].push(slot)
-  })
+  const isMySched = selectedDay === MY_SCHEDULE_IDX
+  const totalFavorites = favorites.size
+
+  const myScheduleDays: Array<{ day: ScheduleDay; slots: ScheduleSlot[] }> = schedule.days
+    .map(day => ({
+      day,
+      slots: day.slots.filter(s => s.classSlug && favorites.has(s.classSlug)),
+    }))
+    .filter(({ slots }) => slots.length > 0)
 
   return (
     <div className='space-y-6'>
-      {/* Day Selector */}
-      <div className='flex gap-2 rounded-xl bg-[#1a1a1a] border border-[#2a2a2a] p-2'>
+      {/* Day Selector + My Schedule tab */}
+      <div className='flex gap-2 rounded-xl bg-[#1a1a1a] border border-[#2a2a2a] p-2 flex-wrap'>
         {schedule.days.map((day, index) => {
           const isActive = selectedDay === index
           const dateLabel = new Date(day.date + 'T12:00:00').toLocaleDateString('en-US', {
@@ -87,10 +91,33 @@ export default function ScheduleGrid({
             </button>
           )
         })}
+
+        {/* My Schedule tab */}
+        <button
+          onClick={() => setSelectedDay(MY_SCHEDULE_IDX)}
+          className={`flex items-center gap-1.5 rounded-lg px-4 py-3 text-center transition-all duration-200 whitespace-nowrap ${
+            isMySched
+              ? 'bg-fire-orange text-black shadow-lg shadow-fire-orange/20'
+              : 'text-gray-400 hover:bg-[#2a2a2a] hover:text-white'
+          }`}>
+          <Star
+            className='h-3.5 w-3.5'
+            fill={isMySched ? 'currentColor' : 'none'}
+          />
+          <span className='font-bold text-sm'>My Schedule</span>
+          {totalFavorites > 0 && (
+            <span
+              className={`rounded-full px-1.5 py-0.5 text-xs font-bold leading-none ${
+                isMySched ? 'bg-black/20 text-black' : 'bg-fire-orange text-black'
+              }`}>
+              {totalFavorites}
+            </span>
+          )}
+        </button>
       </div>
 
-      {/* Level Filter */}
-      {hasLevelData && (
+      {/* Level Filter (hidden in My Schedule view) */}
+      {!isMySched && hasLevelData && (
         <div className='flex items-center gap-2 flex-wrap'>
           <span className='text-sm text-gray-400 mr-1'>Filter by level:</span>
           {levelOptions.map(option => (
@@ -108,55 +135,109 @@ export default function ScheduleGrid({
         </div>
       )}
 
-      {/* Schedule grouped by time */}
-      <div className='space-y-8'>
-        {orderedTimes.map(time => {
-          const slots = timeGroups[time]
-          const visibleSlots = slots.filter(isSlotVisible)
-          if (visibleSlots.length === 0) return null
-
-          const classSlots = visibleSlots.filter(s => s.type === 'class')
-          const otherSlots = visibleSlots.filter(s => s.type !== 'class')
-
-          return (
-            <div key={time} className='space-y-3'>
-              {/* Time header */}
-              <div className='flex items-center gap-3'>
-                <span className='text-[#f4a261] font-bold text-lg md:text-xl whitespace-nowrap'>
-                  {time}
-                </span>
-                <div className='flex-1 h-px bg-[#2a2a2a]' />
+      {/* My Schedule view */}
+      {isMySched && (
+        <div className='space-y-8'>
+          {myScheduleDays.length === 0 ? (
+            <div className='bg-fire-charcoal border-2 border-fire-dark rounded-lg p-12 text-center'>
+              <Star className='h-10 w-10 text-gray-600 mx-auto mb-4' />
+              <h3 className='text-xl font-bold text-white mb-2'>No starred classes yet</h3>
+              <p className='text-gray-400'>
+                Tap ☆ on any class to add it here.
+              </p>
+            </div>
+          ) : (
+            myScheduleDays.map(({ day, slots }) => (
+              <div key={day.date} className='space-y-3'>
+                <div className='flex items-center gap-3'>
+                  <span className='text-fire-yellow font-bold text-lg'>{day.label}</span>
+                  <div className='flex-1 h-px bg-[#2a2a2a]' />
+                </div>
+                {slots.map((slot, i) => (
+                  <ScheduleSlotCard
+                    key={i}
+                    slot={slot}
+                    eventSlug={eventSlug}
+                    presenterNames={presenterNames}
+                    classLevel={slot.classSlug ? classLevels[slot.classSlug] : undefined}
+                    isFavorited={slot.classSlug ? favorites.has(slot.classSlug) : false}
+                    onToggleFavorite={
+                      slot.classSlug ? () => toggleFavorite(slot.classSlug!) : undefined
+                    }
+                  />
+                ))}
               </div>
+            ))
+          )}
+        </div>
+      )}
 
-              {/* Non-class slots: full width */}
-              {otherSlots.map((slot, i) => (
-                <ScheduleSlotCard
-                  key={i}
-                  slot={slot}
-                  eventSlug={eventSlug}
-                  presenterNames={presenterNames}
-                  classLevel={slot.classSlug ? classLevels[slot.classSlug] : undefined}
-                />
-              ))}
+      {/* Normal day schedule */}
+      {!isMySched && (
+        <div className='space-y-8'>
+          {(() => {
+            const currentDay = schedule.days[selectedDay]
+            const orderedTimes = [...new Set(currentDay.slots.map(s => s.time))]
+            const timeGroups: Record<string, ScheduleSlot[]> = {}
+            currentDay.slots.forEach(slot => {
+              if (!timeGroups[slot.time]) timeGroups[slot.time] = []
+              timeGroups[slot.time].push(slot)
+            })
 
-              {/* Class slots: 2-col on large, 1-col on small */}
-              {classSlots.length > 0 && (
-                <div className='grid grid-cols-1 lg:grid-cols-2 gap-3'>
-                  {classSlots.map((slot, i) => (
+            return orderedTimes.map(time => {
+              const slots = timeGroups[time]
+              const visibleSlots = slots.filter(isSlotVisible)
+              if (visibleSlots.length === 0) return null
+
+              const classSlots = visibleSlots.filter(s => s.type === 'class')
+              const otherSlots = visibleSlots.filter(s => s.type !== 'class')
+
+              return (
+                <div key={time} className='space-y-3'>
+                  <div className='flex items-center gap-3'>
+                    <span className='text-[#f4a261] font-bold text-lg md:text-xl whitespace-nowrap'>
+                      {time}
+                    </span>
+                    <div className='flex-1 h-px bg-[#2a2a2a]' />
+                  </div>
+
+                  {otherSlots.map((slot, i) => (
                     <ScheduleSlotCard
                       key={i}
                       slot={slot}
                       eventSlug={eventSlug}
                       presenterNames={presenterNames}
                       classLevel={slot.classSlug ? classLevels[slot.classSlug] : undefined}
+                      isFavorited={slot.classSlug ? favorites.has(slot.classSlug) : false}
+                      onToggleFavorite={
+                        slot.classSlug ? () => toggleFavorite(slot.classSlug!) : undefined
+                      }
                     />
                   ))}
+
+                  {classSlots.length > 0 && (
+                    <div className='grid grid-cols-1 lg:grid-cols-2 gap-3'>
+                      {classSlots.map((slot, i) => (
+                        <ScheduleSlotCard
+                          key={i}
+                          slot={slot}
+                          eventSlug={eventSlug}
+                          presenterNames={presenterNames}
+                          classLevel={slot.classSlug ? classLevels[slot.classSlug] : undefined}
+                          isFavorited={slot.classSlug ? favorites.has(slot.classSlug) : false}
+                          onToggleFavorite={
+                            slot.classSlug ? () => toggleFavorite(slot.classSlug!) : undefined
+                          }
+                        />
+                      ))}
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
-          )
-        })}
-      </div>
+              )
+            })
+          })()}
+        </div>
+      )}
     </div>
   )
 }
@@ -166,9 +247,18 @@ interface ScheduleSlotCardProps {
   eventSlug: string
   presenterNames: Record<string, string>
   classLevel?: string
+  isFavorited: boolean
+  onToggleFavorite?: () => void
 }
 
-function ScheduleSlotCard({ slot, eventSlug, presenterNames, classLevel }: ScheduleSlotCardProps) {
+function ScheduleSlotCard({
+  slot,
+  eventSlug,
+  presenterNames,
+  classLevel,
+  isFavorited,
+  onToggleFavorite,
+}: ScheduleSlotCardProps) {
   const getTypeStyles = (type: string) => {
     switch (type) {
       case 'class':
@@ -226,11 +316,13 @@ function ScheduleSlotCard({ slot, eventSlug, presenterNames, classLevel }: Sched
     const l = level.toLowerCase()
     let classes = ''
     if (l.includes('beginner')) classes = 'bg-emerald-600/20 text-emerald-400 border-emerald-600/30'
-    else if (l.includes('intermediate')) classes = 'bg-amber-500/20 text-amber-400 border-amber-500/30'
+    else if (l.includes('intermediate'))
+      classes = 'bg-amber-500/20 text-amber-400 border-amber-500/30'
     else if (l.includes('advanced')) classes = 'bg-red-500/20 text-red-400 border-red-500/30'
     else classes = 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30'
     return (
-      <span className={`inline-flex items-center px-2 py-1 rounded text-xs font-semibold border ${classes}`}>
+      <span
+        className={`inline-flex items-center px-2 py-1 rounded text-xs font-semibold border ${classes}`}>
         {level}
       </span>
     )
@@ -240,8 +332,23 @@ function ScheduleSlotCard({ slot, eventSlug, presenterNames, classLevel }: Sched
     <div
       className={`rounded-lg border-2 ${getTypeStyles(slot.type)} p-4 md:p-5 transition-all duration-200 hover:border-fire-orange hover:shadow-lg hover:shadow-fire-orange/10`}>
       <div className='space-y-2'>
-        {/* Title + badges */}
+        {/* Title + badges + star */}
         <div className='flex flex-wrap items-start gap-2'>
+          {onToggleFavorite && (
+            <button
+              onClick={e => {
+                e.preventDefault()
+                onToggleFavorite()
+              }}
+              aria-label={isFavorited ? 'Remove from My Schedule' : 'Add to My Schedule'}
+              className='mt-0.5 flex-shrink-0 transition-transform duration-150 hover:scale-110 active:scale-95'>
+              <Star
+                className={`h-5 w-5 transition-colors duration-150 ${
+                  isFavorited ? 'fill-fire-orange text-fire-orange' : 'text-gray-600'
+                }`}
+              />
+            </button>
+          )}
           <h3 className='text-base md:text-lg font-semibold flex-1 min-w-0'>
             {slot.classSlug ? (
               <Link
@@ -276,7 +383,7 @@ function ScheduleSlotCard({ slot, eventSlug, presenterNames, classLevel }: Sched
                       className='text-fire-yellow hover:text-fire-orange transition-colors duration-200 hover:underline'>
                       {presenterNames[slug] ?? formatPresenterName(slug)}
                     </Link>
-                    {i < arr.length - 1 && <span className='text-gray-400'> & </span>}
+                    {i < arr.length - 1 && <span className='text-gray-400'> &amp; </span>}
                   </span>
                 )
               )}
