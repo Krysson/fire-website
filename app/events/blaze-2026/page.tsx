@@ -2,7 +2,7 @@ import { getEventData } from '@/lib/content';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Calendar, MapPin, Users, Ticket } from 'lucide-react';
+import { Calendar, MapPin, Users, Ticket, Building2 } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -47,6 +47,12 @@ export default function BlazePage() {
       description: 'Location and facility information',
       href: '/events/blaze-2026/venue',
       icon: MapPin,
+    },
+    {
+      title: 'Sponsors',
+      description: 'Our sponsors and vendors',
+      href: '/events/blaze-2026/sponsors',
+      icon: Building2,
     },
   ];
 
@@ -169,7 +175,7 @@ export default function BlazePage() {
             Explore {event.name} {event.year}
           </h2>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {navigationCards.map((card) => (
               <Link
                 key={card.href}
