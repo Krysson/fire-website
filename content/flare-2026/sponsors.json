@@ -2,10 +2,25 @@
   "sponsors": [
     {
       "tier": "gold",
-      "name": "TwoSix Rope",
-      "logo": "/images/sponsors/twosix-rope.png",
-      "url": "https://example.com/twosix-rope",
-      "tagline": "Premium handcrafted jute for every style"
+      "name": "The Woodshed Orlando",
+      "logo": "/images/sponsors/SpatterNoBKGRND.png",
+      "url": "https://thewoodshedorlando.com",
+      "tagline": "A private membership club dedicated to educating and building community for alternative lifestyles."
+    },
+    {
+      "tier": "gold",
+      "name": "Kinbaku Studio",
+      "logo": "/images/sponsors/KinbakuStudioMOCKlogo.jpg",
+      "url": "https://kinbaku-studio.com/",
+      "tagline": "Elevate Your Rope Practice with tools crafted for intimacy and art."
+    },
+
+    {
+      "tier": "silver",
+      "name": "Krysson Supply Co.",
+      "logo": "/images/sponsors/KryssonSupplyCo.png",
+      "url": "https://krysson.com",
+      "tagline": "Everything you need for your events"
     },
     {
       "tier": "silver",
@@ -16,11 +31,26 @@
     },
     {
       "tier": "silver",
-      "name": "Bound & Determined",
-      "logo": "/images/sponsors/bound-and-determined.png",
-      "url": "https://example.com/bound-and-determined",
-      "tagline": "Quality gear for serious practitioners"
+      "name": "Ropecraft Supply Co.",
+      "logo": "/images/sponsors/ropecraft-supply.png",
+      "url": "https://example.com/ropecraft-supply",
+      "tagline": "Everything you need to tie"
     },
+    {
+      "tier": "bronze",
+      "name": "Power Exchange Xperience",
+      "logo": "/images/sponsors/logo1.jpeg",
+      "url": "https://www.powerexchangexperience.com/",
+      "tagline": "PEX is home to the Florida Power Exchange contest. "
+    },
+    {
+      "tier": "bronze",
+      "name": "Florida Power Exchange",
+      "logo": "/images/sponsors/logo2.tiff",
+      "url": "https://www.facebook.com/flpowerexchangecontest/?_rdr",
+      "tagline": "This is a TEACHING title. We are calling all dynamics that have the passion for education."
+    },
+
     {
       "tier": "bronze",
       "name": "Firefly Jute",
@@ -37,13 +67,31 @@
     },
     {
       "tier": "community",
-      "name": "RopeLove",
+      "name": "Ocala Rope Jam",
+      "logo": "/images/sponsors/OcalaRopeJamTransparent.png",
+      "url": "https://https://fetlife.com/OcalaRopeJam"
+    },
+    {
+      "tier": "community",
+      "name": "Orlando RopeBite",
+      "logo": "/images/sponsors/ORlandoRopeBiteMOCKUP.jpg",
+      "url": "https://www.instagram.com/orlandoropebite/"
+    },
+    {
+      "tier": "community",
+      "name": "Coming Soon!",
       "logo": "/images/sponsors/rope-love.png",
       "url": "https://example.com/rope-love"
     },
     {
       "tier": "community",
-      "name": "Shibari Society",
+      "name": "Coming Soon!",
+      "logo": "/images/sponsors/rope-love.png",
+      "url": "https://example.com/rope-love"
+    },
+    {
+      "tier": "community",
+      "name": "Coming Soon!",
       "logo": "/images/sponsors/shibari-society.png",
       "url": "https://example.com/shibari-society"
     }

@@ -28,8 +28,8 @@ const TIER_CONFIG: Record<
     borderClass: 'border-[#f9c74f]/20 hover:border-[#f9c74f]/50',
     visitClass: 'text-[#f9c74f]',
     gridClass: 'grid-cols-1 sm:grid-cols-2',
-    logoWidth: 120,
-    logoHeight: 80,
+    logoWidth: 240,
+    logoHeight: 160,
   },
   silver: {
     label: 'Silver',
@@ -38,8 +38,8 @@ const TIER_CONFIG: Record<
     borderClass: 'border-[#cccccc]/20 hover:border-[#cccccc]/50',
     visitClass: 'text-[#cccccc]',
     gridClass: 'grid-cols-2 sm:grid-cols-3',
-    logoWidth: 88,
-    logoHeight: 60,
+    logoWidth: 176,
+    logoHeight: 120,
   },
   bronze: {
     label: 'Bronze',
@@ -48,8 +48,8 @@ const TIER_CONFIG: Record<
     borderClass: 'border-[#cd7f32]/20 hover:border-[#cd7f32]/50',
     visitClass: 'text-[#cd7f32]',
     gridClass: 'grid-cols-2 sm:grid-cols-4',
-    logoWidth: 72,
-    logoHeight: 48,
+    logoWidth: 144,
+    logoHeight: 96,
   },
   community: {
     label: 'Community',
@@ -58,8 +58,8 @@ const TIER_CONFIG: Record<
     borderClass: 'border-[#e63946]/20 hover:border-[#e63946]/50',
     visitClass: 'text-[#e63946]',
     gridClass: 'grid-cols-3 sm:grid-cols-5',
-    logoWidth: 56,
-    logoHeight: 36,
+    logoWidth: 112,
+    logoHeight: 72,
   },
 }
 
