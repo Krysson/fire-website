@@ -24,17 +24,17 @@
     },
     {
       "tier": "silver",
-      "name": "Ropecraft Supply Co.",
-      "logo": "/images/sponsors/ropecraft-supply.png",
-      "url": "https://example.com/ropecraft-supply",
-      "tagline": "Everything you need to tie"
+      "name": "Coming Soon!",
+      "logo": "/images/sponsors/small.png",
+      "url": "https://FireOrlando.com",
+      "tagline": ""
     },
     {
       "tier": "silver",
-      "name": "Ropecraft Supply Co.",
-      "logo": "/images/sponsors/ropecraft-supply.png",
-      "url": "https://example.com/ropecraft-supply",
-      "tagline": "Everything you need to tie"
+      "name": "Coming Soon!",
+      "logo": "/images/sponsors/small.png",
+      "url": "https://FireOrlando.com",
+      "tagline": ""
     },
     {
       "tier": "bronze",
@@ -53,17 +53,17 @@
 
     {
       "tier": "bronze",
-      "name": "Firefly Jute",
-      "logo": "/images/sponsors/firefly-jute.png",
-      "url": "https://example.com/firefly-jute",
-      "tagline": "Small batch jute, big quality"
+      "name": "Coming Soon!",
+      "logo": "/images/sponsors/small.png",
+      "url": "https://FireOrlando.com",
+      "tagline": ""
     },
     {
       "tier": "bronze",
-      "name": "ShibariStyle",
-      "logo": "/images/sponsors/shibari-style.png",
-      "url": "https://example.com/shibari-style",
-      "tagline": "Fashion meets function"
+      "name": "Coming Soon!",
+      "logo": "/images/sponsors/small.png",
+      "url": "https://FireOrlando.com",
+      "tagline": ""
     },
     {
       "tier": "community",
@@ -80,20 +80,20 @@
     {
       "tier": "community",
       "name": "Coming Soon!",
-      "logo": "/images/sponsors/rope-love.png",
-      "url": "https://example.com/rope-love"
+      "logo": "/images/sponsors/small.png",
+      "url": "https://FireOrlando.com"
     },
     {
       "tier": "community",
       "name": "Coming Soon!",
-      "logo": "/images/sponsors/rope-love.png",
-      "url": "https://example.com/rope-love"
+      "logo": "/images/sponsors/small.png",
+      "url": "https://FireOrlando.com"
     },
     {
       "tier": "community",
       "name": "Coming Soon!",
-      "logo": "/images/sponsors/shibari-society.png",
-      "url": "https://example.com/shibari-society"
+      "logo": "/images/sponsors/small.png",
+      "url": "https://FireOrlando.com"
     }
   ]
 }
