@@ -7,24 +7,28 @@
         {
           "time": "1:00 PM",
           "title": "Registration Opens",
+          "classSlug": "registration",
           "type": "general"
         },
         {
           "time": "3:00 PM",
           "title": "Class Block 1B",
           "type": "class",
+          "classSlug": "block-1b",
           "room": "Blue Side"
         },
         {
           "time": "3:00 PM",
           "title": "Class Block 1G",
           "type": "class",
+          "classSlug": "block-1g",
           "room": "Green Side"
         },
         {
           "time": "8:00 PM",
           "title": "Rope Jam Until 12:00 AM",
           "type": "general",
+          "classSlug": "rope-jam",
           "room": "Green Side"
         }
       ]
@@ -37,6 +41,7 @@
           "time": "09:30 AM",
           "title": "Class Block 2G",
           "presenter": " ",
+          "classSlug": "block-2g",
           "room": "Green Side",
           "type": "class"
         },
@@ -44,18 +49,21 @@
           "time": "09:30 AM",
           "title": "Class Block 2B",
           "presenter": " ",
+          "classSlug": "block-2b",
           "room": "Blue Side",
           "type": "class"
         },
         {
           "time": "01:00 PM",
           "title": "Lunch Break",
+          "classSlug": "lunch-break",
           "type": "general"
         },
         {
           "time": "2:00 PM",
           "title": "Class Block 3G",
           "presenter": " ",
+          "classSlug": "block-3g",
           "room": "Green Side",
           "type": "class"
         },
@@ -63,17 +71,20 @@
           "time": "2:00 PM",
           "title": "Class Block 3B",
           "presenter": " ",
+          "classSlug": "block-3b",
           "room": "Blue Side",
           "type": "class"
         },
         {
           "time": "5:30 PM",
           "title": "Dinner Break",
+          "classSlug": "dinner-break",
           "type": "general"
         },
         {
           "time": "8:00 PM",
           "title": "Open Dungeon Time Until 2:00 AM",
+          "classSlug": "open-dungeon",
           "type": "social",
           "room": "All Rooms"
         }
@@ -87,6 +98,7 @@
           "time": "09:30 AM",
           "title": "Class Block 4G",
           "presenter": " ",
+          "classSlug": "block-4g",
           "room": "Green Side",
           "type": "class"
         },
@@ -94,18 +106,21 @@
           "time": "09:30 AM",
           "title": "Class Block 4B",
           "presenter": " ",
+          "classSlug": "block-4b",
           "room": "Blue Side",
           "type": "class"
         },
         {
           "time": "01:00 PM",
           "title": "Lunch Break",
+          "classSlug": "lunch-Sat",
           "type": "general"
         },
         {
           "time": "2:00 PM",
           "title": "Class Block 5G",
           "presenter": " ",
+          "classSlug": "block-5g",
           "room": "Green Side",
           "type": "class"
         },
@@ -113,17 +128,20 @@
           "time": "2:00 PM",
           "title": "Class Block 5B",
           "presenter": " ",
+          "classSlug": "block-5b",
           "room": "Blue Side",
           "type": "class"
         },
         {
           "time": "5:30 PM",
           "title": "Dinner Break",
+          "classSlug": "dinner-Sat",
           "type": "general"
         },
         {
           "time": "8:00 PM",
           "title": "Open Dungeon Time Until 2:00 AM",
+          "classSlug": "open-dungeon-Sat",
           "type": "social",
           "room": "All Rooms"
         }
@@ -137,6 +155,7 @@
           "time": "10:30 AM",
           "title": "Class Block 6G Part 1 (90 minutes)",
           "presenter": " ",
+          "classSlug": "block-6g-1",
           "room": "Green Side",
           "type": "class"
         },
@@ -144,18 +163,21 @@
           "time": "10:30 AM",
           "title": "Class Block 6B Part 1 (90 minutes)",
           "presenter": " ",
+          "classSlug": "block-6b-1",
           "room": "Blue Side",
           "type": "class"
         },
         {
           "time": "12:00 PM",
           "title": "Lunch Break",
+          "classSlug": "lunch-Sun",
           "type": "general"
         },
         {
           "time": "1:00 PM",
           "title": "Class Block 6G Part 2 (90 minutes)",
           "presenter": " ",
+          "classSlug": "block-6g-2",
           "room": "Green Side",
           "type": "class"
         },
@@ -163,6 +185,7 @@
           "time": "1:00 PM",
           "title": "Class Block 6B Part 2 (90 minutes)",
           "presenter": " ",
+          "classSlug": "block-6b-2",
           "room": "Blue Side",
           "type": "class"
         },
@@ -170,6 +193,7 @@
           "time": "3:00 PM",
           "title": "Self Tie #1 (90 minutes)",
           "presenter": " ",
+          "classSlug": "self-tie-1",
           "room": "Green Side",
           "type": "class"
         },
@@ -177,12 +201,14 @@
           "time": "3:00 PM",
           "title": "Self Tie #2 (90 minutes)",
           "presenter": " ",
+          "classSlug": "self-tie-2",
           "room": "Blue Side",
           "type": "class"
         },
         {
           "time": "5:00 PM",
           "title": "Open Tie Lounge Until 7:00 PM",
+          "classSlug": "open-tie-lounge",
           "type": "social",
           "room": "All Rooms"
         }

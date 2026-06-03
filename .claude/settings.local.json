@@ -22,7 +22,9 @@
       "mcp__plugin_playwright_playwright__browser_click",
       "mcp__plugin_playwright_playwright__browser_take_screenshot",
       "Bash(scripts/start-server.sh *)",
-      "Bash(bash *)"
+      "Bash(bash *)",
+      "mcp__plugin_playwright_playwright__browser_snapshot",
+      "mcp__plugin_playwright_playwright__browser_evaluate"
     ]
   },
   "enableAllProjectMcpServers": true,
