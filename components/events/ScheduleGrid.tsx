@@ -97,7 +97,7 @@ export default function ScheduleGrid({
           onClick={() => setSelectedDay(MY_SCHEDULE_IDX)}
           className={`flex items-center gap-1.5 rounded-lg px-4 py-3 text-center transition-all duration-200 whitespace-nowrap ${
             isMySched
-              ? 'bg-fire-orange text-black shadow-lg shadow-fire-orange/20'
+              ? 'bg-[#f4a261] text-white shadow-lg shadow-[#f4a261]/20'
               : 'text-gray-400 hover:bg-[#2a2a2a] hover:text-white'
           }`}>
           <Star
@@ -108,7 +108,7 @@ export default function ScheduleGrid({
           {totalFavorites > 0 && (
             <span
               className={`rounded-full px-1.5 py-0.5 text-xs font-bold leading-none ${
-                isMySched ? 'bg-black/20 text-black' : 'bg-fire-orange text-black'
+                isMySched ? 'bg-white/20 text-white' : 'bg-[#e63946] text-white'
               }`}>
               {totalFavorites}
             </span>
