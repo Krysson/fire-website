@@ -344,7 +344,7 @@ function ScheduleSlotCard({
               className='mt-0.5 flex-shrink-0 transition-transform duration-150 hover:scale-110 active:scale-95'>
               <Star
                 className={`h-5 w-5 transition-colors duration-150 ${
-                  isFavorited ? 'fill-fire-red text-fire-red' : 'text-gray-600'
+                  isFavorited ? 'fill-[#e63946] text-[#e63946]' : 'text-gray-600'
                 }`}
               />
             </button>
