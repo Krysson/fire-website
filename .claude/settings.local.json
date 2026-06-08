@@ -24,7 +24,10 @@
       "Bash(scripts/start-server.sh *)",
       "Bash(bash *)",
       "mcp__plugin_playwright_playwright__browser_snapshot",
-      "mcp__plugin_playwright_playwright__browser_evaluate"
+      "mcp__plugin_playwright_playwright__browser_evaluate",
+      "PowerShell(Get-NetTCPConnection *)",
+      "Bash(Remove-Item -Recurse -Force .playwright-mcp)",
+      "Bash(Remove-Item -Force after-first-star.png, blaze-schedule.png, empty-state.png, flare-my-schedule.png, flare-thursday.png, multi-day-schedule.png, my-schedule-view.png, schedule-initial.png)"
     ]
   },
   "enableAllProjectMcpServers": true,

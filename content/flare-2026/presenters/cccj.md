@@ -1,5 +1,5 @@
 ---
-name: Chingon_Cuerdas & CreppyJane
+name: Chingon_Cuerdas & CreepyJane
 slug: cccj
 pronouns:
   - 'he/him'
@@ -16,6 +16,6 @@ social_labels:
 featured: true
 ---
 
-# Chingon_Cuerdas & CreppyJane
+# Chingon_Cuerdas & CreepyJane
 
 ## Update Coming Soon!
