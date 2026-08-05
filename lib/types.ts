@@ -114,8 +114,8 @@ export interface Presenter {
   slug: string;
   /** Pronouns (e.g., "he/him", "she/her", "they/them") - can be string or array */
   pronouns?: string | string[];
-  /** Path to presenter photo (relative to /public) */
-  photo?: string;
+  /** Path to presenter photo (relative to /public). Use an array of 2+ paths for duo/group presenters. */
+  photo?: string | string[];
   /** Social media links */
   social?: SocialLinks;
   /** Custom display labels for social links — keys match SocialLinks keys, values are label string(s) */

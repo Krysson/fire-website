@@ -108,22 +108,41 @@ export default async function PresenterPage({ params }: PresenterPageProps) {
           <div className="flex flex-col md:flex-row gap-8 mb-12">
             {/* Photo */}
             <div className="flex-shrink-0">
-              <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto md:mx-0 rounded-lg overflow-hidden bg-fire-dark">
-                {presenter.photo ? (
-                  <Image
-                    src={presenter.photo}
-                    alt={presenter.name}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 256px, 320px"
-                    priority
-                  />
+              {presenter.photo ? (
+                Array.isArray(presenter.photo) ? (
+                  <div className="grid grid-cols-2 gap-2 w-64 h-64 md:w-80 md:h-80 mx-auto md:mx-0">
+                    {presenter.photo.map((src, index) => (
+                      <div key={index} className="relative rounded-lg overflow-hidden bg-fire-dark">
+                        <Image
+                          src={src}
+                          alt={presenter.name}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 128px, 160px"
+                          priority={index === 0}
+                        />
+                      </div>
+                    ))}
+                  </div>
                 ) : (
+                  <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto md:mx-0 rounded-lg overflow-hidden bg-fire-dark">
+                    <Image
+                      src={presenter.photo}
+                      alt={presenter.name}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 256px, 320px"
+                      priority
+                    />
+                  </div>
+                )
+              ) : (
+                <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto md:mx-0 rounded-lg overflow-hidden bg-fire-dark">
                   <div className="w-full h-full flex items-center justify-center text-fire-orange/30 text-6xl font-bold">
                     {presenter.name.charAt(0)}
                   </div>
-                )}
-              </div>
+                </div>
+              )}
             </div>
 
             {/* Name and Info */}

@@ -11,18 +11,25 @@
           "type": "general"
         },
         {
-          "time": "3:00 PM",
-          "title": "Class Block 1B",
+          "time": "3:30 PM",
+          "title": "Who's Upline Is It Anyway?",
           "type": "class",
           "classSlug": "block-1b",
           "room": "Blue Side"
         },
         {
-          "time": "3:00 PM",
-          "title": "Class Block 1G",
+          "time": "3:30 PM",
+          "title": "Can i Be Mean for a Second?",
           "type": "class",
           "classSlug": "block-1g",
           "room": "Green Side"
+        },
+        {
+          "time": "8:00 PM",
+          "title": "Volunteer Intensive",
+          "type": "general",
+          "classSlug": "Staff",
+          "room": "Blue Side"
         },
         {
           "time": "8:00 PM",
@@ -38,19 +45,27 @@
       "label": "Friday",
       "slots": [
         {
-          "time": "09:30 AM",
-          "title": "Class Block 2G",
+          "time": "08:30 AM",
+          "title": "Morning Yoga",
           "presenter": " ",
-          "classSlug": "block-2g",
-          "room": "Green Side",
+          "classSlug": "block-yoga",
+          "room": "Blue Side",
           "type": "class"
         },
         {
           "time": "09:30 AM",
-          "title": "Class Block 2B",
+          "title": "Ode to Waist Rope",
+          "presenter": " ",
+          "classSlug": "block-2g",
+          "room": "Blue Side",
+          "type": "class"
+        },
+        {
+          "time": "09:30 AM",
+          "title": "Static Suspensions for the Technically Minded",
           "presenter": " ",
           "classSlug": "block-2b",
-          "room": "Blue Side",
+          "room": "Green Side",
           "type": "class"
         },
         {
@@ -61,18 +76,18 @@
         },
         {
           "time": "2:00 PM",
-          "title": "Class Block 3G",
+          "title": "Diamonds are Forever",
           "presenter": " ",
           "classSlug": "block-3g",
-          "room": "Green Side",
+          "room": "Blue Side",
           "type": "class"
         },
         {
           "time": "2:00 PM",
-          "title": "Class Block 3B",
+          "title": "Waiting for the Bus",
           "presenter": " ",
           "classSlug": "block-3b",
-          "room": "Blue Side",
+          "room": "Green Side",
           "type": "class"
         },
         {
@@ -95,8 +110,16 @@
       "label": "Saturday",
       "slots": [
         {
+          "time": "08:30 AM",
+          "title": "Morning Yoga",
+          "presenter": " ",
+          "classSlug": "block-yoga",
+          "room": "Blue Side",
+          "type": "class"
+        },
+        {
           "time": "09:30 AM",
-          "title": "Class Block 4G",
+          "title": "Rope + Tarot: Storytelling",
           "presenter": " ",
           "classSlug": "block-4g",
           "room": "Green Side",
@@ -104,7 +127,7 @@
         },
         {
           "time": "09:30 AM",
-          "title": "Class Block 4B",
+          "title": "Impact for Rope",
           "presenter": " ",
           "classSlug": "block-4b",
           "room": "Blue Side",
@@ -118,7 +141,7 @@
         },
         {
           "time": "2:00 PM",
-          "title": "Class Block 5G",
+          "title": "Bespoke Box Tie",
           "presenter": " ",
           "classSlug": "block-5g",
           "room": "Green Side",
@@ -126,7 +149,7 @@
         },
         {
           "time": "2:00 PM",
-          "title": "Class Block 5B",
+          "title": "Body Bamboo",
           "presenter": " ",
           "classSlug": "block-5b",
           "room": "Blue Side",
@@ -152,8 +175,16 @@
       "label": "Sunday",
       "slots": [
         {
+          "time": "08:30 AM",
+          "title": "Morning Yoga",
+          "presenter": " ",
+          "classSlug": "block-yoga",
+          "room": "Blue Side",
+          "type": "class"
+        },
+        {
           "time": "10:30 AM",
-          "title": "Class Block 6G Part 1 (90 minutes)",
+          "title": "Mono-bloc Meltdown",
           "presenter": " ",
           "classSlug": "block-6g-1",
           "room": "Green Side",
@@ -161,9 +192,9 @@
         },
         {
           "time": "10:30 AM",
-          "title": "Class Block 6B Part 1 (90 minutes)",
+          "title": "Harness Invention",
           "presenter": " ",
-          "classSlug": "block-6b-1",
+          "classSlug": "block-6g-1",
           "room": "Blue Side",
           "type": "class"
         },
@@ -175,7 +206,7 @@
         },
         {
           "time": "1:00 PM",
-          "title": "Class Block 6G Part 2 (90 minutes)",
+          "title": "Mono-bloc Meltdown (pt. 2)",
           "presenter": " ",
           "classSlug": "block-6g-2",
           "room": "Green Side",
@@ -183,7 +214,7 @@
         },
         {
           "time": "1:00 PM",
-          "title": "Class Block 6B Part 2 (90 minutes)",
+          "title": "Harness Invention (pt. 2)",
           "presenter": " ",
           "classSlug": "block-6b-2",
           "room": "Blue Side",

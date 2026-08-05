@@ -37,20 +37,36 @@ export default function PresenterCard({ presenter, eventSlug }: PresenterCardPro
 
   const excerpt = getExcerpt(presenter.content);
   const pronounsText = formatPronouns(presenter.pronouns);
+  const photo = presenter.photo;
 
   return (
     <div className="group bg-fire-charcoal rounded-lg overflow-hidden border-2 border-fire-dark transition-all duration-300 hover:border-fire-orange hover:shadow-lg hover:shadow-fire-orange/20 hover:scale-105 hover:-translate-y-1">
       {/* Presenter photo */}
       <Link href={`/events/${eventSlug}/presenters/${presenter.slug}`} className="block">
         <div className="relative w-full aspect-square bg-fire-dark flex items-center justify-center overflow-hidden">
-          {presenter.photo ? (
-            <Image
-              src={presenter.photo}
-              alt={presenter.name}
-              width={400}
-              height={400}
-              className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
-            />
+          {photo ? (
+            Array.isArray(photo) ? (
+              <div className="grid grid-cols-2 w-full h-full">
+                {photo.map((src, index) => (
+                  <div key={index} className="relative overflow-hidden">
+                    <Image
+                      src={src}
+                      alt={presenter.name}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <Image
+                src={photo}
+                alt={presenter.name}
+                width={400}
+                height={400}
+                className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
+              />
+            )
           ) : (
             <div className="flex items-center justify-center w-full h-full">
               <svg

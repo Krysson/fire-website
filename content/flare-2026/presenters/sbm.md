@@ -4,7 +4,9 @@ slug: sbm
 pronouns:
   - 'she/they'
   - 'she/her'
-photo: /images/presenters/flameHolder.png
+photo:
+  - /images/presenters/shak.jpg
+  - /images/presenters/Mag.jpg
 social:
   fetlife:
     - https://fetlife.com/ShaktiBliss
