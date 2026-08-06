@@ -4,7 +4,7 @@ slug: sf
 pronouns:
   - 'she/her'
   - 'she/they'
-photo: /images/presenters/sf.png
+photo: /images/presenters/sf.jpg
 social:
   fetlife:
     - https://fetlife.com/Test

@@ -4,7 +4,9 @@ slug: fd
 pronouns:
   - 'she/her'
   - 'he/him'
-photo: /images/presenters/flameHolder.png
+photo:
+  - /images/presenters/fuoco.jpg
+  - /images/presenters/frank.jpeg
 social:
   fetlife:
     - https://fetlife.com/-fuoco-

@@ -6,7 +6,7 @@ pronouns:
   - 'she/her'
 photo:
   - /images/presenters/shak.jpg
-  - /images/presenters/Mag.jpg
+  - /images/presenters/mag.jpg
 social:
   fetlife:
     - https://fetlife.com/ShaktiBliss

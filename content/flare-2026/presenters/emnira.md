@@ -5,7 +5,7 @@ pronouns:
   - 'he/him'
   - 'she/her'
 photo:
-  - /images/presenters/em.jpg
+  - /images/presenters/EM.jpg
   - /images/presenters/NiraL.jpg
 social:
   fetlife:

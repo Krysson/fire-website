@@ -4,7 +4,7 @@ slug: lh
 pronouns:
   - 'he/they'
   - 'he/they'
-photo: /images/presenters/lh.png
+photo: /images/presenters/lh.jpg
 social:
   fetlife:
     - https://fetlife.com/Lief
