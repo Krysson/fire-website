@@ -1,7 +1,7 @@
 ---
 title: Uplines for Self Suspenders
-slug: Uplines for Self Suspenders
-presenter: NiraTheJitten
+slug: self-tie-2
+presenter: emnira
 level: Intermediate Partials/Suspension
 duration: 90 minutes
 feedbackUrl: https://tally.so
