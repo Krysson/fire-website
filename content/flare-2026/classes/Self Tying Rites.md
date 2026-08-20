@@ -1,6 +1,6 @@
 ---
 title: Self Tying Rites
-slug: Self Tying Rites
+slug: self-tie-1
 presenter: Suolinga
 level: Ground Advanced
 duration: 90 minutes
