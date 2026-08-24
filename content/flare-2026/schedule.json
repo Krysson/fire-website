@@ -86,8 +86,8 @@
         {
           "time": "2:00 PM",
           "title": "Waiting for the Bus",
-          "presenter": " ",
-          "classSlug": "block-3b",
+          "presenter": "emnira",
+          "classSlug": "wait",
           "room": "Green Side",
           "type": "class"
         },
