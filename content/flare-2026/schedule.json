@@ -195,8 +195,8 @@
         {
           "time": "10:30 AM",
           "title": "Harness Invention",
-          "presenter": " ",
-          "classSlug": "block-6g-1",
+          "presenter": "fd",
+          "classSlug": "invent",
           "room": "Blue Side",
           "type": "class"
         },
@@ -217,8 +217,8 @@
         {
           "time": "1:00 PM",
           "title": "Harness Invention (pt. 2)",
-          "presenter": " ",
-          "classSlug": "block-6b-2",
+          "presenter": "fd",
+          "classSlug": "invent",
           "room": "Blue Side",
           "type": "class"
         },
