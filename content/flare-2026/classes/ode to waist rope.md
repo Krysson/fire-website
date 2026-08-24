@@ -1,6 +1,6 @@
 ---
 title: Ode to waist rope 
-slug: ode
+slug: ode1
 presenter: lh
 level: Advanced partials/Suspension
 duration: 180 minutes
