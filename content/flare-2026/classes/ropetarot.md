@@ -1,5 +1,4 @@
 ---
-
 title: Rope and Tarot: Storytelling the fool
 slug: fool
 presenter: sbm
@@ -20,4 +19,5 @@ Through a blend of discussion and hands-on practice, participants will learn a r
 Prerequisites for this class include: experience in suspension and tying suspendible structures
 
 ## What to Bring
+
 Full rope suspension kit complete with safety shears
