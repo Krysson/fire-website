@@ -21,8 +21,9 @@
         {
           "time": "3:30 PM",
           "title": "Can i Be Mean for a Second?",
+          "presenter": "sf",
           "type": "class",
-          "classSlug": "block-1g",
+          "classSlug": "mean",
           "room": "Green Side"
         },
         {
