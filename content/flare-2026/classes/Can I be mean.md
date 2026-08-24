@@ -1,7 +1,7 @@
 ---
 title: Can I be mean for a second? Sadistic floor rope
-slug: mono
-presenter: sbm
+slug: mean
+presenter: sf
 level: Ground advanced
 duration: 180 minutes
 feedbackUrl: https://tally.so
