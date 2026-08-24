@@ -1,6 +1,6 @@
 ---
 title: Rope and Tarot: Storytelling the fool
-slug: mono
+slug: fool
 presenter: sbm
 level: Intermediate Partials/Suspension
 duration: 180 minutes
@@ -19,5 +19,4 @@ Through a blend of discussion and hands-on practice, participants will learn a r
 Prerequisites for this class include: experience in suspension and tying suspendible structures
 
 ## What to Bring
-
-Full rope suspension kit complete with safety shears 
+Full rope suspension kit complete with safety shears
