@@ -1,7 +1,7 @@
 ---
 title: Waiting for the bus 
-slug: mono
-presenter: sbm
+slug: wait
+presenter: emnira
 level: Intermediate Partials/Suspension
 duration: 180 minutes
 feedbackUrl: https://tally.so
