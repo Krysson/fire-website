@@ -1,4 +1,5 @@
 ---
+
 title: Rope and Tarot: Storytelling the fool
 slug: fool
 presenter: sbm
