@@ -3,7 +3,7 @@ title: Diamonds Are Forever
 slug: dia
 presenter: cccj
 level: Intermediate Partials/Suspension
-duration: 1800 minutes
+duration: 180 minutes
 feedbackUrl: https://tally.so
 ---
 
