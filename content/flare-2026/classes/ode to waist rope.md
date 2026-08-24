@@ -13,6 +13,7 @@ Waist rope, crotch rope, torsions…
 If any or all of these things excite or interest you, you might love Lief and Icky’s new suspension sequence! Taught on a bamboo hardpoint, this delicious sequence utilizes a chest harness of your choice, crotch rope, and a minimalistic mermaid to create tough, torturous, and dynamic shapes. 
 The goal of this sequence is meant to push the top’s and bottom’s skill set. However, there will be adaptations for folks to choose how far they want to push along the way. 
 Lief and icky will teach considerations for different types of genitalia when applying crotch rope as well. 
+
 In this class, Lief and icky will teach the steps of the sequence through a demo that will help the students understand the rough outline of the shapes that can be achieved. They will also teach insider info on upline management on a bamboo hardpoint and how to tie harnesses in the air.
 Then there will be plenty of time for students to try out this sequence on their own while getting one on one feedback from the instructors.
 At the end of this class, you will have a new exciting sequence to try with any lover of waist rope. 
