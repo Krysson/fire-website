@@ -186,8 +186,8 @@
         {
           "time": "10:30 AM",
           "title": "Mono-bloc Meltdown",
-          "presenter": " ",
-          "classSlug": "block-6g-1",
+          "presenter": "sbm",
+          "classSlug": "mono",
           "room": "Green Side",
           "type": "class"
         },
