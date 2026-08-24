@@ -1,7 +1,7 @@
 ---
 title: Harness invention
 slug: invent
-presenter: sbm
+presenter: fd
 level: Intermediate Partials/Suspension
 duration: 180 minutes
 feedbackUrl: https://tally.so
