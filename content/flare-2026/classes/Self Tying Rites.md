@@ -7,7 +7,6 @@ duration: 90 minutes
 feedbackUrl: https://tally.so
 ---
 
-## Class Info
 
 "Self-tying serves many practical purposes. It allows repetition, problem solving, develops body awareness- and so much more. But what about the mental narrative? The emotional impact? How do we make self-tying more than just a series of steps and procedures, and instead into its own scene?
 
