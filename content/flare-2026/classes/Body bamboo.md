@@ -8,6 +8,7 @@ feedbackUrl: https://tally.so
 ---
 
 
+
 Would you like to feel... more stuck?  Are you looking to add a layer of complexity to explore in your rope practice? Maybe you're interested in discovering new shapes and predicaments? 
 Join Lief and Icky to learn about bamboo body ties! Attaching smaller pieces of bamboo to the body in rope can create complex shapes and new sensations - but it also creates additional considerations for rope technique and safety! In this class, Lief and Icky will cover the basics of bamboo lashings to the upper and lower body and the relevant safety and risk mitigation considerations for placement, body manipulation, and upline management. Demonstrations and class exercises will allow attendees to explore these concepts in partial and suspension. 
 
