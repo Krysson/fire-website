@@ -7,7 +7,6 @@ duration: 180 minutes
 feedbackUrl: https://tally.so
 ---
 
-## Class Info
 
 This class explores the exciting adventure of co-topping in rope bondage scenes, offering an in-depth look at how multiple tops can collaborate or challenge one another to create safe(r), engaging, and creative experiences. We'll cover essential topics such as negotiation strategies tailored for multi-person dynamics, managing group energy and responsibilities, handling differences in skill levels between co-tops, and maintaining clear, continuous communication between all parties involved—including the bottom(s). Whether you're new to co-topping or looking to refine your collaborative scenes, this class will provide practical tools and insights to help you work in sync with your partners and create cohesive, connected scenes.
 
