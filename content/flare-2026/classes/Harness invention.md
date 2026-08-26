@@ -7,7 +7,6 @@ duration: 210 minutes
 feedbackUrl: https://tally.so
 ---
 
-## Class Info
 
 Want to move beyond cooking from recipes and start cooking from the heart? When you start learning to tie, it’s easy to collect patterns like recipes without ever really learning how the ingredients work together. In this class we’ll break down common building blocks of suspendable patterns, and consider how harnesses work as a holistic unit under load to support the body in a variety of positions. Attendees will leave with a better understanding of how harnesses can be imagined, improvised, adapted, and improved over time.
 
