@@ -7,7 +7,6 @@ duration: 180 minutes
 feedbackUrl: https://tally.so
 ---
 
-## Class Info
 
 Waist rope, crotch rope, torsions…
 If any of these things excite or interest you, you might love Lief and Icky’s new suspension sequence! Taught on a bamboo hardpoint, this delicious sequence utilizes a chest harness of your choice, crotch rope, and a minimalistic mermaid to create tough, torturous, and dynamic shapes. 
