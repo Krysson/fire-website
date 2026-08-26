@@ -7,7 +7,6 @@ duration: 210 minutes
 feedbackUrl: https://tally.so
 ---
 
-## Class Info
 
 Utilizing the Mono-bloc (also known as the Basket Tie), this intermediate-to-advanced class explores a suspension progression built around this versatile double-column tie. We’ll examine both its adaptability and its use in more demanding applications, with a focus on construction techniques, attachment point theory, and load management.
 The class will also cover body handling and safer lifting practices, along with methods for creating intentional, opportunistic exposure while maintaining control, communication, and safety.
