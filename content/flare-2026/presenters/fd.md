@@ -18,7 +18,7 @@ social_labels:
 featured: true
 ---
 
-# Fuoco & Demo
+ Fuoco & Demo
 
 - Fuoco began her rope journey as a bottom in Phoenix in 2012 and shortly thereafter moved to London, where much of her early rope learning happened. Upon moving back to the US, she began presenting at conferences and intensives around the country, while regularly returning to Europe to further her education. Her career as a bondage practitioner, teacher, and performer grew alongside her career as a professional acrobat and movement specialist. She's trained extensively in partner acrobatics, contortion, and hair hanging, and through these disciplines has developed a keen sense of how to explore intensity in sustainable ways and what it means for two bodies to be in conversation with one another. In 2023 she joined Shibari Study as Director of Education and has been thinking about shibari education full time ever since. 
 
