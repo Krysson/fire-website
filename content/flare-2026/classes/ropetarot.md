@@ -6,7 +6,7 @@ level: Intermediate Partials/Suspension
 duration: 180 minutes
 feedbackUrl: https://tally.so
 ---
-## Class Info
+
 
 This class is designed for rope practitioners interested in deepening their work through symbolism, narrative, and embodied exploration.
 
