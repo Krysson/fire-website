@@ -20,7 +20,7 @@ featured: true
 
 # Chingon_Cuerdas & CreepyJane
 
-Chingón Cuerdas is a Chicago-based kinbaku educator, performer, and photographer whose work emphasizes adaptability, efficiency, and embodied understanding. He began his kink journey in 2013 and quickly developed a deep passion for rope bondage and rough body play, approaching both as systems of communication and intensity.
+- Chingón Cuerdas is a Chicago-based kinbaku educator, performer, and photographer whose work emphasizes adaptability, efficiency, and embodied understanding. He began his kink journey in 2013 and quickly developed a deep passion for rope bondage and rough body play, approaching both as systems of communication and intensity.
 
 Drawing from a background in bio-anatomy, experience in martial arts, and a healthy dose of general perversion, his teaching focuses on body mechanics, spatial awareness, and uncovering moments of erotic vulnerability. His style prioritizes engagement—physically and mentally—breaking complex concepts down into clear logic and practical exercises students can immediately apply to their own practice.
 
