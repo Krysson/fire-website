@@ -1,6 +1,6 @@
 ---
 name: Chingon_Cuerdas & CreepyJane
-slug: cccc
+slug: cccj
 pronouns:
   - 'he/him'
   - 'they/them'
