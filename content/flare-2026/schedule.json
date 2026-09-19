@@ -12,7 +12,7 @@
         },
         {
           "time": "3:30 PM",
-          "title": "Who's Upline Is It Anyway?",
+          "title": "Diamonds are forever",
           "presenter": "cccj",
           "type": "class",
           "classSlug": "who",
@@ -78,15 +78,15 @@
         },
         {
           "time": "2:00 PM",
-          "title": "Diamonds are Forever",
-          "presenter": "cccj",
+          "title": "Who's upline is it anyway",
+          "presenter": "cccj, sbm",
           "classSlug": "dia",
           "room": "Blue Side",
           "type": "class"
         },
         {
           "time": "2:00 PM",
-          "title": "Waiting for the Bus",
+          "title": "Bound for impact",
           "presenter": "emnira",
           "classSlug": "wait",
           "room": "Green Side",
@@ -129,7 +129,7 @@
         },
         {
           "time": "09:30 AM",
-          "title": "Bound for impact",
+          "title": "Waiting for the bus",
           "presenter": "emnira",
           "classSlug": "bound",
           "room": "Blue Side",
@@ -177,7 +177,7 @@
       "label": "Sunday",
       "slots": [
         {
-          "time": "08:30 AM",
+          "time": "09:30 AM",
           "title": "Morning Yoga",
           "presenter": " ",
           "classSlug": "block-yoga",
