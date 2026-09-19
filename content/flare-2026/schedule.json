@@ -15,7 +15,7 @@
           "title": "Diamonds are forever",
           "presenter": "cccj",
           "type": "class",
-          "classSlug": "who",
+          "classSlug": "dia",
           "room": "Blue Side"
         },
         {
@@ -80,7 +80,7 @@
           "time": "2:00 PM",
           "title": "Who's upline is it anyway",
           "presenter": "cccj, sbm",
-          "classSlug": "dia",
+          "classSlug": "wgo",
           "room": "Blue Side",
           "type": "class"
         },
@@ -88,7 +88,7 @@
           "time": "2:00 PM",
           "title": "Bound for impact",
           "presenter": "emnira",
-          "classSlug": "wait",
+          "classSlug": "bound",
           "room": "Green Side",
           "type": "class"
         },
@@ -131,7 +131,7 @@
           "time": "09:30 AM",
           "title": "Waiting for the bus",
           "presenter": "emnira",
-          "classSlug": "bound",
+          "classSlug": "wait",
           "room": "Blue Side",
           "type": "class"
         },
