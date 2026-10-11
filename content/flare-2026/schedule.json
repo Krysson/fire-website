@@ -187,7 +187,7 @@
         {
           "time": "10:30 AM",
           "title": "Mono-bloc Meltdown",
-          "presenter": "sbm",
+          "presenter": ["cccj", "sbm"],
           "classSlug": "mono",
           "room": "Green Side",
           "type": "class"
@@ -209,7 +209,7 @@
         {
           "time": "1:00 PM",
           "title": "Mono-bloc Meltdown (pt. 2)",
-          "presenter": "sbm",
+          "presenter": ["cccj", "sbm"],
           "classSlug": "mono",
           "room": "Green Side",
           "type": "class"
