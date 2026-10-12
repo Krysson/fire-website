@@ -3,7 +3,7 @@ title: Monoblock Meltdown
 slug: mono
 presenter: sbm
 level: Intermediate Partials/Suspension
-duration: 210 minutes
+duration: 180 minutes
 feedbackUrl: https://tally.so
 ---
 
