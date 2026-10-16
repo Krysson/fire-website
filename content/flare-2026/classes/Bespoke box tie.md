@@ -4,11 +4,8 @@ slug: bespoke
 presenter: fd
 level: Intermediate Partials/Suspension
 duration: 180 minutes
-feedbackUrl: https://tally.so
+feedbackUrl: https://docs.google.com/forms/d/1cJmo1I4uZOkC2sCf-YyZUCFRK_-w4129EcF73TQ6Lew/viewform
 ---
-
-
-
 
 A theoretical box tie class on the box tie form that starts from a place of each bottom's anatomical box tie and builds accordingly. This class doesn't teach any single pattern, but rather aims to help riggers and bottoms make decisions about each box tie component, from how to set the shoulders to how to lock kanukis. 
 
