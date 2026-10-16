@@ -4,7 +4,7 @@ slug: self-tie-1
 presenter: Suolinga
 level: Ground Advanced
 duration: 90 minutes
-feedbackUrl: https://tally.so
+feedbackUrl: https://docs.google.com/forms/d/1cJmo1I4uZOkC2sCf-YyZUCFRK_-w4129EcF73TQ6Lew/viewform
 ---
 
 
